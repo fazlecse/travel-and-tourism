@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ai-content-&-image-enerator-platform</title>
+    <!-- Favicon-link -->
+    <link rel="shortcut icon" href="assets/img/logo/favicon.png" type="image/x-icon">
+    <!-- Fontawesome6_Js_link -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <!-- Bootstrap5_Css_link -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Owl_carousel_Css_link -->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+    <!-- Swiper_Css_link -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <!-- select2_Css_link -->
+    <link rel="stylesheet" href="assets/css/select2.min.css">
+
+
+
+    <!-- Style_Css_link -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body onload="preloder_function()" class="">
+    <!-- Preloader area start -->
+    <div id="preloader">
+        <div class="loader">Loading
+            <span></span>
+        </div>
+    </div>
+    <!-- Preloader area end -->
+
+    <!-- Nav section start -->
+    <nav class="navbar fixed-top navbar-expand-lg">
+        <div class="container position-relative">
+            <a class="navbar-brand logo" href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar">
+                <i class="fa-light fa-list"></i>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbar">
+                <div class="offcanvas-header">
+                    <a class="navbar-brand" href="index.html"><img class="logo" src="assets/img/logo/logo.png"
+                            alt=""></a>
+                    <button type="button" class="cmn-btn-close btn-close" data-bs-dismiss="offcanvas"
+                        aria-label="Close"><i class="fa-light fa-arrow-right"></i></button>
+                </div>
+                <div class="offcanvas-body align-items-center justify-content-between">
+                    <ul class="navbar-nav m-auto text-center">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="features.html">features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pricing.html">pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="faq.html">FAQ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html"><i
+                                    class="login-icon fa-regular fa-right-to-bracket"></i>Login</a>
+                        </li>
+                    </ul>
+
+
+                </div>
+            </div>
+            <div class="nav-right">
+                <ul class="custom-nav">
+
+
+
+                    <li class="nav-item">
+                        <div class="profile-box">
+                            <div class="profile">
+                                <img src="./assets/img/Person/1.jpg" class="img-fluid" alt="" />
+                            </div>
+                            <ul class="user-dropdown">
+                                <li>
+                                    <a href="user-panel.html"> <i class="fal fa-user"></i> View Profile </a>
+                                </li>
+                                <li>
+                                    <a href="support-ticket.html"> <i class="fal fa-user-headset"></i> Support </a>
+                                </li>
+                                <li>
+                                    <a href="edit-profile.html"> <i class="fal fa-user-cog"></i> Account Settings </a>
+                                </li>
+                                <li>
+                                    <a href=""> <i class="fal fa-sign-out-alt"></i> Sign Out </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a id="toggle-btn" class="nav-link d-flex toggle-btn">
+                            <i class="fa-regular fa-moon" id="moon"></i>
+                            <i class="fa-regular fa-sun-bright" id="sun"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Nav section end -->
+
+    <!-- Bottom Mobile Tab nav section start -->
+    <ul class="nav bottom-nav fixed-bottom d-lg-none">
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="offcanvas" role="button" aria-controls="offcanvasExample"
+                href="#offcanvasNavbar" aria-current="page" href="#"><i class="fa-regular fa-bars-staggered"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa-regular fa-shuttle-space"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active"><i class="fa-regular fa-house"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link"><i class="fa-regular fa-address-book"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link"><i class="fa-regular fa-user"></i></a>
+        </li>
+    </ul>
+    <!-- Bottom Mobile Tab nav section end -->
+
+    <!-- Banner section start -->
+    <div class="banner-area">
+        <div class="container">
+            <div class="row ">
+                <div class="col">
+                    <div class="breadcrumb-area">
+                        <h3>Pricing plan</h3>
+                        <ul class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="home-1.html">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Pricing plan</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Banner section end -->
+
+    <!-- Pricing section start -->
+    <section class="pricing-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-header text-center mb-50">
+                        <div class="section-subtitle">
+                            pricing plan
+                        </div>
+                        <h2>Perfect plan for everyone</h2>
+                        <p class="cmn-para-text mx-auto">Manage your projects and your talent in a single system,
+                            resulting in empowered teams.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <!-- Cmn tabs start -->
+                    <div class="cmn-tabs mb-50">
+                        <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="Prepaid-tab" data-bs-toggle="pill"
+                                    data-bs-target="#Prepaid" type="button" role="tab" aria-controls="Prepaid"
+                                    aria-selected="true">Prepaid</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="monthly-plan-tab" data-bs-toggle="pill"
+                                    data-bs-target="#monthly-plan" type="button" role="tab" aria-controls="monthly-plan"
+                                    aria-selected="false">monthly plan</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="yearly-plan-tab" data-bs-toggle="pill"
+                                    data-bs-target="#yearly-plan" type="button" role="tab" aria-controls="yearly-plan"
+                                    aria-selected="false">yearly plan</button>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <!-- Cmn tabs end -->
+
+                    <!-- Cmn tab content start -->
+                    <div class="cmn-tab-content">
+                        <div class="tab-content" id="pills-tabContent">
+                            <!-- Prepaid tab content start -->
+                            <div class="tab-pane fade" id="Prepaid" role="tabpanel" aria-labelledby="Prepaid-tab"
+                                tabindex="0">
+                                <div class="row g-4 justify-content-center">
+                                    <div class="col-xl-6">
+                                        <div class="prepaid-plan">
+                                            <div class="section-body">
+                                                <div class="price-area">
+                                                    <div class="price-title">
+                                                        <div><sup>$</sup> <span>99.99</span> </div>
+                                                    </div>
+                                                </div>
+                                                <div class="content-details">
+                                                    <div class="prepaid-title">
+                                                        <h3>5000x100</h3>
+                                                    </div>
+                                                    <p class="prepaid-info"><span>Words Included:</span> <span
+                                                            class="highlight">5,000</span></p>
+                                                    <p class="prepaid-info"><span>Images Included:</span> <span
+                                                            class="highlight">100</span></p>
+                                                </div>
+                                                <div class="btn-area">
+                                                    <button type="button" class="cmn-btn">Purchase</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="prepaid-plan">
+                                            <div class="section-body">
+                                                <div class="price-area">
+                                                    <div class="price-title">
+                                                        <div><sup>$</sup> <span>99.99</span> </div>
+                                                    </div>
+                                                </div>
+                                                <div class="content-details">
+                                                    <div class="prepaid-title">
+                                                        <h3>5000x100</h3>
+                                                    </div>
+                                                    <p class="prepaid-info"><span>Words Included:</span> <span
+                                                            class="highlight">5,000</span></p>
+                                                    <p class="prepaid-info"><span>Images Included:</span> <span
+                                                            class="highlight">100</span></p>
+                                                </div>
+                                                <div class="btn-area">
+                                                    <button type="button" class="cmn-btn">Purchase</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="prepaid-plan">
+                                            <div class="section-body">
+                                                <div class="price-area">
+                                                    <div class="price-title">
+                                                        <div><sup>$</sup> <span>99.99</span> </div>
+                                                    </div>
+                                                </div>
+                                                <div class="content-details">
+                                                    <div class="prepaid-title">
+                                                        <h3>5000x100</h3>
+                                                    </div>
+                                                    <p class="prepaid-info"><span>Words Included:</span> <span
+                                                            class="highlight">5,000</span></p>
+                                                    <p class="prepaid-info"><span>Images Included:</span> <span
+                                                            class="highlight">100</span></p>
+                                                </div>
+                                                <div class="btn-area">
+                                                    <button type="button" class="cmn-btn">Purchase</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="prepaid-plan">
+                                            <div class="section-body">
+                                                <div class="price-area">
+                                                    <div class="price-title">
+                                                        <div><sup>$</sup> <span>99.99</span> </div>
+                                                    </div>
+                                                </div>
+                                                <div class="content-details">
+                                                    <div class="prepaid-title">
+                                                        <h3>5000x100</h3>
+                                                    </div>
+                                                    <p class="prepaid-info"><span>Words Included:</span> <span
+                                                            class="highlight">5,000</span></p>
+                                                    <p class="prepaid-info"><span>Images Included:</span> <span
+                                                            class="highlight">100</span></p>
+                                                </div>
+                                                <div class="btn-area">
+                                                    <button type="button" class="cmn-btn">Purchase</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- Prepaid tab content end -->
+
+                            <!-- Monthly plan tab content start -->
+                            <div class="tab-pane fade show active" id="monthly-plan" role="tabpanel"
+                                aria-labelledby="monthly-plan-tab" tabindex="0">
+                                <div class="cmn-tab-content">
+                                    <div class="row g-5">
+                                        <div class="col-lg-4 col-md-6">
+                                            <div class="pricing-box">
+                                                <div class="section-header">
+                                                    <div class="title-area">
+                                                        <div class="icon-area"><i class="fa-regular fa-leaf-maple"></i>
+                                                        </div>
+                                                        <h3 class="title">standerd</h3>
+                                                    </div>
+                                                    <p>Perfect to get start</p>
+                                                </div>
+
+                                                <div class="section-body">
+                                                    <div class="title">
+                                                        <span class="price">$12</span> <span>/month</span>
+                                                    </div>
+                                                    <ul class="pricing-feature">
+                                                        <li><i class="fa-regular fa-circle-check"></i>5 user seats
+                                                        </li>
+                                                        <li><i class="fa-regular fa-circle-check"></i>90+ copywriting
+                                                            tools</li>
+                                                        <li><i class="fa-regular fa-circle-check"></i>90+ copywriting
+                                                            tools</li>
+                                                        <li><i class="fa-regular fa-circle-check"></i>Unlimited projects
+                                                        </li>
+                                                        <li><i class="fa-regular fa-circle-check"></i>Unlimited projects
+                                                        </li>
+                                                        <li><i class="fa-regular fa-circle-check"></i>Priority email
+                                                            support</li>
+
+                                                        <li><i class="fa-regular fa-circle-xmark"></i>25+ languages
+                                                        </li>
+                                                        <li><i class="fa-regular fa-circle-xmark"></i>Blog Wizard tool
+                                                        </li>
+                                                    </ul>
+                                                    <div class="btn-area">
+                                                        <button type="button" class="cmn-btn w-100">Start free
+                                                            trial</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6">
+                                            <div class="pricing-box featured">
+                                                <div class="featured-title">most popular</div>
+                                                <div class="section-header">
+                                                    <div class="title-area">
+                                                        <div class="icon-area"><i class="fa-regular fa-paper-plane"></i>
+                                                        </div>
+                                                        <h3 class="title">plus</h3>
+                                                    </div>
+                                                    <p>Best for professionals</p>
+                                                </div>
+                                                <div class="section-body">
+                                                    <div class="title">
+                                                        <span class="price">$39</span> <span>/month</span>
+                                                    </div>
+                                                    <ul class="pricing-feature">
+                                                        <li><i class="fa-regular fa-circle-check"></i>90+ copywriting
+                                                            tools</li>
+                                                        <li><i class="fa-regular fa-circle-check"></i>Unlimited projects
+                                                        </li>
+                                                        <li><i class="fa-regular fa-circle-check"></i>Priority email
+                                                            support</li>
+                                                        <li><i class="fa-regular fa-circle-check"></i>Priority email
+                                                            support</li>
+                                                        <li><i class="fa-regular fa-circle-check"></i>25+ languages
+                                                        </li>
+                                                        <li><i class="fa-regular fa-circle-check"></i>Blog Wizard tool
+                                                        </li>
+                                                        <li><i class="fa-regular fa-circle-check"></i>Blog Wizard tool
+                                                        </li>
+                                                        <li><i class="fa-regular fa-circle-xmark"></i>Access to newest
+                                                            features
+                                                        </li>
+                                                    </ul>
+                                                    <div class="btn-area">
+                                                        <button type="button" class="cmn-btn w-100">Start free
+                                                            trial</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6">
+                                            <div class="pricing-box">
+                                                <div class="section-header">
+                                                    <div class="title-area">
+                                                        <div class="icon-area">
+                                                            <i class="fa-regular fa-bolt"></i>
+                                                        </div>
+                                                        <h3 class="title">enterprise</h3>
+                                                    </div>
+                                                    <p>Toolset for hard players</p>
+                                                </div>
+                                                <div class="section-body">
+                                                    <div class="title">
+                                                        <span class="price">$129</span> <span>/month</span>
+                                                    </div>
+                                                    <ul class="pricing-feature">
+                                                        <li><i class="fa-regular fa-circle-check"></i>90+ copywriting
+                                                            tools</li>
+                                                        <li><i class="fa-regular fa-circle-check"></i>Unlimited projects
+                                                        </li>
+                                                        <li><i class="fa-regular fa-circle-check"></i>25+ languages
+                                                        </li>
+                                                        <li><i class="fa-regular fa-circle-check"></i>25+ languages
+                                                        </li>
+                                                        <li><i class="fa-regular fa-circle-check"></i>Blog Wizard tool
+                                                        </li>
+                                                        <li><i class="fa-regular fa-circle-check"></i>Access to newest
+                                                            features
+                                                        </li>
+                                                        <li><i class="fa-regular fa-circle-check"></i>API access</li>
+                                                        <li><i class="fa-regular fa-circle-check"></i>API access</li>
+                                                    </ul>
+                                                    <div class="btn-area">
+                                                        <button type="button" class="cmn-btn w-100">Start free
+                                                            trial</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Monthly plan tab content end -->
+
+                            <!-- Yearly plan tab content start -->
+                            <div class="tab-pane fade" id="yearly-plan" role="tabpanel"
+                                aria-labelledby="yearly-plan-tab" tabindex="0">
+                                <div class="cmn-tab-content">
+                                    <div class="row g-5">
+                                        <div class="col-lg-4 col-md-6">
+                                            <div class="pricing-box">
+                                                <div class="section-header">
+                                                    <div class="title-area">
+                                                        <div class="icon-area"><i class="fa-regular fa-leaf-maple"></i>
+                                                        </div>
+                                                        <h3 class="title">standerd</h3>
+                                                    </div>
+                                                    <p>Perfect to get start</p>
+                                                </div>
+
+                                                <div class="section-body">
+                                                    <div class="title">
+                                                        <span class="price">$12</span> <span>/month</span>
+                                                    </div>
+                                                    <ul class="pricing-feature">
+                                                        <li><i class="fa-regular fa-circle-check"></i>5 user seats
+                                                        </li>
+                                                        <li><i class="fa-regular fa-circle-check"></i>90+ copywriting
+                                                            tools</li>
+                                                        <li><i class="fa-regular fa-circle-check"></i>90+ copywriting
+                                                            tools</li>
+                                                        <li><i class="fa-regular fa-circle-check"></i>Unlimited projects
+                                                        </li>
+                                                        <li><i class="fa-regular fa-circle-check"></i>Unlimited projects
+                                                        </li>
+                                                        <li><i class="fa-regular fa-circle-check"></i>Priority email
+                                                            support</li>
+
+                                                        <li><i class="fa-regular fa-circle-xmark"></i>25+ languages
+                                                        </li>
+                                                        <li><i class="fa-regular fa-circle-xmark"></i>Blog Wizard tool
+                                                        </li>
+                                                    </ul>
+                                                    <div class="btn-area">
+                                                        <button type="button" class="cmn-btn w-100">Start free
+                                                            trial</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6">
+                                            <div class="pricing-box featured">
+                                                <div class="featured-title">most popular</div>
+                                                <div class="section-header">
+                                                    <div class="title-area">
+                                                        <div class="icon-area"><i class="fa-regular fa-paper-plane"></i>
+                                                        </div>
+                                                        <h3 class="title">plus</h3>
+                                                    </div>
+                                                    <p>Best for professionals</p>
+                                                </div>
+                                                <div class="section-body">
+                                                    <div class="title">
+                                                        <span class="price">$39</span> <span>/month</span>
+                                                    </div>
+                                                    <ul class="pricing-feature">
+                                                        <li><i class="fa-regular fa-circle-check"></i>90+ copywriting
+                                                            tools</li>
+                                                        <li><i class="fa-regular fa-circle-check"></i>Unlimited projects
+                                                        </li>
+                                                        <li><i class="fa-regular fa-circle-check"></i>Priority email
+                                                            support</li>
+                                                        <li><i class="fa-regular fa-circle-check"></i>Priority email
+                                                            support</li>
+                                                        <li><i class="fa-regular fa-circle-check"></i>25+ languages
+                                                        </li>
+                                                        <li><i class="fa-regular fa-circle-check"></i>Blog Wizard tool
+                                                        </li>
+                                                        <li><i class="fa-regular fa-circle-check"></i>Blog Wizard tool
+                                                        </li>
+                                                        <li><i class="fa-regular fa-circle-xmark"></i>Access to newest
+                                                            features
+                                                        </li>
+                                                    </ul>
+                                                    <div class="btn-area">
+                                                        <button type="button" class="cmn-btn w-100">Start free
+                                                            trial</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6">
+                                            <div class="pricing-box">
+                                                <div class="section-header">
+                                                    <div class="title-area">
+                                                        <div class="icon-area">
+                                                            <i class="fa-regular fa-bolt"></i>
+                                                        </div>
+                                                        <h3 class="title">enterprise</h3>
+                                                    </div>
+                                                    <p>Toolset for hard players</p>
+                                                </div>
+                                                <div class="section-body">
+                                                    <div class="title">
+                                                        <span class="price">$129</span> <span>/month</span>
+                                                    </div>
+                                                    <ul class="pricing-feature">
+                                                        <li><i class="fa-regular fa-circle-check"></i>90+ copywriting
+                                                            tools</li>
+                                                        <li><i class="fa-regular fa-circle-check"></i>Unlimited projects
+                                                        </li>
+                                                        <li><i class="fa-regular fa-circle-check"></i>25+ languages
+                                                        </li>
+                                                        <li><i class="fa-regular fa-circle-check"></i>25+ languages
+                                                        </li>
+                                                        <li><i class="fa-regular fa-circle-check"></i>Blog Wizard tool
+                                                        </li>
+                                                        <li><i class="fa-regular fa-circle-check"></i>Access to newest
+                                                            features
+                                                        </li>
+                                                        <li><i class="fa-regular fa-circle-check"></i>API access</li>
+                                                        <li><i class="fa-regular fa-circle-check"></i>API access</li>
+                                                    </ul>
+                                                    <div class="btn-area">
+                                                        <button type="button" class="cmn-btn w-100">Start free
+                                                            trial</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Yearly plan tab content end -->
+                        </div>
+                    </div>
+                    <!-- Cmn tab content end -->
+                </div>
+            </div>
+        </div>
+        <div class="shape3">
+        </div>
+    </section>
+    <!-- Pricing section end -->
+
+
+    <!-- Faq section start -->
+    <section class="faq-area">
+        <div class="container">
+            <div class="row">
+                <div class="section-header text-center mb-50">
+                    <div class="section-subtitle">Frequently Asked Questions</div>
+                    <h2>Have Any Questions!</span> </h2>
+                    <p class="cmn-para-text mx-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+                        possimus itaque earum dolor sit repudiandae impedit tempore accusantium quos in.</p>
+                </div>
+            </div>
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 order-2 order-lg-1">
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    1. What is an AI Content Writer?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="table-responsive">
+                                        <p>An AI content writer is a computer program or software that uses artificial
+                                            intelligence and natural language processing to generate written content. It
+                                            can create articles, blog posts, product descriptions, and more, without
+                                            human intervention.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    2. How Does Your AI Content Writer Work?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>Our AI content writer uses advanced algorithms to analyze input data and generate
+                                        human-like text based on the provided instructions. It can understand context,
+                                        tone, and style to create high-quality content.</p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, labore
+                                        repudiandae. Quis ipsam distinctio necessitatibus, similique sit suscipit magni
+                                        nobis.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    3. Is the Content Generated by Your AI Original?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>Yes, the content generated by our AI is original. It is not copied or plagiarized
+                                        from existing sources. However, it's important to review and edit the content to
+                                        ensure it meets your specific needs.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+                                    4. Can I Customize the Content Generated by the AI?
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>Absolutely! You can customize the content generated by our AI to match your
+                                        unique requirements. You can edit, add, or remove content as needed to make it
+                                        perfect for your website.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
+                                    5. What Types of Content Can Your AI Generate?
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>Our AI content writer can generate a wide range of content, including blog posts,
+                                        articles, product descriptions, social media posts, email newsletters, and more.
+                                        Just let us know what you need, and it can create it for you.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseThree">
+                                    6. How Fast Can I Get Content from Your AI?
+                                </button>
+                            </h2>
+                            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>The speed of content generation depends on the length and complexity of the
+                                        content you need. Short articles or social media posts can be generated almost
+                                        instantly, while longer, more complex content may take a bit more time.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6  order-1 order-lg-2">
+                    <div class="faq-thumbs">
+                        <img src="assets/img/faq/Questions-pana.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="shape3">
+        </div>
+    </section>
+    <!-- Faq section end -->
+
+
+    <!-- footer section start -->
+    <section class="footer-area pb-50">
+        <div class="container">
+            <div class="row gy-4 gy-sm-5">
+                <div class="col-lg-6 col-sm-6">
+                    <div class="footer-widget">
+                        <div class="widget_logo mb-30">
+                            <a href="#nav_area"><img class="footer-logo" src="assets/img/logo/logo.png" alt=""></a>
+                        </div>
+                        <p class="cmn-para-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur
+                            fuga odit excepturi,
+                            natus voluptate commodi qui sunt quisquam cupiditate molestiae?</p>
+
+                    </div>
+                </div>
+                <div class="col-lg-2 col-sm-6">
+                    <div class="footer-widget">
+                        <h5>Quick Links</h5>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- <div class="col-lg-3 col-sm-6 pt-sm-0 pt-3 ps-lg-5">
+                    <div class="footer-widget">
+                        <h5>Support</h5>
+                        <ul>
+                            <li><a href="">Help Center</a></li>
+                            <li><a href="">Blog & Tutorial</a></li>
+                            <li><a href="">Pricing</a></li>
+                            <li><a href="">Student Discount</a></li>
+                        </ul>
+                    </div>
+                </div> -->
+                <div class="col-lg-4 col-sm-6 pt-sm-0 pt-3">
+                    <div class="footer-widget">
+                        <h5>Contact Us</h5>
+                        <p>10714 163rd Pl, Orland Park, IL 60467, United States</p>
+                        <p>email@website.com</p>
+                        <p>354-4156745674</p>
+                    </div>
+                </div>
+            </div>
+            <div class="newsletter-area">
+                <div class="row g-5 align-items-end">
+                    <div class="col-md-6">
+                        <div class="newsletter-inner">
+                            <h3 class="newslatter-title">Get the latest news and updates,
+                                <br>
+                                Subscribe now!
+                            </h3>
+                            <form class="subscribe-form">
+                                <input class="form-control" type="text" placeholder="Enter your email address">
+                                <button class="subscribe-btn"><i class="fa-regular fa-arrow-right fa-beat"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="social-area">
+                            <ul class="d-flex justify-content-md-end">
+                                <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                                <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+                                <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="cmn-hr">
+            <div class="copy-right-area">
+                <div class="row gy-4 ">
+                    <div class="col-sm-6 text-sm-start text-center">
+                        <p>Copyright © 2023 <a href="" class="highlight">CreativeGenius AI</a> All Rights Reserved</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="language text-sm-end text-center">
+                            <a href="" class="language">English</a>
+                            <a href="" class="language">Spanish</a>
+                            <a href="" class="language">Germany</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- footer section start -->
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Jquery_Js_link -->
+    <script src="assets/js/jquery-3.6.1.min.js"></script>
+
+    <!-- Bootstrap_Js_link -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Owl_carausel_Js_link -->
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <!-- Swiper_Js_link -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <!-- select2_Js_link -->
+    <script src="assets/js/select2.min.js"></script>
+
+
+    <!-- Main_Js_link -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
