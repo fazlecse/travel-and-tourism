@@ -24,9 +24,9 @@ $(document).ready(function () {
     $('.carousel-area1').owlCarousel({
         loop: true,
         autoplay: false,
-        margin: 10,
-        nav: true,
-        dots: false,
+        margin: 20,
+        nav: false,
+        dots: true,
         // rtl:true,
         responsive: {
             0: {
@@ -36,7 +36,7 @@ $(document).ready(function () {
                 items: 2
             },
             991: {
-                items: 2
+                items: 5
             }
         }
     });
@@ -49,7 +49,6 @@ $(document).ready(function () {
         $('.testimonial-carousel').owlCarousel({
             loop: true,
             autoplay: true,
-            center: true,
             margin: 10,
             nav: false,
             dots: true,
@@ -60,10 +59,10 @@ $(document).ready(function () {
                     items: 1
                 },
                 600: {
-                    items: 2
+                    items: 1
                 },
                 1000: {
-                    items: 3
+                    items: 1
                 }
             }
         });
