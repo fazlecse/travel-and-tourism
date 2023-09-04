@@ -69,6 +69,15 @@ $(document).ready(function () {
     });
     // Testimonial section end
 
+    // product_area_start range_area
+    $(".js-range-slider").ionRangeSlider({
+        type: "double",
+        min: 0,
+        max: 100,
+        from: 800,
+        to: 500,
+        grid: true
+    });
 
 
 
