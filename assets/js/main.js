@@ -19,6 +19,7 @@ window.addEventListener("scroll", function () {
 });
 
 
+
 $(document).ready(function () {
     // owl carousel dashboard card
     $('.carousel-area1').owlCarousel({
@@ -69,7 +70,47 @@ $(document).ready(function () {
     });
     // Testimonial section end
 
-    // product_area_start range_area
+
+
+
+
+
+    // Fancybox carousel section start
+    // Initialise Carousel
+    const mainCarousel = new Carousel(document.querySelector("#mainCarousel"), {
+        Dots: false,
+    });
+
+    // Thumbnails
+    const thumbCarousel = new Carousel(document.querySelector("#thumbCarousel"), {
+        Sync: {
+            target: mainCarousel,
+            friction: 0,
+        },
+        Dots: false,
+        Navigation: false,
+        center: true,
+        slidesPerPage: 1,
+        infinite: true,
+    });
+
+    // Customize Fancybox
+    Fancybox.bind('[data-fancybox="gallery"]', {
+        Carousel: {
+            on: {
+                change: (that) => {
+                    mainCarousel.slideTo(mainCarousel.findPageForSlide(that.page), {
+                        friction: 0,
+                    });
+                },
+            },
+        },
+    });
+
+
+    // Fancybox carousel section end
+
+    // range-area
     $(".js-range-slider").ionRangeSlider({
         type: "double",
         min: 0,
@@ -140,8 +181,6 @@ $('.date-picker').datepicker({
     // options here
     format: 'dd/mm/yyyy',
 
-
-
 });
 // Bootstrap datepicker end
 
@@ -191,4 +230,6 @@ var img = document.createElement("img");
 img.src = qr;
 document.getElementById("qrcode").appendChild(img);
 var download = (document.getElementById("download-qr").href = qr);
-    // Qr section end
+// Qr section end
+
+

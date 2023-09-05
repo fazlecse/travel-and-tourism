@@ -1467,6 +1467,68 @@ hr.divider:after {
   cursor: pointer;
 }
 
+.fancybox-carousel {
+  width: 100%;
+  margin: 0 auto 1rem auto;
+  --carousel-button-color: var(--primary-color);
+  --carousel-button-bg: #fff;
+  --carousel-button-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%);
+  --carousel-button-svg-width: 20px;
+  --carousel-button-svg-height: 20px;
+  --carousel-button-svg-stroke-width: 2.5;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.fancybox-carousel .carousel__slide {
+  width: 100%;
+  padding: 0;
+}
+.fancybox-carousel .carousel__slide img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 5/3;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0px !important;
+}
+.fancybox-carousel .carousel__button.is-prev {
+  left: 1rem;
+}
+.fancybox-carousel .carousel__button.is-next {
+  right: 1rem;
+}
+.fancybox-carousel .carousel__button:focus {
+  outline: none;
+  box-shadow: 0 0 0 0px var(--primary);
+}
+.fancybox-carousel .carousel__button svg {
+  color: var(--primary);
+}
+
+.thumb_carousel .carousel__slide {
+  opacity: 0.5;
+  padding: 0;
+  margin: 5px;
+  width: 100px;
+  height: 60px;
+  cursor: pointer;
+}
+.thumb_carousel .carousel__slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 2px;
+}
+.thumb_carousel .carousel__slide.is-nav-selected {
+  opacity: 1;
+}
+
+.rtl .thumb_carousel,
+.rtl .main_carousel {
+  direction: ltr;
+}
+
 .mt-10 {
   margin-top: 10px;
 }
@@ -2211,65 +2273,6 @@ Destination details section start
 Destination details section end
 ----------------------------------------------*/
 /*----------------------------------------------
-04. Feature section start
-----------------------------------------------*/
-.feature-section {
-  position: relative;
-  z-index: 0;
-  background-color: var(--bg-color1);
-}
-
-.feature-box {
-  display: flex;
-  flex-direction: column;
-  box-shadow: var(--shadow3);
-  padding: 40px 25px;
-  border-radius: 5px;
-  gap: 15px;
-  text-align: center;
-  background-color: var(--bg-color2);
-  margin-top: 50px;
-}
-.feature-box .icon-box {
-  margin-top: -95px;
-}
-.feature-box .text-box .highlight {
-  text-transform: capitalize;
-  font-size: 16px;
-  font-weight: 500;
-}
-
-.icon-box {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 22px;
-  color: var(--primary-color);
-  min-width: 50px;
-  height: 50px;
-  border-radius: 5px;
-  background-color: var(--white);
-  box-shadow: var(--shadow4);
-}
-
-@media (max-width: 991px) {
-  h2 {
-    font-size: 28px;
-  }
-}
-.rtl .feature-box .icon-box {
-  margin-right: 0;
-  margin-left: 15px;
-}
-
-.dark-theme .icon-box .svg-icon {
-  fill: var(--bg-color3);
-}
-
-/*----------------------------------------------
-Feature section end
-----------------------------------------------*/
-/*----------------------------------------------
 05. About section start
 ----------------------------------------------*/
 .about-section {
@@ -2321,33 +2324,33 @@ Feature section end
 About section end
 ----------------------------------------------*/
 /*----------------------------------------------
-07. Popular tour section start
+07. Package section start
 ----------------------------------------------*/
-.trip-card {
+.package-card {
   border-radius: 15px;
   border: 1px solid var(--border-color1);
   background-color: var(--white);
   overflow: hidden;
 }
-.trip-card .thumbs-area {
+.package-card .thumbs-area {
   overflow: hidden;
 }
-.trip-card .thumbs-area img {
+.package-card .thumbs-area img {
   transition: var(--transition);
 }
-.trip-card:hover .thumbs-area img {
+.package-card:hover .thumbs-area img {
   transform: scale(1.1);
 }
-.trip-card .content-area {
+.package-card .content-area {
   position: relative;
   padding: 15px;
 }
-.trip-card .content-area .rate-area {
+.package-card .content-area .rate-area {
   position: absolute;
   top: -17px;
   right: 20px;
 }
-.trip-card .content-area .rate-area .item {
+.package-card .content-area .rate-area .item {
   background-color: var(--white);
   width: 35px;
   height: 35px;
@@ -2357,15 +2360,15 @@ About section end
   align-items: center;
   justify-content: center;
 }
-.trip-card .content-area .rate-area.active {
+.package-card .content-area .rate-area.active {
   color: var(--primary-color);
 }
-.trip-card .content-area .location {
+.package-card .content-area .location {
   text-transform: capitalize;
   display: flex;
   gap: 5px;
 }
-.trip-card .content-area .title {
+.package-card .content-area .title {
   margin: 10px 0 15px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -2373,17 +2376,7 @@ About section end
   display: -webkit-box;
   -webkit-line-clamp: 2;
 }
-.trip-card .content-area .review-area {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  text-transform: capitalize;
-}
-.trip-card .content-area .review-area p {
-  color: var(--heading-color);
-  font-weight: 500;
-}
-.trip-card .content-area .content-bottom {
+.package-card .content-area .content-bottom {
   margin-top: 20px;
   text-transform: capitalize;
   color: var(--heading-color);
@@ -2394,17 +2387,88 @@ About section end
   border-top: 1px solid var(--border-color1);
   padding-top: 15px;
 }
-.trip-card .content-area .content-bottom .duration {
+.package-card .content-area .content-bottom .duration {
   display: flex;
   gap: 5px;
 }
-.trip-card .content-area .content-bottom .price span {
+.package-card .content-area .content-bottom .price span {
   font-weight: 600;
   font-size: 18px;
 }
 
+.review-area {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  text-transform: capitalize;
+}
+.review-area p {
+  color: var(--heading-color);
+  font-weight: 500;
+}
+
 /*----------------------------------------------
-Popular tour section end
+Package section end
+----------------------------------------------*/
+/*----------------------------------------------
+00. Package details section end
+----------------------------------------------*/
+.package-details-section .title {
+  margin-bottom: 10px;
+}
+.package-details-section .section-header {
+  margin-top: 20px;
+}
+.package-details-section .location-review {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.package-details-section .location-review .location {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.package-details-section .feature-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.package-details-section .feature-box .icon-area {
+  font-size: 40px;
+  color: var(--primary-color);
+}
+.package-details-section .overview-area {
+  margin-top: 30px;
+}
+.package-details-section .overview-area .over-view-list {
+  color: var(--heading-color);
+  margin-top: 15px;
+}
+.package-details-section .overview-area .over-view-list .item {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  position: relative;
+}
+.package-details-section .overview-area .over-view-list .item::after {
+  position: absolute;
+  content: "";
+  background-color: var(--primary-color);
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  left: 0;
+}
+.package-details-section .overview-area .over-view-list .item:not(:last-child) {
+  margin-bottom: 10px;
+}
+.package-details-section .included-area {
+  margin-top: 30px;
+}
+
+/*----------------------------------------------
+Package details section end
 ----------------------------------------------*/
 /*----------------------------------------------
 12. Newsletter section start
@@ -3144,6 +3208,9 @@ Login Signup end
 .map-section iframe {
   width: 100%;
   height: 450px;
+  padding: 5px;
+  background-color: var(--white);
+  box-shadow: var(--shadow4);
 }
 
 /*----------------------------------------------

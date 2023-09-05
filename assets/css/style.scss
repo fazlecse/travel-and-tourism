@@ -1719,6 +1719,79 @@ hr.divider:after {
 
 // checkbox categories area end
 
+// Fancybox carousel section start
+.fancybox-carousel {
+    width: 100%;
+    margin: 0 auto 1rem auto;
+    --carousel-button-color: var(--primary-color);
+    --carousel-button-bg: #fff;
+    --carousel-button-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%);
+    --carousel-button-svg-width: 20px;
+    --carousel-button-svg-height: 20px;
+    --carousel-button-svg-stroke-width: 2.5;
+    border-radius: 5px;
+    overflow: hidden;
+
+    .carousel__slide {
+        width: 100%;
+        padding: 0;
+    }
+
+    .carousel__slide img {
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 5/3;
+        object-fit: cover;
+        border-radius: 0px !important;
+    }
+
+    .carousel__button.is-prev {
+        left: 1rem;
+    }
+
+    .carousel__button.is-next {
+        right: 1rem;
+    }
+
+    .carousel__button:focus {
+        outline: none;
+        box-shadow: 0 0 0 0px var(--primary);
+    }
+
+    .carousel__button svg {
+        color: var(--primary);
+    }
+}
+
+.thumb_carousel {
+    .carousel__slide {
+        opacity: 0.5;
+        padding: 0;
+        margin: 5px;
+        width: 100px;
+        height: 60px;
+        cursor: pointer;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 2px;
+        }
+
+        &.is-nav-selected {
+            opacity: 1;
+        }
+    }
+}
+
+.rtl .thumb_carousel,
+.rtl .main_carousel {
+    direction: ltr;
+}
+
+// Fancybox carousel section end
+
 
 //  Margin top 
 .mt-10 {
@@ -2624,84 +2697,6 @@ Destination details section start
 Destination details section end
 ----------------------------------------------*/
 
-
-/*----------------------------------------------
-04. Feature section start
-----------------------------------------------*/
-.feature-section {
-    position: relative;
-    z-index: 0;
-    background-color: var(--bg-color1);
-}
-
-.feature-box {
-    display: flex;
-    flex-direction: column;
-    box-shadow: var(--shadow3);
-    padding: 40px 25px;
-    border-radius: 5px;
-    gap: 15px;
-    text-align: center;
-    background-color: var(--bg-color2);
-    margin-top: 50px;
-
-    .icon-box {
-        margin-top: -95px;
-    }
-
-    .text-box {
-        .highlight {
-            text-transform: capitalize;
-            font-size: 16px;
-            font-weight: 500;
-        }
-    }
-}
-
-.icon-box {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 22px;
-    color: var(--primary-color);
-    min-width: 50px;
-    height: 50px;
-    border-radius: 5px;
-    background-color: var(--white);
-    box-shadow: var(--shadow4);
-}
-
-// Feature responsive start
-
-@media (max-width: 991px) {
-    h2 {
-        font-size: 28px;
-    }
-}
-
-// Feature responsive end
-// Feature rtl start
-
-.rtl .feature-box .icon-box {
-    margin-right: 0;
-    margin-left: 15px;
-}
-
-// Feature rtl end
-
-// Dark theme feature section start
-.dark-theme {
-    .icon-box .svg-icon {
-        fill: var(--bg-color3);
-    }
-}
-
-// Dark theme feature section end
-
-/*----------------------------------------------
-Feature section end
-----------------------------------------------*/
-
 /*----------------------------------------------
 05. About section start
 ----------------------------------------------*/
@@ -2774,9 +2769,9 @@ About section end
 ----------------------------------------------*/
 
 /*----------------------------------------------
-07. Popular tour section start
+07. Package section start
 ----------------------------------------------*/
-.trip-card {
+.package-card {
     border-radius: 15px;
     border: 1px solid var(--border-color1);
     background-color: var(--white);
@@ -2834,18 +2829,6 @@ About section end
             -webkit-line-clamp: 2;
         }
 
-        .review-area {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            text-transform: capitalize;
-
-            p {
-                color: var(--heading-color);
-                font-weight: 500;
-            }
-        }
-
         .content-bottom {
             margin-top: 20px;
             text-transform: capitalize;
@@ -2872,9 +2855,93 @@ About section end
     }
 }
 
+.review-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-transform: capitalize;
+
+    p {
+        color: var(--heading-color);
+        font-weight: 500;
+    }
+}
+
+
 /*----------------------------------------------
-Popular tour section end
+Package section end
 ----------------------------------------------*/
+
+/*----------------------------------------------
+00. Package details section end
+----------------------------------------------*/
+.package-details-section {
+    .title{
+        margin-bottom: 10px;
+    }
+    .section-header {
+        margin-top: 20px;
+
+    }
+
+    .location-review {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        .location {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+    }
+
+    .feature-box {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .icon-area {
+            font-size: 40px;
+            color: var(--primary-color);
+        }
+    }
+    .overview-area{
+        margin-top: 30px;
+        .over-view-list{
+            color: var(--heading-color);
+            margin-top: 15px;
+            .item{
+                display: flex;
+                align-items: center;
+                padding-left: 20px;
+                position: relative;
+                &::after{
+                    position: absolute;
+                    content: "";
+                    background-color: var(--primary-color);
+                    width: 7px;
+                    height: 7px;
+                    border-radius: 50%;
+                    left: 0;
+
+                }
+            }
+            .item:not(:last-child){
+                margin-bottom: 10px;
+            }
+        }
+    }
+    .included-area{
+        margin-top: 30px;
+    }
+
+}
+
+/*----------------------------------------------
+Package details section end
+----------------------------------------------*/
+
 /*----------------------------------------------
 12. Newsletter section start
 ----------------------------------------------*/
@@ -3834,6 +3901,9 @@ Login Signup end
     iframe {
         width: 100%;
         height: 450px;
+        padding: 5px;
+        background-color: var(--white);
+        box-shadow: var(--shadow4);
     }
 }
 

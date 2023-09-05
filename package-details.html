@@ -22,6 +22,12 @@
     <link rel="stylesheet" href="assets/css/select2.min.css">
     <!-- rangeSlider Css link -->
     <link rel="stylesheet" href="assets/css/ion.rangeSlider.min.css">
+    <!-- fancybox Css link -->
+    <link rel="stylesheet" href="assets/css/fancybox.css">
+    <!-- fancybox carousel Css link -->
+    <!-- <link rel="stylesheet" href="assets/css/carousel.css"> -->
+    <!-- Bootstrap Datepicker Css_link -->
+    <link rel="stylesheet" href="assets/css/bootstrap-datepicker.min.css">
 
 
 
@@ -169,17 +175,16 @@
     </ul>
     <!-- Bottom Mobile Tab nav section end -->
 
-
     <!-- Banner section start -->
     <div class="banner-area">
         <div class="container">
             <div class="row ">
                 <div class="col">
                     <div class="breadcrumb-area">
-                        <h3>package</h3>
+                        <h3>package details</h3>
                         <ul class="breadcrumb">
                             <li class="breadcrumb-item"><a href="home-1.html">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">package</li>
+                            <li class="breadcrumb-item active" aria-current="page">package details</li>
                         </ul>
                     </div>
                 </div>
@@ -188,10 +193,181 @@
     </div>
     <!-- Banner section end -->
 
-    <!-- Destination section start -->
-    <section class="package-section">
+    <!-- Package details section start -->
+    <section class="package-details-section">
         <div class="container">
             <div class="row g-5">
+                <div class="col-lg-8">
+                    <div class="fancybox-carousel-section">
+                        <div id="mainCarousel" class="carousel mx-auto fancybox-carousel">
+                            <div class="carousel__slide" data-src="./assets/img/destinaiton/large1.jpg"
+                                data-fancybox="gallery" data-caption="">
+                                <img class="img-fluid" src="./assets/img/destinaiton/large1.jpg" />
+                            </div>
+                            <div class="carousel__slide" data-src="./assets/img/destinaiton/large2.jpg"
+                                data-fancybox="gallery" data-caption="">
+                                <img class="img-fluid" src="./assets/img/destinaiton/large2.jpg" />
+                            </div>
+                            <div class="carousel__slide" data-src="./assets/img/destinaiton/large3.jpg"
+                                data-fancybox="gallery" data-caption="">
+                                <img class="img-fluid" src="./assets/img/destinaiton/large3.jpg" />
+                            </div>
+                            <div class="carousel__slide" data-src="./assets/img/destinaiton/large4.jpg"
+                                data-fancybox="gallery" data-caption="">
+                                <img class="img-fluid" src="./assets/img/destinaiton/large4.jpg" />
+                            </div>
+                            <div class="carousel__slide" data-src="./assets/img/destinaiton/large5.jpg"
+                                data-fancybox="gallery" data-caption="">
+                                <img class="img-fluid" src="./assets/img/destinaiton/large5.jpg" />
+                            </div>
+                            <div class="carousel__slide" data-src="./assets/img/destinaiton/large6.jpg"
+                                data-fancybox="gallery" data-caption="">
+                                <img class="img-fluid" src="./assets/img/destinaiton/large6.jpg" />
+                            </div>
+                            <div class="carousel__slide" data-src="./assets/img/destinaiton/large7.jpg"
+                                data-fancybox="gallery" data-caption="">
+                                <img class="img-fluid" src="./assets/img/destinaiton/large7.jpg" />
+                            </div>
+                            <div class="carousel__slide" data-src="./assets/img/destinaiton/large8.jpg"
+                                data-fancybox="gallery" data-caption="">
+                                <img class="img-fluid" src="./assets/img/destinaiton/large8.jpg" />
+                            </div>
+                            <div class="carousel__slide" data-src="./assets/img/destinaiton/large9.jpg"
+                                data-fancybox="gallery" data-caption="">
+                                <img class="img-fluid" src="./assets/img/destinaiton/large9.jpg" />
+                            </div>
+                        </div>
+
+                        <div id="thumbCarousel" class="carousel max-w-xl mx-auto thumb_carousel">
+                            <div class="carousel__slide">
+                                <img class="panzoom__content img-fluid" src="./assets/img/destinaiton/large1.jpg" />
+                            </div>
+                            <div class="carousel__slide">
+                                <img class="panzoom__content img-fluid" src="./assets/img/destinaiton/large2.jpg" />
+                            </div>
+                            <div class="carousel__slide">
+                                <img class="panzoom__content img-fluid" src="./assets/img/destinaiton/large3.jpg" />
+                            </div>
+                            <div class="carousel__slide">
+                                <img class="panzoom__content img-fluid" src="./assets/img/destinaiton/large4.jpg" />
+                            </div>
+                            <div class="carousel__slide">
+                                <img class="panzoom__content img-fluid" src="./assets/img/destinaiton/large5.jpg" />
+                            </div>
+                            <div class="carousel__slide">
+                                <img class="panzoom__content img-fluid" src="./assets/img/destinaiton/large6.jpg" />
+                            </div>
+                            <div class="carousel__slide">
+                                <img class="panzoom__content img-fluid" src="./assets/img/destinaiton/large7.jpg" />
+                            </div>
+                            <div class="carousel__slide">
+                                <img class="panzoom__content img-fluid" src="./assets/img/destinaiton/large8.jpg" />
+                            </div>
+                            <div class="carousel__slide">
+                                <img class="panzoom__content img-fluid" src="./assets/img/destinaiton/large9.jpg" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section-header">
+                        <h3 class="title">Luxury Celebrity Homes Cruise Experience</h3>
+                        <div class="location-review">
+                            <span class="location"><i class="fa-regular fa-location-dot"></i>Miami, USA</span>
+                            <div class="review-area">
+                                <ul class="star-list">
+                                    <li>
+                                        <a href="" class="active"><i class="fa-solid fa-star"></i></a>
+                                        <a href="" class="active"><i class="fa-solid fa-star"></i></a>
+                                        <a href="" class="active"><i class="fa-solid fa-star"></i></a>
+                                        <a href=""><i class="fa-solid fa-star"></i></a>
+                                        <a href=""><i class="fa-solid fa-star"></i></a>
+                                    </li>
+                                </ul>
+                                <p class="mb-0"><span>4.8 </span> <span>(167 reviews)</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Feature area start  -->
+                    <div class="feature-area">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="feature-box">
+                                    <div class="icon-area">
+                                        <i class="fa-light fa-clock"></i>
+                                    </div>
+                                    <div class="content-area">
+                                        <h5 class="mb-0">Duration</h5>
+                                        <span>4 Days</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="feature-box">
+                                    <div class="icon-area">
+                                        <i class="fa-light fa-rocket-launch"></i>
+                                    </div>
+                                    <div class="content-area">
+                                        <h5 class="mb-0">Tour Type</h5>
+                                        <span>Advanture, Fun</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="feature-box">
+                                    <div class="icon-area">
+                                        <i class="fa-light fa-user"></i>
+                                    </div>
+                                    <div class="content-area">
+                                        <h5 class="mb-0">Min Age</h5>
+                                        <span>9+</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="feature-box">
+                                    <div class="icon-area">
+                                        <i class="fa-light fa-user-cowboy"></i>
+                                    </div>
+                                    <div class="content-area">
+                                        <h5 class="mb-0">Tour Guide</h5>
+                                        <span>04 People</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Feature area end -->
+                    <!-- Overview area start -->
+                    <div class="overview-area">
+                        <h4 class="title">Overview</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, illum necessitatibus? Nihil libero, exercitationem nemo accusamus qui facere animi, assumenda porro inventore saepe pariatur cupiditate aperiam quasi possimus minus veritatis suscipit culpa. Voluptatum debitis velit ad nemo esse impedit itaque, atque sed illo. Vel consequuntur id molestias commodi sunt nostrum?</p>
+                        <ul class="over-view-list">
+                            <li class="item">
+                                Private tour for your party only
+                            </li>
+                            <li class="item">
+                                Traditional rickshaw and wooden rowboat rides
+                            </li>
+                            <li class="item">
+                                Lunch of traditional local cuisine 
+                            </li>
+                            <li class="item">
+                                Flexible itinerary and personalized attention
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Overview area  end-->
+                    <!-- Included area start -->
+                    <div class="included-area">
+                        <h4 class="title">Included</h4>
+                        <ul class="cmn-list">
+                            <li class="item"></li>
+                        </ul>
+                    </div>
+                    <!-- Included area end -->
+
+
+                </div>
                 <div class="col-lg-4">
                     <div class="package-sidebar">
                         <div class="sidebar-widget-area">
@@ -447,307 +623,12 @@
 
                     </div>
                 </div>
-                <div class="col-lg-8">
-                    <div class="row g-4">
-                        <div class="col-md-6">
-                            <div class="package-card">
-                                <a href="package-details.html">
-                                    <div class="thumbs-area">
-                                        <img src="assets/img/destinaiton/1.jpg" alt="img">
-                                    </div>
-                                </a>
-                                <div class="content-area">
-                                    <div class="rate-area active">
-                                        <a href="javascript:void(0)" class="item"><i
-                                                class="fa-regular fa-heart"></i></a>
-                                    </div>
-                                    <span class="location"><i class="fa-regular fa-location-dot"></i> paris,
-                                        france</span>
-                                    <h4 class="title"><a href="">centipade tour - guiided arizona desert tour by ATV</a>
-                                    </h4>
-                                    <div class="review-area">
-                                        <ul class="star-list">
-                                            <li>
-                                                <a href="javascript:void(0)" class="active"><i
-                                                        class="fa-solid fa-star"></i></a>
-                                                <a href="javascript:void(0)" class="active"><i
-                                                        class="fa-solid fa-star"></i></a>
-                                                <a href="javascript:void(0)" class="active"><i
-                                                        class="fa-solid fa-star"></i></a>
-                                                <a href="javascript:void(0)"><i class="fa-solid fa-star"></i></a>
-                                                <a href="javascript:void(0)"><i class="fa-solid fa-star"></i></a>
-                                            </li>
-                                        </ul>
-                                        <p class="mb-0"><span>4.8 </span> <span>(167 reviews)</span></p>
-                                    </div>
-                                    <div class="content-bottom">
-                                        <div class="duration">
-                                            <i class="fa-regular fa-clock"></i>
-                                            4 days
-                                        </div>
-                                        <div class="price">
-                                            from :
-                                            <span>$145,12</span>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="package-card">
-                                <a href="package-details.html">
-                                    <div class="thumbs-area">
-                                        <img src="assets/img/destinaiton/2.jpg" alt="img">
-                                    </div>
-                                </a>
-                                <div class="content-area">
-                                    <div class="rate-area">
-                                        <a href="javascript:void(0)" class="item"><i
-                                                class="fa-regular fa-heart"></i></a>
-                                    </div>
-                                    <span class="location"><i class="fa-regular fa-location-dot"></i> paris,
-                                        france</span>
-                                    <h4 class="title"><a href="">centipade tour - guiided arizona desert tour by ATV</a>
-                                    </h4>
-                                    <div class="review-area">
-                                        <ul class="star-list">
-                                            <li>
-                                                <a href="javascript:void(0)" class="active"><i
-                                                        class="fa-solid fa-star"></i></a>
-                                                <a href="javascript:void(0)" class="active"><i
-                                                        class="fa-solid fa-star"></i></a>
-                                                <a href="javascript:void(0)" class="active"><i
-                                                        class="fa-solid fa-star"></i></a>
-                                                <a href="javascript:void(0)"><i class="fa-solid fa-star"></i></a>
-                                                <a href="javascript:void(0)"><i class="fa-solid fa-star"></i></a>
-                                            </li>
-                                        </ul>
-                                        <p class="mb-0"><span>4.8 </span> <span>(167 reviews)</span></p>
-                                    </div>
-                                    <div class="content-bottom">
-                                        <div class="duration">
-                                            <i class="fa-regular fa-clock"></i>
-                                            4 days
-                                        </div>
-                                        <div class="price">
-                                            from :
-                                            <span>$145,12</span>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="package-card">
-                                <a href="package-details.html">
-                                    <div class="thumbs-area">
-                                        <img src="assets/img/destinaiton/3.jpg" alt="img">
-                                    </div>
-                                </a>
-                                <div class="content-area">
-                                    <div class="rate-area active">
-                                        <a href="javascript:void(0)" class="item"><i
-                                                class="fa-regular fa-heart"></i></a>
-                                    </div>
-                                    <span class="location"><i class="fa-regular fa-location-dot"></i> paris,
-                                        france</span>
-                                    <h4 class="title"><a href="">centipade tour - guiided arizona desert tour by ATV</a>
-                                    </h4>
-                                    <div class="review-area">
-                                        <ul class="star-list">
-                                            <li>
-                                                <a href="javascript:void(0)" class="active"><i
-                                                        class="fa-solid fa-star"></i></a>
-                                                <a href="javascript:void(0)" class="active"><i
-                                                        class="fa-solid fa-star"></i></a>
-                                                <a href="javascript:void(0)" class="active"><i
-                                                        class="fa-solid fa-star"></i></a>
-                                                <a href="javascript:void(0)"><i class="fa-solid fa-star"></i></a>
-                                                <a href="javascript:void(0)"><i class="fa-solid fa-star"></i></a>
-                                            </li>
-                                        </ul>
-                                        <p class="mb-0"><span>4.8 </span> <span>(167 reviews)</span></p>
-                                    </div>
-                                    <div class="content-bottom">
-                                        <div class="duration">
-                                            <i class="fa-regular fa-clock"></i>
-                                            4 days
-                                        </div>
-                                        <div class="price">
-                                            from :
-                                            <span>$145,12</span>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="package-card">
-                                <a href="package-details.html">
-                                    <div class="thumbs-area">
-                                        <img src="assets/img/destinaiton/4.jpg" alt="img">
-                                    </div>
-                                </a>
-                                <div class="content-area">
-                                    <div class="rate-area active">
-                                        <a href="javascript:void(0)" class="item"><i
-                                                class="fa-regular fa-heart"></i></a>
-                                    </div>
-                                    <span class="location"><i class="fa-regular fa-location-dot"></i> paris,
-                                        france</span>
-                                    <h4 class="title"><a href="">centipade tour - guiided arizona desert tour by ATV</a>
-                                    </h4>
-                                    <div class="review-area">
-                                        <ul class="star-list">
-                                            <li>
-                                                <a href="javascript:void(0)" class="active"><i
-                                                        class="fa-solid fa-star"></i></a>
-                                                <a href="javascript:void(0)" class="active"><i
-                                                        class="fa-solid fa-star"></i></a>
-                                                <a href="javascript:void(0)" class="active"><i
-                                                        class="fa-solid fa-star"></i></a>
-                                                <a href="javascript:void(0)"><i class="fa-solid fa-star"></i></a>
-                                                <a href="javascript:void(0)"><i class="fa-solid fa-star"></i></a>
-                                            </li>
-                                        </ul>
-                                        <p class="mb-0"><span>4.8 </span> <span>(167 reviews)</span></p>
-                                    </div>
-                                    <div class="content-bottom">
-                                        <div class="duration">
-                                            <i class="fa-regular fa-clock"></i>
-                                            4 days
-                                        </div>
-                                        <div class="price">
-                                            from :
-                                            <span>$145,12</span>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="package-card">
-                                <a href="package-details.html">
-                                    <div class="thumbs-area">
-                                        <img src="assets/img/destinaiton/5.jpg" alt="img">
-                                    </div>
-                                </a>
-                                <div class="content-area">
-                                    <div class="rate-area">
-                                        <a href="javascript:void(0)" class="item"><i
-                                                class="fa-regular fa-heart"></i></a>
-                                    </div>
-                                    <span class="location"><i class="fa-regular fa-location-dot"></i> paris,
-                                        france</span>
-                                    <h4 class="title"><a href="">centipade tour - guiided arizona desert tour by ATV</a>
-                                    </h4>
-                                    <div class="review-area">
-                                        <ul class="star-list">
-                                            <li>
-                                                <a href="javascript:void(0)" class="active"><i
-                                                        class="fa-solid fa-star"></i></a>
-                                                <a href="javascript:void(0)" class="active"><i
-                                                        class="fa-solid fa-star"></i></a>
-                                                <a href="javascript:void(0)" class="active"><i
-                                                        class="fa-solid fa-star"></i></a>
-                                                <a href="javascript:void(0)"><i class="fa-solid fa-star"></i></a>
-                                                <a href="javascript:void(0)"><i class="fa-solid fa-star"></i></a>
-                                            </li>
-                                        </ul>
-                                        <p class="mb-0"><span>4.8 </span> <span>(167 reviews)</span></p>
-                                    </div>
-                                    <div class="content-bottom">
-                                        <div class="duration">
-                                            <i class="fa-regular fa-clock"></i>
-                                            4 days
-                                        </div>
-                                        <div class="price">
-                                            from :
-                                            <span>$145,12</span>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="package-card">
-                                <a href="package-details.html">
-                                    <div class="thumbs-area">
-                                        <img src="assets/img/destinaiton/6.jpg" alt="img">
-                                    </div>
-                                </a>
-                                <div class="content-area">
-                                    <div class="rate-area active">
-                                        <a href="javascript:void(0)" class="item"><i
-                                                class="fa-regular fa-heart"></i></a>
-                                    </div>
-                                    <span class="location"><i class="fa-regular fa-location-dot"></i> paris,
-                                        france</span>
-                                    <h4 class="title"><a href="">centipade tour - guiided arizona desert tour by ATV</a>
-                                    </h4>
-                                    <div class="review-area">
-                                        <ul class="star-list">
-                                            <li>
-                                                <a href="javascript:void(0)" class="active"><i
-                                                        class="fa-solid fa-star"></i></a>
-                                                <a href="javascript:void(0)" class="active"><i
-                                                        class="fa-solid fa-star"></i></a>
-                                                <a href="javascript:void(0)" class="active"><i
-                                                        class="fa-solid fa-star"></i></a>
-                                                <a href="javascript:void(0)"><i class="fa-solid fa-star"></i></a>
-                                                <a href="javascript:void(0)"><i class="fa-solid fa-star"></i></a>
-                                            </li>
-                                        </ul>
-                                        <p class="mb-0"><span>4.8 </span> <span>(167 reviews)</span></p>
-                                    </div>
-                                    <div class="content-bottom">
-                                        <div class="duration">
-                                            <i class="fa-regular fa-clock"></i>
-                                            4 days
-                                        </div>
-                                        <div class="price">
-                                            from :
-                                            <span>$145,12</span>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <!-- pagination section start -->
-                        <div class="pagination-section">
-                            <nav aria-label="...">
-                                <ul class="pagination">
-                                    <li class="page-item">
-                                        <a class="page-link" href="#"><i class="fal fa-long-arrow-left"></i></a>
-                                    </li>
-                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                    <li class="page-item active" aria-current="page">
-                                        <a class="page-link" href="#">2</a>
-                                    </li>
-                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                    <li class="page-item">
-                                        <a class="page-link" href="#"><i class="fal fa-long-arrow-right"></i></a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
-                        <!-- pagination section end -->
-                    </div>
-                </div>
             </div>
 
         </div>
 
     </section>
-    <!-- Destination section end -->
+    <!-- Package details section end -->
 
 
     <!-- Footer Section start -->
@@ -856,6 +737,12 @@
     <script src="assets/js/select2.min.js"></script>
     <!-- select2 Js link -->
     <script src="assets/js/ion.rangeSlider.min.js"></script>
+    <!-- fancybox Js link -->
+    <script src="assets/js/fancybox.umd.js"></script>
+    <!-- fancybox carousel Js link -->
+    <!-- <script src="assets/js/carousel.esm.js"></script> -->
+    <!-- Bootstrap Datepicker Js_link -->
+    <script src="assets/js/bootstrap-datepicker.min.js"></script>
 
 
     <!-- Main_Js_link -->
