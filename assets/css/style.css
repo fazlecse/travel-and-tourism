@@ -367,7 +367,7 @@ body {
   font-size: 16px;
   overflow-x: hidden;
   background-color: var(--bg-color1);
-  font-weight: 500;
+  font-weight: 400;
 }
 
 body.dark-theme {
@@ -387,6 +387,11 @@ html {
 
 textarea.form-control {
   height: initial;
+}
+
+.form-label {
+  margin-bottom: 5px;
+  font-weight: 500;
 }
 
 .form-control {
@@ -1018,7 +1023,7 @@ Reuseble style section start
   transition: all 0.3s ease-in-out;
   font-size: 18px;
   color: var(--white);
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   font-weight: 500;
@@ -1527,6 +1532,30 @@ hr.divider:after {
 .rtl .thumb_carousel,
 .rtl .main_carousel {
   direction: ltr;
+}
+
+.schedule-form {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.schedule-form .date-icon {
+  position: absolute;
+  left: 15px;
+  color: var(--primary-color);
+}
+.schedule-form .date-picker {
+  padding-left: 40px;
+}
+
+.increment-decrement-area {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.increment-decrement-area .quantity {
+  font-size: 20px;
+  color: var(--heading-color);
 }
 
 .mt-10 {
@@ -2414,7 +2443,7 @@ Package section end
 00. Package details section end
 ----------------------------------------------*/
 .package-details-section .title {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 .package-details-section .section-header {
   margin-top: 20px;
@@ -2429,17 +2458,27 @@ Package section end
   align-items: center;
   gap: 5px;
 }
+.package-details-section .feature-area {
+  margin-bottom: 50px;
+}
 .package-details-section .feature-box {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 .package-details-section .feature-box .icon-area {
-  font-size: 40px;
+  background-color: var(--primary-color-opacity-low);
+  font-size: 20px;
   color: var(--primary-color);
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
 }
-.package-details-section .overview-area {
-  margin-top: 30px;
+.package-details-section .content-product {
+  margin-bottom: 30px;
 }
 .package-details-section .overview-area .over-view-list {
   color: var(--heading-color);
@@ -2463,8 +2502,38 @@ Package section end
 .package-details-section .overview-area .over-view-list .item:not(:last-child) {
   margin-bottom: 10px;
 }
-.package-details-section .included-area {
-  margin-top: 30px;
+.package-details-section .cmn-list .item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--heading-color);
+}
+.package-details-section .cmn-list .item i {
+  color: var(--primary-color);
+  font-size: 18px;
+}
+.package-details-section .cmn-list .item:not(:last-child) {
+  margin-bottom: 10px;
+}
+.package-details-section .tour-plan .accordion-button .accordion-title {
+  text-transform: capitalize;
+  background-color: var(--primary-color-opacity-low);
+  padding: 3px 15px;
+  border-radius: 5px;
+  transition: var(--transition);
+}
+.package-details-section .tour-plan .accordion-button:not(.collapsed) .accordion-title {
+  background-color: var(--white);
+}
+.package-details-section .cmn-list .cmn-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.package-details-section .cmn-list .cmn-item:not(:last-child) {
+  margin-bottom: 15px;
+  border-bottom: 1px solid var(--border-color1);
+  padding-bottom: 10px;
 }
 
 /*----------------------------------------------
@@ -2712,7 +2781,7 @@ Testimonial section end
 }
 .faq-area .accordion-button {
   color: var(--heading-color);
-  font-weight: 600;
+  font-weight: 400;
   font-size: 18px;
   gap: 10px;
 }
@@ -3300,6 +3369,9 @@ Map section end
   margin-bottom: 30px;
   box-shadow: var(--shadow1);
 }
+.sidebar-widget-area .title {
+  margin-bottom: 5px;
+}
 .sidebar-widget-area .widget-title {
   margin-bottom: 20px;
   position: relative;
@@ -3381,6 +3453,16 @@ Map section end
 /*----------------------------------------------
 Blog details end
 ----------------------------------------------*/
+/*----------------------------------------------
+00. Checkout page start
+----------------------------------------------*/
+/*----------------------------------------------
+Checkout page end
+----------------------------------------------*/
+.checkout-form .title {
+  margin-bottom: 20px;
+}
+
 /*----------------------------------------------
 19. Pagination section start
 ----------------------------------------------*/

@@ -405,7 +405,7 @@ body {
     font-size: 16px;
     overflow-x: hidden;
     background-color: var(--bg-color1);
-    font-weight: 500;
+    font-weight: 400;
 }
 
 body.dark-theme {
@@ -426,6 +426,11 @@ html {
 
 textarea.form-control {
     height: initial;
+}
+
+.form-label {
+    margin-bottom: 5px;
+    font-weight: 500;
 }
 
 .form-control {
@@ -1179,7 +1184,7 @@ Reuseble style section start
     transition: all .3s ease-in-out;
     font-size: 18px;
     color: var(--white);
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     font-weight: 500;
@@ -1792,6 +1797,36 @@ hr.divider:after {
 
 // Fancybox carousel section end
 
+// schedule form section start
+.schedule-form {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    .date-icon {
+        position: absolute;
+        left: 15px;
+        color: var(--primary-color);
+    }
+
+    .date-picker {
+        padding-left: 40px;
+    }
+}
+
+// schedule form section end
+// Increment decrement section start
+.increment-decrement-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    .quantity{
+        font-size: 20px;
+        color: var(--heading-color);
+    }
+}
+
+// Increment decrement section end
 
 //  Margin top 
 .mt-10 {
@@ -2876,9 +2911,10 @@ Package section end
 00. Package details section end
 ----------------------------------------------*/
 .package-details-section {
-    .title{
-        margin-bottom: 10px;
+    .title {
+        margin-bottom: 20px;
     }
+
     .section-header {
         margin-top: 20px;
 
@@ -2896,27 +2932,44 @@ Package section end
         }
     }
 
+    .feature-area {
+        margin-bottom: 50px;
+    }
+
     .feature-box {
         display: flex;
         align-items: center;
         gap: 10px;
 
         .icon-area {
-            font-size: 40px;
+            background-color: var(--primary-color-opacity-low);
+            font-size: 20px;
             color: var(--primary-color);
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
         }
     }
-    .overview-area{
-        margin-top: 30px;
-        .over-view-list{
+
+    .content-product {
+        margin-bottom: 30px;
+    }
+
+    .overview-area {
+        .over-view-list {
             color: var(--heading-color);
             margin-top: 15px;
-            .item{
+
+            .item {
                 display: flex;
                 align-items: center;
                 padding-left: 20px;
                 position: relative;
-                &::after{
+
+                &::after {
                     position: absolute;
                     content: "";
                     background-color: var(--primary-color);
@@ -2927,14 +2980,64 @@ Package section end
 
                 }
             }
-            .item:not(:last-child){
+
+            .item:not(:last-child) {
                 margin-bottom: 10px;
             }
         }
     }
-    .included-area{
-        margin-top: 30px;
+
+    .cmn-list {
+        .item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--heading-color);
+
+            i {
+                color: var(--primary-color);
+                font-size: 18px;
+            }
+        }
+
+        .item:not(:last-child) {
+            margin-bottom: 10px;
+        }
     }
+
+    .tour-plan {
+        .accordion-button {
+            .accordion-title {
+                text-transform: capitalize;
+                background-color: var(--primary-color-opacity-low);
+                padding: 3px 15px;
+                border-radius: 5px;
+                transition: var(--transition);
+            }
+
+            &:not(.collapsed) {
+                .accordion-title {
+                    background-color: var(--white);
+                }
+            }
+        }
+    }
+
+    .cmn-list {
+
+        .cmn-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .cmn-item:not(:last-child){
+            margin-bottom: 15px;
+            border-bottom: 1px solid var(--border-color1);
+            padding-bottom: 10px;
+        }
+    }
+
+
 
 }
 
@@ -3255,7 +3358,7 @@ Testimonial section end
 
     .accordion-button {
         color: var(--heading-color);
-        font-weight: 600;
+        font-weight: 400;
         font-size: 18px;
         gap: 10px;
 
@@ -4020,6 +4123,10 @@ Map section end
     margin-bottom: 30px;
     box-shadow: var(--shadow1);
 
+    .title {
+        margin-bottom: 5px;
+    }
+
     .widget-title {
         margin-bottom: 20px;
         position: relative;
@@ -4132,6 +4239,18 @@ Map section end
 Blog details end
 ----------------------------------------------*/
 
+/*----------------------------------------------
+00. Checkout page start
+----------------------------------------------*/
+
+/*----------------------------------------------
+Checkout page end
+----------------------------------------------*/
+.checkout-form{
+    .title{
+        margin-bottom: 20px;
+    }
+}
 
 /*----------------------------------------------
 19. Pagination section start
