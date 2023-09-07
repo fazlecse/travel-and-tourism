@@ -179,10 +179,10 @@
             <div class="row ">
                 <div class="col">
                     <div class="breadcrumb-area">
-                        <h3>package details</h3>
+                        <h3>check out</h3>
                         <ul class="breadcrumb">
                             <li class="breadcrumb-item"><a href="home-1.html">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">package details</li>
+                            <li class="breadcrumb-item active" aria-current="page">check out</li>
                         </ul>
                     </div>
                 </div>
@@ -194,52 +194,268 @@
     <!-- Checkout page start  -->
     <section class="checkout-page">
         <div class="container">
-            <div class="row">
+            <div class="row g-4">
                 <div class="col-md-8">
-                    
-                    <form class="checkout-form">
-                        <h3 class="title">Booking Submission</h3>
-                        <div class="row g-3">
-                            <div class="col-md-6">
-                                <label for="First-Name" class="form-label">First Name *</label>
-                                <input type="text" class="form-control" id="First-Name" placeholder="First Name">
-                            </div>
-                            <div class="col-md-6">
-                                <label for="last-Name" class="form-label">Last Name *</label>
-                                <input type="text" class="form-control" id="last-Name" placeholder="Last Name">
-                            </div>
-                            <div class="col-md-6">
-                                <label for="email" class="form-label">Email *</label>
-                                <input type="email" class="form-control" id="email" placeholder="user@email.com">
-                            </div>
-                            <div class="col-md-6">
-                                <label for="email" class="form-label">Phone *</label>
-                                <input type="text" class="form-control" id="email" placeholder="Your Phone"
-                                    onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
-                            </div>
-                            <div class="col-md-6">
-                                <label for="Address-Line1" class="form-label">Address Line 1</label>
-                                <input type="text" class="form-control" id="Address-Line1"
-                                    placeholder="Your Address Line 1">
-                            </div>
-                            <div class="col-md-6">
-                                <label for="Address-Line2" class="form-label">Address Line 2</label>
-                                <input type="text" class="form-control" id="Address-Line2"
-                                    placeholder="Your Address Line 2">
-                            </div>
-                            <div class="col-md-6">
-                                <label for="City" class="form-label">City</label>
-                                <input type="text" class="form-control" id="City" placeholder="Your City">
-                            </div>
-                            <div class="col-md-6">
-                                <label for="State/Province/Region" class="form-label">State/Province/Region</label>
-                                <input type="text" class="form-control" id="State/Province/Region"
-                                    placeholder="State/Province/Region">
-                            </div>
+                    <div class="row g-4">
+                        <div class="col-12">
+                            <form class="checkout-form">
+                                <h3 class="title">Booking Submission</h3>
+                                <div class="row g-4">
+                                    <div class="col-md-6">
+                                        <label for="First-Name" class="form-label">First Name *</label>
+                                        <input type="text" class="form-control" id="First-Name"
+                                            placeholder="First Name">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="last-Name" class="form-label">Last Name *</label>
+                                        <input type="text" class="form-control" id="last-Name" placeholder="Last Name">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="email" class="form-label">Email *</label>
+                                        <input type="email" class="form-control" id="email"
+                                            placeholder="user@email.com">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="email" class="form-label">Phone *</label>
+                                        <input type="text" class="form-control" id="email" placeholder="Your Phone"
+                                            onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="Address-Line1" class="form-label">Address Line 1</label>
+                                        <input type="text" class="form-control" id="Address-Line1"
+                                            placeholder="Your Address Line 1">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="Address-Line2" class="form-label">Address Line 2</label>
+                                        <input type="text" class="form-control" id="Address-Line2"
+                                            placeholder="Your Address Line 2">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="City" class="form-label">City</label>
+                                        <input type="text" class="form-control" id="City" placeholder="Your City">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="State/Province/Region"
+                                            class="form-label">State/Province/Region</label>
+                                        <input type="text" class="form-control" id="State/Province/Region"
+                                            placeholder="State/Province/Region">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="ZIP-code/Postal-code" class="form-label">ZIP code/Postal
+                                            code</label>
+                                        <input type="text" class="form-control" id="ZIP-code/Postal-code"
+                                            placeholder="ZIP code/Postal code">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="Country" class="form-label">Country</label>
+                                        <input type="text" class="form-control" id="Country" placeholder="Country">
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label for="message" class="form-label">Message</label>
+                                        <textarea class="form-control" id="message" rows="5"></textarea>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
-                    </form>
+                        <div class="col-12">
+                            <!-- Payment section start -->
+                            <div class="payment-section">
+                                <h4>How would you like to pay?</h4>
+                                <ul class="payment-container-list">
+                                    <li class="item">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault2">
+                                        <label class="form-check-label" for="flexRadioDefault2">
+                                            <div class="image-area">
+                                                <img src="assets/img/gateway/Bank-Transfer.png" alt="">
+                                            </div>
+                                            <div class="content-area">
+                                                <h5>bank transfer</h5>
+                                                <span>0.82 USD in total fees.</span>
+                                                <br>
+                                                <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                                    Nulla,</span>
+                                            </div>
+                                        </label>
+
+                                    </li>
+                                    <li class="item">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault1" checked>
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                            <div class="image-area">
+                                                <img src="assets/img/gateway/paypal.jpg" alt="">
+                                            </div>
+                                            <div class="content-area">
+                                                <h5>Paypal</h5>
+                                                <span>0.82 USD in total fees.</span>
+                                                <br>
+                                                <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                                    Nulla,</span>
+                                            </div>
+                                        </label>
+
+                                    </li>
+                                    <li class="item">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault3">
+                                        <label class="form-check-label" for="flexRadioDefault3">
+                                            <div class="image-area">
+                                                <img src="assets/img/gateway/mastercard.png" alt="">
+                                            </div>
+                                            <div class="content-area">
+                                                <h5>mastercard</h5>
+                                                <span>0.82 USD in total fees.</span>
+                                                <br>
+                                                <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                                    Nulla,</span>
+                                            </div>
+                                        </label>
+
+                                    </li>
+                                    <li class="item">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault4">
+                                        <label class="form-check-label" for="flexRadioDefault4">
+                                            <div class="image-area">
+                                                <img src="assets/img/gateway/razorpay.jpg" alt="">
+                                            </div>
+                                            <div class="content-area">
+                                                <h5>razorpay</h5>
+                                                <span>0.82 USD in total fees.</span>
+                                                <br>
+                                                <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                                    Nulla,</span>
+                                            </div>
+                                        </label>
+                                    </li>
+                                    <li class="item">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="skrill">
+                                        <label class="form-check-label" for="skrill">
+                                            <div class="image-area">
+                                                <img src="assets/img/gateway/skrill.jpg" alt="">
+                                            </div>
+                                            <div class="content-area">
+                                                <h5>skrill</h5>
+                                                <span>0.82 USD in total fees.</span>
+                                                <br>
+                                                <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                                    Nulla,</span>
+                                            </div>
+                                        </label>
+                                    </li>
+                                    <li class="item">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="stripe">
+                                        <label class="form-check-label" for="stripe">
+                                            <div class="image-area">
+                                                <img src="assets/img/gateway/stripe.jpg" alt="">
+                                            </div>
+                                            <div class="content-area">
+                                                <h5>stripe</h5>
+                                                <span>0.82 USD in total fees.</span>
+                                                <br>
+                                                <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                                    Nulla,</span>
+                                            </div>
+                                        </label>
+                                    </li>
+                                    <li class="item">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="visa">
+                                        <label class="form-check-label" for="visa">
+                                            <div class="image-area">
+                                                <img src="assets/img/gateway/visa.png" alt="">
+                                            </div>
+                                            <div class="content-area">
+                                                <h5>visa</h5>
+                                                <span>0.82 USD in total fees.</span>
+                                                <br>
+                                                <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                                    Nulla,</span>
+                                            </div>
+                                        </label>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <!-- Payment section end -->
+                        </div>
+                    </div>
+
+
                 </div>
-                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <div class="booking-submission-section">
+                        <div class="sidebar-widget-area">
+                            <div class="widget-title">
+                                <h4>Your booking</h4>
+                            </div>
+                            <div class="section-header">
+                                <div class="image-area">
+                                    <img src="./assets/img/destinaiton/1.jpg" alt="">
+                                </div>
+                                <div class="content-area">
+                                    <h5 class="title">Luxury Celebrity Homes Cruise Experience</h5>
+                                    <span class="location"><i class="fa-regular fa-location-dot"></i>Miami, USA</span>
+                                </div>
+                            </div>
+                            <ul class="cmn-list">
+                                <li class="item">
+                                    <h6>Tour type</h6>
+                                    <h6>Advanture, Fun</h6>
+                                </li>
+                                <li class="item">
+                                    <h6>Departure date</h6>
+                                    <h6>09/06/2023 <a href="#" class="highlight">Edit</a></h6>
+                                </li>
+                                <li class="item">
+                                    <h6>Duration</h6>
+                                    <h6>8 hour</h6>
+                                </li>
+                                <li class="item">
+                                    <h6>Number of Adult</h6>
+                                    <h6>1</h6>
+                                </li>
+                                <li class="item">
+                                    <h6>Number of Children</h6>
+                                    <h6>1</h6>
+                                </li>
+                                <li class="item">
+                                    <h6>Number of Infant</h6>
+                                    <h6>1</h6>
+                                </li>
+                            </ul>
+                            <div class="coupon-code-area">
+                                <div class="widget-title">
+                                    <h4 class="title">Coupon code</h4>
+                                </div>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Code here" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                    <a href="" class="cmn-btn2">Apply</a>
+                                  </div>
+                            </div>
+                            <ul class="cmn-list">
+                                <li class="item">
+                                    <h6>Price</h6>
+                                    <h6>$189</h6>
+                                </li>
+                                <li class="item">
+                                    <h6>Subtotal</h6>
+                                    <h6>$189</h6>
+                                </li>
+                                
+                            </ul>
+                            <ul class="cmn-list mt-20 border-0 pb-0">
+                                <li class="item">
+                                    <h5>Pay Amount</h5>
+                                    <h5>$189</h5>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 Author        :
 Author Uri    :
@@ -44,7 +45,7 @@ Typography
   --white: #ffffff;
   --magenta: #b125c0;
   --blue: #0057ff;
-  --orange: #f6b91c;
+  --orange: #FFC83E;
   --bg-color1: #fdfbef;
   --bg-color2: #F5F5F5;
   --bg-color3: #02505A;
@@ -365,7 +366,6 @@ body {
   line-height: 1.5;
   color: var(--body-color);
   font-size: 16px;
-  overflow-x: hidden;
   background-color: var(--bg-color1);
   font-weight: 400;
 }
@@ -413,7 +413,7 @@ textarea.form-control {
 .form-select:focus {
   box-shadow: 0 0 0 4px rgba(255, 153, 51, 0.1);
   border: 1px solid var(--primary-color);
-  background-color: var(--secondary-color);
+  background-color: var(--white);
 }
 
 .form-check label,
@@ -451,7 +451,7 @@ textarea.form-control {
   align-items: center;
   justify-content: center;
   border: none;
-  background: var(--secondary-color);
+  background: var(--primary-color);
 }
 
 /*----------------------------------------------
@@ -1299,12 +1299,12 @@ section {
 }
 
 .star-list li a {
-  color: var(--primary-color);
+  color: var(--orange);
   opacity: 0.5;
 }
 
 .star-list li a.active {
-  color: var(--primary-color);
+  color: var(--orange);
   opacity: 1;
 }
 
@@ -2536,8 +2536,171 @@ Package section end
   padding-bottom: 10px;
 }
 
+.package-sidebar {
+  position: sticky;
+  top: 100px;
+}
+
 /*----------------------------------------------
 Package details section end
+----------------------------------------------*/
+/*----------------------------------------------
+00. Review section start
+----------------------------------------------*/
+.average-review .card-box {
+  text-align: center;
+}
+.average-review .card-box i {
+  color: var(--orange);
+  font-size: 14px;
+}
+.average-review .index {
+  display: inline-block;
+  width: 20px;
+}
+.average-review .progress {
+  width: 100%;
+  height: 10px;
+}
+.average-review .progress .progress-bar {
+  background: var(--primary-color);
+}
+
+.all-review {
+  margin-top: 50px;
+  color: var(--heading-color);
+}
+.all-review .review-box {
+  display: flex;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+.all-review .review-box .img-box {
+  width: 50px;
+  height: 50px;
+}
+.all-review .review-box .img-box img {
+  border-radius: 50px;
+  width: 100%;
+  height: 100%;
+}
+.all-review .review-box .name,
+.all-review .review-box .date {
+  margin-bottom: 5px;
+}
+.all-review .review-box .date {
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.all-review .review-box .text-box {
+  width: calc(100% - 50px);
+  margin-left: auto;
+  padding-left: 15px;
+}
+.all-review .review-box .text-box .reply-btn {
+  font-family: "Teko", sans-serif;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+.all-review .review-box .rating {
+  margin-top: 15px;
+}
+.all-review .review-box .rating i {
+  color: var(--orange);
+  font-size: 14px;
+}
+.all-review .review-box .feedback {
+  display: flex;
+}
+.all-review .review-box .feedback P {
+  font-weight: 500;
+  margin-bottom: 0;
+  margin-right: 15px;
+}
+.all-review .review-box .feedback button {
+  color: var(--heading-color);
+  align-items: center;
+  font-size: 14px;
+  margin: 0 5px;
+  margin-top: -2px;
+}
+.all-review .review-box .feedback button i {
+  font-size: 15px;
+  color: var(--primary-color);
+}
+
+.add-review {
+  margin-bottom: 50px;
+}
+.add-review .rating {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: start;
+}
+.add-review .rating:not(:checked) > input {
+  position: absolute;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+.add-review .rating:not(:checked) > label {
+  cursor: pointer;
+  font-size: 36px;
+  color: var(--body-color);
+}
+.add-review .rating:not(:checked) > label:before {
+  content: "★";
+}
+.add-review .rating > input:checked + label:hover,
+.add-review .rating > input:checked + label:hover ~ label,
+.add-review .rating > input:checked ~ label:hover,
+.add-review .rating > input:checked ~ label:hover ~ label,
+.add-review .rating > label:hover ~ input:checked ~ label {
+  color: var(--orange);
+}
+.add-review .rating:not(:checked) > label:hover,
+.add-review .rating:not(:checked) > label:hover ~ label {
+  color: var(--orange);
+}
+.add-review .rating > input:checked ~ label {
+  color: var(--orange);
+}
+.add-review form .input-box label {
+  font-weight: 500;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+.add-review form .input-box .form-select,
+.add-review form .input-box .form-control {
+  height: 50px;
+  border-radius: 5px;
+  padding: 8px;
+  padding-left: 15px;
+  font-weight: normal;
+  caret-color: var(--primary-color);
+  color: var(--heading-color);
+}
+.add-review form .input-box .form-select::-moz-placeholder, .add-review form .input-box .form-control::-moz-placeholder {
+  color: var(--heading-color);
+}
+.add-review form .input-box .form-select::placeholder,
+.add-review form .input-box .form-control::placeholder {
+  color: var(--heading-color);
+}
+.add-review form .input-box .form-select {
+  background-image: url(../img/icon/downward-arrow.png);
+}
+.add-review form .input-box .form-select option {
+  background: var(--white);
+  color: var(--heading-color);
+}
+.add-review form .input-box textarea.form-control {
+  height: 120px;
+  border-radius: 5px;
+}
+
+/*----------------------------------------------
+Review section end
 ----------------------------------------------*/
 /*----------------------------------------------
 12. Newsletter section start
@@ -3150,6 +3313,13 @@ Banner section end
   position: relative;
   z-index: 0;
 }
+.contact-section .contact-inner {
+  background-color: var(--white);
+  padding: 80px 80px;
+  border-radius: 5px;
+  margin-top: -230px;
+  box-shadow: var(--shadow2);
+}
 .contact-section .contact-area .contact-item-list {
   margin-top: 30px;
 }
@@ -3169,12 +3339,6 @@ Banner section end
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.contact-section .contact-message-area {
-  background-color: var(--bg-color2);
-  padding: 30px 25px;
-  box-shadow: var(--shadow3);
-  border-radius: 5px;
 }
 .contact-section .contact-message-area .contact-header {
   margin-bottom: 30px;
@@ -3213,13 +3377,18 @@ Contact end
 17. Login Signup section start
 ----------------------------------------------*/
 .login-signup-page {
-  background-color: var(--bg-color1);
+  background-color: var(--white);
+}
+.login-signup-page .login-signup-thums {
+  background-image: url(../img/login_signup/login-signup-background.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .login-signup-page .login-signup-form {
-  background-color: var(--bg-color2);
-  padding: 30px 25px;
-  border-radius: 5px;
-  box-shadow: var(--shadow3);
+  background-color: var(--white);
+  padding: 50px 65px 40px 65px;
+  max-width: 600px;
 }
 .login-signup-page .login-signup-form .cmn-btn {
   height: 45px;
@@ -3363,7 +3532,7 @@ Map section end
 }
 
 .sidebar-widget-area {
-  padding: 30px;
+  padding: 25px;
   background-color: var(--white);
   border-radius: 5px;
   margin-bottom: 30px;
@@ -3456,11 +3625,132 @@ Blog details end
 /*----------------------------------------------
 00. Checkout page start
 ----------------------------------------------*/
+.checkout-form {
+  padding: 20px;
+  border-radius: 5px;
+  background-color: var(--white);
+}
+.checkout-form .title {
+  margin-bottom: 20px;
+}
+
 /*----------------------------------------------
 Checkout page end
 ----------------------------------------------*/
-.checkout-form .title {
-  margin-bottom: 20px;
+/*----------------------------------------------
+Payment section start
+-----------------------------------------------*/
+.payment-section {
+  padding: 20px;
+  border-radius: 5px;
+  background-color: var(--white);
+}
+
+.payment-container-list {
+  margin-top: 20px;
+  height: 480px;
+  overflow: auto;
+  padding: 5px;
+}
+.payment-container-list .item {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.payment-container-list .form-check-label {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  cursor: pointer;
+  box-shadow: var(--shadow1);
+  border-radius: 5px;
+  transition: var(--transition);
+  gap: 15px;
+}
+.payment-container-list .form-check-label .image-area img {
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  min-height: 50px;
+  border-radius: 50%;
+}
+.payment-container-list .form-check-label .content-area {
+  max-width: 400px;
+  padding-right: 30px;
+}
+.payment-container-list .form-check-input {
+  position: absolute;
+  right: 15px;
+}
+.payment-container-list .form-check-input[type=radio]:checked + .form-check-label {
+  background-color: var(--primary-color-opacity-low);
+}
+
+.rtl .payment-container-list .form-check-label .content-area {
+  padding-right: 0;
+  padding-left: 30px;
+}
+.rtl .payment-container-list .form-check-input {
+  left: 15px;
+  right: auto;
+}
+
+/*----------------------------------------------
+Payment section end
+-----------------------------------------------*/
+/*----------------------------------------------
+Booking submission section start
+-----------------------------------------------*/
+/*----------------------------------------------
+Booking submission section end
+-----------------------------------------------*/
+.booking-submission-section {
+  position: sticky;
+  top: 100px;
+}
+.booking-submission-section .sidebar-widget-area .section-header {
+  display: flex;
+  gap: 15px;
+}
+.booking-submission-section .sidebar-widget-area .section-header .image-area img {
+  min-width: 100px;
+  height: 85px;
+  border-radius: 5px;
+}
+.booking-submission-section .sidebar-widget-area .section-header .content-area .title {
+  margin-bottom: 10px;
+}
+.booking-submission-section .sidebar-widget-area .section-header .content-area .location {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.booking-submission-section .sidebar-widget-area .highlight {
+  margin-left: 5px;
+}
+.booking-submission-section .cmn-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-color1);
+}
+.booking-submission-section .cmn-list .item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.booking-submission-section .coupon-code-area {
+  margin: 20px 0;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-color1);
+}
+.booking-submission-section .coupon-code-area .title {
+  margin-bottom: 15px;
 }
 
 /*----------------------------------------------
