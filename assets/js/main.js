@@ -33,10 +33,16 @@ $(document).ready(function () {
             0: {
                 items: 1
             },
-            400: {
+            550: {
                 items: 2
             },
             991: {
+                items: 3
+            },
+            1200: {
+                items: 4
+            },
+            1400: {
                 items: 5
             }
         }
@@ -70,46 +76,6 @@ $(document).ready(function () {
     });
     // Testimonial section end
 
-
-
-
-
-
-    // Fancybox carousel section start
-    // Initialise Carousel
-    const mainCarousel = new Carousel(document.querySelector("#mainCarousel"), {
-        Dots: false,
-    });
-
-    // Thumbnails
-    const thumbCarousel = new Carousel(document.querySelector("#thumbCarousel"), {
-        Sync: {
-            target: mainCarousel,
-            friction: 0,
-        },
-        Dots: false,
-        Navigation: false,
-        center: true,
-        slidesPerPage: 1,
-        infinite: true,
-    });
-
-    // Customize Fancybox
-    Fancybox.bind('[data-fancybox="gallery"]', {
-        Carousel: {
-            on: {
-                change: (that) => {
-                    mainCarousel.slideTo(mainCarousel.findPageForSlide(that.page), {
-                        friction: 0,
-                    });
-                },
-            },
-        },
-    });
-
-
-    // Fancybox carousel section end
-
     // range-area
     $(".js-range-slider").ionRangeSlider({
         type: "double",
@@ -119,6 +85,11 @@ $(document).ready(function () {
         to: 500,
         grid: true
     });
+
+
+
+
+
 
 
 
@@ -172,6 +143,41 @@ $(document).ready(function () {
     });
     // cmn select2 modal start
 
+
+    // Fancybox carousel section start
+    // Initialise Carousel
+    const mainCarousel = new Carousel(document.querySelector("#mainCarousel"), {
+        Dots: false,
+    });
+
+    // Thumbnails
+    const thumbCarousel = new Carousel(document.querySelector("#thumbCarousel"), {
+        Sync: {
+            target: mainCarousel,
+            friction: 0,
+        },
+        Dots: false,
+        Navigation: false,
+        center: true,
+        slidesPerPage: 1,
+        infinite: true,
+    });
+
+    // Customize Fancybox
+    Fancybox.bind('[data-fancybox="gallery"]', {
+        Carousel: {
+            on: {
+                change: (that) => {
+                    mainCarousel.slideTo(mainCarousel.findPageForSlide(that.page), {
+                        friction: 0,
+                    });
+                },
+            },
+        },
+    });
+
+
+    // Fancybox carousel section end
 
 
 });

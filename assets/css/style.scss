@@ -369,6 +369,12 @@ h2 {
 
 }
 
+@media(max-width: 991px) {
+    h2 {
+        font-size: 34px;
+    }
+}
+
 h3 {
     font-size: 30px;
     margin-bottom: 10px;
@@ -403,19 +409,19 @@ body {
     color: var(--body-color);
     font-size: 16px;
     // overflow-x: hidden;
-    background-color: var(--bg-color1);
+    // background-color: var(--bg-color1);
     font-weight: 400;
+}
+
+@media (max-width: 991px) {
+    body {
+        padding-bottom: 56px;
+    }
 }
 
 body.dark-theme {
     color: #d1cbdb;
     background-image: none;
-}
-
-@media (max-width: 991px) {
-    body {
-        padding-bottom: initial;
-    }
 }
 
 html {
@@ -631,7 +637,7 @@ span.select2.select2-container.select2-container--default {
 }
 
 .select2-container--default .select2-selection--single .select2-selection__arrow b {
-    border-color: var(--primary-color) transparent transparent transparent;
+    border-color: #a19e9e transparent transparent transparent;
     border-width: 5px 6px 0 6px;
     margin-left: -10px;
     top: 50%;
@@ -1095,6 +1101,12 @@ Reuseble style section start
     margin-bottom: 30px;
 }
 
+@media (max-width: 575px) {
+    .section-header {
+        text-align: center;
+    }
+}
+
 .top-right-radius-0 {
     border-top-right-radius: 0 !important;
 }
@@ -1177,6 +1189,8 @@ Reuseble style section start
 }
 
 .cmn-btn2 {
+    position: relative;
+    z-index: 1;
     background: var(--primary-color);
     padding: 8px 15px;
     border-radius: 8px;
@@ -1191,27 +1205,6 @@ Reuseble style section start
 
     &:hover {
         color: var(--white);
-        background: var(--black);
-    }
-}
-
-.cmn-btn3 {
-    position: relative;
-    z-index: 1;
-    background: var(--white);
-    padding: 8px 15px;
-    border-radius: 5px;
-    transition: var(--transition);
-    font-size: 16px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    text-transform: capitalize;
-    border: 1px solid var(--primary-color);
-
-    &:hover {
-        color: var(--white);
-        background: var(--btn-after-bg);
 
         &::after {
             height: 100%;
@@ -1226,7 +1219,44 @@ Reuseble style section start
         width: 100%;
         top: 0;
         left: 0;
-        background-color: var(--btn-after-bg);
+        background-color: var(--black);
+        transition: var(--transition);
+        border-radius: 5px;
+        z-index: -1;
+    }
+}
+
+.cmn-btn3 {
+    z-index: 1;
+    position: relative;
+    background: var(--white);
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: var(--transition);
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+    border: 1px solid var(--border-color1);
+
+    &:hover {
+        color: var(--white);
+
+        &::after {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    &::after {
+        position: absolute;
+        content: "";
+        height: 0;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-color: var(--primary-color);
         transition: var(--transition);
         border-radius: 5px;
         z-index: -1;
@@ -1476,7 +1506,12 @@ section {
     display: inline-block;
     text-transform: capitalize;
     font-family: 'Satisfy', cursive;
+}
 
+@media (max-width: 991px) {
+    .section-subtitle {
+        font-size: 20px;
+    }
 }
 
 
@@ -1555,7 +1590,7 @@ hr.divider {
     padding: 0;
     overflow: visible;
     border: none;
-    border-top: 1px solid var(--border-color2);
+    border-top: 1px solid var(--border-color1);
     color: #6e6d7a;
     text-align: center;
     opacity: .75;
@@ -1567,7 +1602,7 @@ hr.divider:after {
     position: relative;
     top: -12px;
     padding: 0 16px;
-    background: var(--bg-color2);
+    background: var(--white);
     color: var(--heading-color);
 }
 
@@ -2127,12 +2162,19 @@ Reuseble style section end
     }
 }
 
+// Responsive top section start
+// @media (max-width: 575px){
+//     .header-top-section .top-bar{
+//         justify-content: center;
+//     }
+// }
+// Responsive top section end
 // Header top section end
 /*----------------------------------------------
 01. Nav section start
 ----------------------------------------------*/
 .header.active {
-    z-index: 999;
+    z-index: 99999;
 
     .header-top-section {
         display: none;
@@ -2368,7 +2410,12 @@ user nav Profile end
             right: 0;
         }
     }
+}
 
+@media (max-width: 575px) {
+    .navbar {
+        padding: 10px 0;
+    }
 }
 
 // Nav responsive end
@@ -2415,7 +2462,7 @@ Nav end
 02. Bottom Mobile, Tab Nav section start
 ----------------------------------------------*/
 .bottom-nav {
-    background: var(--bg-color5);
+    background: var(--white);
     justify-content: space-around;
     box-shadow: var(--shadow3);
     border-top-right-radius: 8px;
@@ -2492,9 +2539,15 @@ Bottom Mobile, Tab Nav section end
 }
 
 // Hero responsive start
+@media(min-width: 992px) {
+    .hero-section .container {
+        max-width: initial;
+    }
+}
+
 @media (max-width: 991px) {
     h1 {
-        font-size: 38px;
+        font-size: 60px;
         line-height: 50px;
     }
 
@@ -2507,11 +2560,19 @@ Bottom Mobile, Tab Nav section end
     }
 
     .hero-section {
-        padding: 130px 0 120px;
+        padding: 180px 0 50px;
         text-align: center;
 
+        .section-subtitle {
+            font-size: 32px;
+        }
+
         .hero-para-text {
-            font-size: 16px;
+            margin: 0 auto;
+        }
+
+        .select2 {
+            text-align: initial;
         }
     }
 
@@ -2522,11 +2583,24 @@ Bottom Mobile, Tab Nav section end
     }
 }
 
-@media (max-width: 575px) {
-    .dark-theme {
-        .hero-section {
-            padding: 130px 0 70px;
+@media (max-width: 767px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    .hero-section {
+        padding: 200px 0 50px;
+        text-align: center;
+
+        .section-subtitle {
+            font-size: 26px;
         }
+    }
+}
+
+@media (max-width: 575px) {
+    .hero-section .hero-para-text {
+        font-size: 18px;
     }
 }
 
@@ -2785,6 +2859,20 @@ Destination details section end
 // About responsive start
 @media (max-width: 767px) {
     .about-section {
+        .about-image-area {
+            .img1 {
+                max-width: 100%;
+            }
+
+            .img2 {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .about-section {
         text-align: center;
 
         .about-content {
@@ -2796,6 +2884,7 @@ Destination details section end
         }
     }
 }
+
 
 // About responsive end
 
@@ -3301,9 +3390,10 @@ Review section end
 }
 
 // Responsive newslatter section start
-@media (max-width: 991px) {
-    .newsletter-area .newslatter-title {
-        font-size: 22px;
+
+@media (max-width: 575px) {
+    .newsletter-section .newsletter-inner {
+        text-align: center;
     }
 }
 
@@ -3365,8 +3455,7 @@ Newsletter section end
     }
 
     .content-area {
-        // background-image: url(../img/why-choose-us/World\ Map.svg);
-        padding: 100px 0;
+        padding: 100px 30px 100px 0;
         max-width: 600px;
         margin-left: 70px;
 
@@ -3384,9 +3473,9 @@ Newsletter section end
         .item {
             display: flex;
             align-items: center;
+            gap: 15px;
 
             .icon-area {
-                margin-right: 20px;
                 min-width: 60px;
                 min-height: 60px;
                 font-size: 45px;
@@ -3399,6 +3488,27 @@ Newsletter section end
     }
 }
 
+// Responsive why choose use section start
+@media (max-width: 1199px) {
+    .why-choose-us .content-area {
+        margin-left: 30px;
+    }
+}
+
+@media (max-width: 991px) {
+    .why-choose-us .content-area {
+        padding: 50px 30px 50px 0;
+    }
+}
+
+@media (max-width: 575px) {
+    .why-choose-us .content-area {
+        padding: 50px 10px 50px 0;
+        margin-left: 10px;
+    }
+}
+
+// Responsive why choose use section end
 /*----------------------------------------------
 Why choose us section end
 ----------------------------------------------*/
@@ -4125,6 +4235,37 @@ Contact end
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .content-area {
+            height: 100%;
+            max-height: 680px;
+            max-width: 500px;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 60px 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border-radius: 30px;
+
+            .logo {
+                max-width: 150px;
+            }
+
+            .section-subtitle {
+                color: var(--white);
+            }
+
+            .section-title {
+                color: var(--white);
+            }
+
+            p {
+                color: var(--white);
+            }
+        }
     }
 
     .login-signup-form {

@@ -334,6 +334,11 @@ h2 {
   color: var(--heading-color);
 }
 
+@media (max-width: 991px) {
+  h2 {
+    font-size: 34px;
+  }
+}
 h3 {
   font-size: 30px;
   margin-bottom: 10px;
@@ -366,20 +371,19 @@ body {
   line-height: 1.5;
   color: var(--body-color);
   font-size: 16px;
-  background-color: var(--bg-color1);
   font-weight: 400;
 }
 
+@media (max-width: 991px) {
+  body {
+    padding-bottom: 56px;
+  }
+}
 body.dark-theme {
   color: #d1cbdb;
   background-image: none;
 }
 
-@media (max-width: 991px) {
-  body {
-    padding-bottom: initial;
-  }
-}
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
@@ -571,7 +575,7 @@ span.select2.select2-container.select2-container--default {
 }
 
 .select2-container--default .select2-selection--single .select2-selection__arrow b {
-  border-color: var(--primary-color) transparent transparent transparent;
+  border-color: #a19e9e transparent transparent transparent;
   border-width: 5px 6px 0 6px;
   margin-left: -10px;
   top: 50%;
@@ -942,6 +946,11 @@ Reuseble style section start
   margin-bottom: 30px;
 }
 
+@media (max-width: 575px) {
+  .section-header {
+    text-align: center;
+  }
+}
 .top-right-radius-0 {
   border-top-right-radius: 0 !important;
 }
@@ -1017,6 +1026,8 @@ Reuseble style section start
 }
 
 .cmn-btn2 {
+  position: relative;
+  z-index: 1;
   background: var(--primary-color);
   padding: 8px 15px;
   border-radius: 8px;
@@ -1031,12 +1042,27 @@ Reuseble style section start
 }
 .cmn-btn2:hover {
   color: var(--white);
-  background: var(--black);
+}
+.cmn-btn2:hover::after {
+  height: 100%;
+  width: 100%;
+}
+.cmn-btn2::after {
+  position: absolute;
+  content: "";
+  height: 0;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--black);
+  transition: var(--transition);
+  border-radius: 5px;
+  z-index: -1;
 }
 
 .cmn-btn3 {
-  position: relative;
   z-index: 1;
+  position: relative;
   background: var(--white);
   padding: 8px 15px;
   border-radius: 5px;
@@ -1046,11 +1072,10 @@ Reuseble style section start
   align-items: center;
   justify-content: center;
   text-transform: capitalize;
-  border: 1px solid var(--primary-color);
+  border: 1px solid var(--border-color1);
 }
 .cmn-btn3:hover {
   color: var(--white);
-  background: var(--btn-after-bg);
 }
 .cmn-btn3:hover::after {
   height: 100%;
@@ -1063,7 +1088,7 @@ Reuseble style section start
   width: 100%;
   top: 0;
   left: 0;
-  background-color: var(--btn-after-bg);
+  background-color: var(--primary-color);
   transition: var(--transition);
   border-radius: 5px;
   z-index: -1;
@@ -1280,6 +1305,11 @@ section {
   font-family: "Satisfy", cursive;
 }
 
+@media (max-width: 991px) {
+  .section-subtitle {
+    font-size: 20px;
+  }
+}
 .social-area ul {
   gap: 15px;
 }
@@ -1343,7 +1373,7 @@ hr.divider {
   padding: 0;
   overflow: visible;
   border: none;
-  border-top: 1px solid var(--border-color2);
+  border-top: 1px solid var(--border-color1);
   color: #6e6d7a;
   text-align: center;
   opacity: 0.75;
@@ -1355,7 +1385,7 @@ hr.divider:after {
   position: relative;
   top: -12px;
   padding: 0 16px;
-  background: var(--bg-color2);
+  background: var(--white);
   color: var(--heading-color);
 }
 
@@ -1849,7 +1879,7 @@ Reuseble style section end
 01. Nav section start
 ----------------------------------------------*/
 .header.active {
-  z-index: 999;
+  z-index: 99999;
 }
 .header.active .header-top-section {
   display: none;
@@ -2035,6 +2065,11 @@ user nav Profile end
     right: 0;
   }
 }
+@media (max-width: 575px) {
+  .navbar {
+    padding: 10px 0;
+  }
+}
 .rtl .navbar .navbar-nav .nav-link .login-icon {
   margin-right: 0;
   margin-left: 5px;
@@ -2061,7 +2096,7 @@ Nav end
 02. Bottom Mobile, Tab Nav section start
 ----------------------------------------------*/
 .bottom-nav {
-  background: var(--bg-color5);
+  background: var(--white);
   justify-content: space-around;
   box-shadow: var(--shadow3);
   border-top-right-radius: 8px;
@@ -2122,9 +2157,14 @@ Bottom Mobile, Tab Nav section end
   box-shadow: var(--shadow4);
 }
 
+@media (min-width: 992px) {
+  .hero-section .container {
+    max-width: initial;
+  }
+}
 @media (max-width: 991px) {
   h1 {
-    font-size: 38px;
+    font-size: 60px;
     line-height: 50px;
   }
   .cmn-btn {
@@ -2134,19 +2174,37 @@ Bottom Mobile, Tab Nav section end
     font-size: 16px;
   }
   .hero-section {
-    padding: 130px 0 120px;
+    padding: 180px 0 50px;
     text-align: center;
   }
+  .hero-section .section-subtitle {
+    font-size: 32px;
+  }
   .hero-section .hero-para-text {
-    font-size: 16px;
+    margin: 0 auto;
+  }
+  .hero-section .select2 {
+    text-align: initial;
   }
   .hero-btn-area {
     justify-content: center;
   }
 }
+@media (max-width: 767px) {
+  h1 {
+    font-size: 40px;
+  }
+  .hero-section {
+    padding: 200px 0 50px;
+    text-align: center;
+  }
+  .hero-section .section-subtitle {
+    font-size: 26px;
+  }
+}
 @media (max-width: 575px) {
-  .dark-theme .hero-section {
-    padding: 130px 0 70px;
+  .hero-section .hero-para-text {
+    font-size: 18px;
   }
 }
 .rtl .hero-section::after {
@@ -2342,6 +2400,14 @@ Destination details section end
 }
 
 @media (max-width: 767px) {
+  .about-section .about-image-area .img1 {
+    max-width: 100%;
+  }
+  .about-section .about-image-area .img2 {
+    display: none;
+  }
+}
+@media (max-width: 575px) {
   .about-section {
     text-align: center;
   }
@@ -2755,9 +2821,9 @@ Review section end
   color: var(--white);
 }
 
-@media (max-width: 991px) {
-  .newsletter-area .newslatter-title {
-    font-size: 22px;
+@media (max-width: 575px) {
+  .newsletter-section .newsletter-inner {
+    text-align: center;
   }
 }
 .rtl .subscribe-form input {
@@ -2798,7 +2864,7 @@ Newsletter section end
   height: 100%;
 }
 .why-choose-us .content-area {
-  padding: 100px 0;
+  padding: 100px 30px 100px 0;
   max-width: 600px;
   margin-left: 70px;
 }
@@ -2814,9 +2880,9 @@ Newsletter section end
 .why-choose-us .why-choose-us-list .item {
   display: flex;
   align-items: center;
+  gap: 15px;
 }
 .why-choose-us .why-choose-us-list .item .icon-area {
-  margin-right: 20px;
   min-width: 60px;
   min-height: 60px;
   font-size: 45px;
@@ -2826,6 +2892,22 @@ Newsletter section end
   justify-content: center;
 }
 
+@media (max-width: 1199px) {
+  .why-choose-us .content-area {
+    margin-left: 30px;
+  }
+}
+@media (max-width: 991px) {
+  .why-choose-us .content-area {
+    padding: 50px 30px 50px 0;
+  }
+}
+@media (max-width: 575px) {
+  .why-choose-us .content-area {
+    padding: 50px 10px 50px 0;
+    margin-left: 10px;
+  }
+}
 /*----------------------------------------------
 Why choose us section end
 ----------------------------------------------*/
@@ -3384,6 +3466,32 @@ Contact end
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login-signup-page .login-signup-thums .content-area {
+  height: 100%;
+  max-height: 680px;
+  max-width: 500px;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 60px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 30px;
+}
+.login-signup-page .login-signup-thums .content-area .logo {
+  max-width: 150px;
+}
+.login-signup-page .login-signup-thums .content-area .section-subtitle {
+  color: var(--white);
+}
+.login-signup-page .login-signup-thums .content-area .section-title {
+  color: var(--white);
+}
+.login-signup-page .login-signup-thums .content-area p {
+  color: var(--white);
 }
 .login-signup-page .login-signup-form {
   background-color: var(--white);

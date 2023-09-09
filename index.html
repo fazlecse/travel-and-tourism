@@ -24,6 +24,10 @@
     <link rel="stylesheet" href="assets/css/fancybox.css">
     <!-- Bootstrap Datepicker Css_link -->
     <link rel="stylesheet" href="assets/css/bootstrap-datepicker.min.css">
+    <!-- intlTelInput Css link -->
+    <link rel="stylesheet" href="assets/css/intlTelInput.min.css">
+    <!-- rangeSlider Css link -->
+    <link rel="stylesheet" href="assets/css/ion.rangeSlider.min.css">
 
 
 
@@ -52,14 +56,15 @@
                         <li><a href="#"><i class="fa-regular fa-envelope-open"></i><span>demo@example.com</span></a>
                         </li>
                     </ul>
-                    <div class="social-area">
-                        <ul class="d-flex">
+                    <div class="social-area ">
+                        <ul class="d-flex d-none d-sm-flex">
                             <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
                             <li><a href=""><i class="fab fa-twitter"></i></a></li>
                             <li><a href=""><i class="fab fa-linkedin"></i></a></li>
                             <li><a href=""><i class="fab fa-instagram"></i></a></li>
                         </ul>
-                        <a href="" class="cmn-btn">book now</a>
+                        <a href="" class="cmn-btn"><span class="d-md-none"><i class="fa-regular fa-calendar-check"></i></span><span class="d-none d-md-block">book
+                                now</span></a>
                     </div>
                 </div>
             </div>
@@ -111,7 +116,8 @@
                     <ul class="custom-nav">
                         <li class="nav-item">
                             <a class="nav-link cmn-btn" href="login.html"><i
-                                    class="login-icon fa-regular fa-right-to-bracket"></i>Login</a>
+                                    class="login-icon fa-regular fa-right-to-bracket"></i><span
+                                    class="d-none d-md-block">Login</span></a>
                         </li>
                         <li class="nav-item">
                             <div class="profile-box">
@@ -174,20 +180,17 @@
 
     <!-- Hero area start -->
     <div class="hero-section">
-        <div class="container-fluid">
+        <div class="container-xl-fluid container container">
             <div class="row g-5 align-items-center">
-                <div class="offset-1 col-lg-5 order-2 order-lg-1">
+                <div class="offset-xl-1 col-xl-5">
                     <div class="section-subtitle">Discover The</div>
-                    <!-- <h1>Travels &<br>
-                        Adventure
-                    </h1> -->
-                    <h1>Travels &<br>
+                    <h1>Travels &
                         Adventure
                     </h1>
                     <p class="hero-para-text cmn-para-text">Travel far, travel wide, and travel boldly</p>
                     <div class="multiple-search-box">
                         <form>
-                            <div class="row g-0  align-items-center justify-content-around">
+                            <div class="row g-xl-0 g-3 align-items-center justify-content-around">
                                 <div class="col-lg-4 col-md-6">
                                     <div class="input-box">
                                         <div class="input-group">
@@ -223,7 +226,7 @@
 
                                 </div>
 
-                                <div class="col-lg-3 col-md-6">
+                                <div class="col-lg-3">
                                     <div class="input-box">
                                         <button class="cmn-btn w-100"><i class="fal fa-search"></i>Explore Now</button>
                                     </div>
@@ -234,20 +237,20 @@
                     </div>
 
                 </div>
-                <div class="col-lg-6 order-1 order-lg-2 d-none d-sm-block">
+                <div class="col-xl-6 d-none d-md-block">
                     <div class="hero-image-area">
                         <div class="row g-3 align-items-center">
-                            <div class="col-6">
+                            <div class="col-xl-6 col-md-8">
                                 <div class="row g-3">
-                                    <div class="col-12">
+                                    <div class="col-xl-12 col-md-6">
                                         <div class="img img1"><img src="./assets/img/hero/1.jpg" alt=""></div>
                                     </div>
-                                    <div class="col-12">
+                                    <div class="col-xl-12 col-md-6">
                                         <div class="img img2"><img src="./assets/img/hero/5.jpg" alt=""></div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-6">
+                            <div class="col-xl-6 col-md-4">
                                 <div class="img img4"><img src="./assets/img/hero/4.jpg" alt=""></div>
                             </div>
                         </div>
@@ -269,7 +272,7 @@
                 </div>
             </div>
             <div class="row g-4">
-                <div class="col-md-3">
+                <div class="col-xl-3 col-lg-4 col-md-6">
                     <a href="destination-details.html" class="detination-box">
                         <div class="thumbs-area">
                             <img src="./assets/img/destinaiton/1.jpg" alt="">
@@ -289,7 +292,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-md-3">
+                <div class="col-xl-3 col-lg-4 col-md-6">
                     <a href="destination-details.html" class="detination-box">
                         <div class="thumbs-area">
                             <img src="./assets/img/destinaiton/2.jpg" alt="">
@@ -309,7 +312,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-md-3">
+                <div class="col-xl-3 col-lg-4 col-md-6">
                     <a href="destination-details.html" class="detination-box">
                         <div class="thumbs-area">
                             <img src="./assets/img/destinaiton/3.jpg" alt="">
@@ -329,7 +332,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-md-3">
+                <div class="col-xl-3 col-lg-4 col-md-6">
                     <a href="destination-details.html" class="detination-box">
                         <div class="thumbs-area">
                             <img src="./assets/img/destinaiton/4.jpg" alt="">
@@ -349,7 +352,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-md-3">
+                <div class="col-xl-3 col-lg-4 col-md-6">
                     <a href="destination-details.html" class="detination-box">
                         <div class="thumbs-area">
                             <img src="./assets/img/destinaiton/5.jpg" alt="">
@@ -369,7 +372,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-md-3">
+                <div class="col-xl-3 col-lg-4 col-md-6">
                     <a href="destination-details.html" class="detination-box">
                         <div class="thumbs-area">
                             <img src="./assets/img/destinaiton/6.jpg" alt="">
@@ -389,7 +392,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-md-3">
+                <div class="col-xl-3 col-lg-4 col-md-6">
                     <a href="destination-details.html" class="detination-box">
                         <div class="thumbs-area">
                             <img src="./assets/img/destinaiton/7.jpg" alt="">
@@ -409,7 +412,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-md-3">
+                <div class="col-xl-3 col-lg-4 col-md-6">
                     <a href="destination-details.html" class="detination-box">
                         <div class="thumbs-area">
                             <img src="./assets/img/destinaiton/8.jpg" alt="">
@@ -487,8 +490,6 @@
 
                 </div>
             </div>
-        </div>
-        <div class="shape3">
         </div>
     </section>
     <!-- About section end -->
@@ -793,8 +794,8 @@
     <!-- Newsletter section start -->
     <section class="newsletter-section">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6">
                     <div class="newsletter-inner">
                         <div class="section-subtitle">newsletter</div>
                         <h3 class="newslatter-title">subscribe <br> our newsletter
@@ -806,7 +807,7 @@
                         </form>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-lg-6">
                     <div class="counter-section">
                         <div class="row g-4">
                             <div class="col-md-6">
@@ -1163,7 +1164,7 @@
 
     <!-- Why choose us section start -->
     <section class="why-choose-us p-0">
-        <div class="container-fluid px-0">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-md-6 p-0">
                     <div class="thumbs-area">
@@ -1424,7 +1425,7 @@
                             natus voluptate commodi qui sunt quisquam cupiditate molestiae?
                         </p>
 
-                        <div class="social-area mt-50">
+                        <div class="social-area  mt-50">
                             <ul class="d-flex">
                                 <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
                                 <li><a href=""><i class="fab fa-twitter"></i></a></li>
@@ -1520,6 +1521,10 @@
     <script src="assets/js/fancybox.umd.js"></script>
     <!-- Bootstrap Datepicker Js_link -->
     <script src="assets/js/bootstrap-datepicker.min.js"></script>
+    <!-- intlTelInput Css link -->
+    <script src="assets/js/intlTelInput.min.js"></script>
+    <!-- rangeSlider Js link -->
+    <script src="assets/js/ion.rangeSlider.min.js"></script>
 
 
     <!-- Main_Js_link -->
