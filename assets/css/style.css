@@ -376,7 +376,7 @@ body {
 
 @media (max-width: 991px) {
   body {
-    padding-bottom: 56px;
+    padding-bottom: 50px;
   }
 }
 body.dark-theme {
@@ -572,12 +572,12 @@ span.select2.select2-container.select2-container--default {
 .select2-container--default .select2-selection--single .select2-selection__arrow {
   top: 50%;
   transform: translateY(-50%);
+  right: 5px;
 }
 
 .select2-container--default .select2-selection--single .select2-selection__arrow b {
   border-color: #a19e9e transparent transparent transparent;
   border-width: 5px 6px 0 6px;
-  margin-left: -10px;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -588,7 +588,7 @@ span.select2.select2-container.select2-container--default {
 }
 
 .rtl .select2-container--default .select2-selection--single .select2-selection__arrow {
-  left: 1px;
+  left: 5px;
 }
 
 .rtl .select2-container .select2-selection--single .select2-selection__rendered {
@@ -769,6 +769,15 @@ Reuseble style section start
   font-size: 18px;
 }
 
+.rtl .search-box .search-btn {
+  left: 2px;
+  right: auto;
+}
+.rtl .search-box .form-control {
+  padding-right: 10px;
+  padding-left: 50px;
+}
+
 .multiple-search-box {
   padding: 10px;
   background: var(--white);
@@ -858,13 +867,20 @@ Reuseble style section start
   height: 50px;
 }
 
-.rtl .search-box .search-btn {
-  left: 2px;
-  right: auto;
+.rtl .multiple-search-box form .input-box .form-control {
+  padding-left: 10px;
+  padding-right: 40px;
 }
-.rtl .search-box .form-control {
-  padding-right: 10px;
-  padding-left: 50px;
+.rtl .multiple-search-box form .input-group-text {
+  right: -10px;
+  left: auto;
+}
+.rtl .multiple-search-box form .select2 {
+  padding-left: 0;
+  padding-right: 30px;
+}
+.rtl .multiple-search-box form .cmn-btn i {
+  transform: rotate(90deg);
 }
 
 .date-picker {
@@ -991,7 +1007,7 @@ Reuseble style section start
   background: var(--primary-color);
   padding: 10px 15px;
   border-radius: 5px;
-  transition: all 0.3s ease-in-out;
+  transition: var(--transition);
   font-size: 16px;
   color: var(--white);
   display: inline-flex;
@@ -1001,7 +1017,7 @@ Reuseble style section start
   font-weight: 500;
   text-transform: capitalize;
   -webkit-mask-image: url(../img/svg/btn-path-right.svg);
-  -webkit-mask-position: bottom right;
+  -webkit-mask-position: center;
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-size: cover;
 }
@@ -2060,14 +2076,24 @@ user nav Profile end
     padding: 15px;
   }
   .navbar .nav-right {
-    margin-right: 70px;
+    margin-right: 65px;
     position: absolute;
     right: 0;
+  }
+}
+@media (max-width: 767px) {
+  .navbar .custom-nav .cmn-btn {
+    height: 40px;
+    width: 40px;
   }
 }
 @media (max-width: 575px) {
   .navbar {
     padding: 10px 0;
+  }
+  .navbar .custom-nav .cmn-btn {
+    height: 40px;
+    width: 40px;
   }
 }
 .rtl .navbar .navbar-nav .nav-link .login-icon {
@@ -2078,7 +2104,7 @@ user nav Profile end
 .rtl .navbar .nav-right {
   left: 0;
   right: auto;
-  margin-left: 70px;
+  margin-left: 65px;
   margin-right: 0;
 }
 
@@ -2207,12 +2233,11 @@ Bottom Mobile, Tab Nav section end
     font-size: 18px;
   }
 }
-.rtl .hero-section::after {
-  transform: rotate(180deg);
-}
-.rtl .hero-section .hero-btn-area .btn {
-  margin-right: 0;
-  margin-left: 10px;
+@media (min-width: 1200px) {
+  .rtl .hero-section .offset-xl-1 {
+    margin-left: 0;
+    margin-right: 8.33333333%;
+  }
 }
 
 .dark-theme .hero-section::before {
@@ -2415,6 +2440,11 @@ Destination details section end
     flex-direction: column;
   }
 }
+.rtl .about-section .about-image-area .img2 {
+  margin-left: 0;
+  margin-right: auto;
+}
+
 /*----------------------------------------------
 About section end
 ----------------------------------------------*/
@@ -2607,6 +2637,15 @@ Package section end
   top: 100px;
 }
 
+.rtl .package-details-section .overview-area .over-view-list .item {
+  padding-left: 0;
+  padding-right: 20px;
+}
+.rtl .package-details-section .overview-area .over-view-list .item::after {
+  left: auto;
+  right: 0;
+}
+
 /*----------------------------------------------
 Package details section end
 ----------------------------------------------*/
@@ -2640,6 +2679,7 @@ Package details section end
   display: flex;
   overflow: hidden;
   margin-bottom: 30px;
+  gap: 15px;
 }
 .all-review .review-box .img-box {
   width: 50px;
@@ -2661,7 +2701,6 @@ Package details section end
 .all-review .review-box .text-box {
   width: calc(100% - 50px);
   margin-left: auto;
-  padding-left: 15px;
 }
 .all-review .review-box .text-box .reply-btn {
   font-family: "Teko", sans-serif;
@@ -2773,6 +2812,8 @@ Review section end
 ----------------------------------------------*/
 .newsletter-section {
   background-image: linear-gradient(rgba(45, 55, 60, 0.8), rgba(45, 55, 60, 0.8)), url(../img/newsletter/1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .newsletter-section .newsletter-inner {
   max-width: 500px;
@@ -2826,15 +2867,12 @@ Review section end
     text-align: center;
   }
 }
-.rtl .subscribe-form input {
-  padding: 5px 5px 5px 40px;
+.rtl .newsletter-form input {
+  padding: 10px 20px 10px 165px;
 }
-.rtl .subscribe-form .subscribe-btn {
-  left: 0;
+.rtl .newsletter-form .subscribe-btn {
+  left: 5px;
   right: auto;
-}
-.rtl .subscribe-form .subscribe-btn i {
-  transform: rotate(-135deg);
 }
 
 .dark-theme .subscribe-form .form-control {
@@ -2945,6 +2983,7 @@ Why choose us section end
   max-width: 600px;
   background-color: var(--white);
   box-shadow: var(--shadow1);
+  text-align: justify;
 }
 .testimonial-section .testimonial-box p {
   font-size: 18px;
@@ -2995,6 +3034,20 @@ Why choose us section end
   margin-top: 30px;
 }
 
+@media (max-width: 575px) {
+  .testimonial-section .testimonial-box {
+    padding: 20px;
+  }
+  .testimonial-section .testimonial-box .quote-area {
+    font-size: 50px;
+    right: 15px;
+    bottom: 15px;
+  }
+  .testimonial-section .testimonial-box .client-info .thumbs-area img {
+    width: 50px;
+    height: 50px;
+  }
+}
 .dark-theme .testimonial-section .owl-item.active.center .testimonial-box {
   border-color: var(--bg-color2);
 }
@@ -3114,7 +3167,7 @@ Testimonial section end
   min-width: 130px;
   height: 100%;
 }
-.blog-box .content-area .sidebar-widget-title {
+.blog-box .content-area .blog-title {
   margin-bottom: 15px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -3154,7 +3207,7 @@ Testimonial section end
 .blog-box-large .content-area {
   max-width: 600px;
 }
-.blog-box-large .content-area .sidebar-widget-title {
+.blog-box-large .content-area .blog-title {
   margin-bottom: 15px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -3184,6 +3237,11 @@ Testimonial section end
   color: var(--white);
   text-transform: uppercase;
   margin-bottom: 0;
+}
+
+.rtl .blog-btn i {
+  margin-left: 0;
+  margin-right: 5px;
 }
 
 /*----------------------------------------------
@@ -3370,7 +3428,7 @@ Footer end
 
 @media (max-width: 991px) {
   .banner-area {
-    padding-top: 100px;
+    padding-top: 250px;
     padding-bottom: 70px;
   }
   .banner-area h3 {
@@ -3397,8 +3455,8 @@ Banner section end
 }
 .contact-section .contact-inner {
   background-color: var(--white);
-  padding: 80px 80px;
-  border-radius: 5px;
+  padding: 80px;
+  border-radius: 15px;
   margin-top: -230px;
   box-shadow: var(--shadow2);
 }
@@ -3435,12 +3493,9 @@ Banner section end
   font-weight: 600;
 }
 
-@media (max-width: 575px) {
-  .contact-section .contact-message-area {
-    padding: 20px;
-  }
-  .contact-section .contact-message-area .btn-area {
-    margin-top: 10px;
+@media (max-width: 991px) {
+  .contact-section .contact-inner {
+    padding: 30px;
   }
 }
 .rtl .contact-section .contact-area .contact-item-list .item .icon-area {
@@ -3469,9 +3524,9 @@ Contact end
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 30px;
 }
 .login-signup-page .login-signup-thums .content-area {
-  height: 100%;
   max-height: 680px;
   max-width: 500px;
   background-color: rgba(0, 0, 0, 0.7);
@@ -3480,6 +3535,7 @@ Contact end
   flex-direction: column;
   justify-content: space-between;
   border-radius: 30px;
+  height: 100%;
 }
 .login-signup-page .login-signup-thums .content-area .logo {
   max-width: 150px;
@@ -3524,6 +3580,11 @@ Contact end
   cursor: pointer;
 }
 
+@media (max-width: 767px) {
+  .login-signup-page .login-signup-form {
+    margin: auto;
+  }
+}
 @media (max-width: 575px) {
   .login-signup-page .login-signup-form {
     padding: 20px;

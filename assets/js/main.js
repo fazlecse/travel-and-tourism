@@ -59,7 +59,6 @@ $(document).ready(function () {
             margin: 10,
             nav: false,
             dots: true,
-
             // rtl: true,
             responsive: {
                 0: {

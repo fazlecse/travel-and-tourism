@@ -408,14 +408,14 @@ body {
     line-height: 1.5;
     color: var(--body-color);
     font-size: 16px;
-    // overflow-x: hidden;
+    // overflow-x: scroll;
     // background-color: var(--bg-color1);
     font-weight: 400;
 }
 
 @media (max-width: 991px) {
     body {
-        padding-bottom: 56px;
+        padding-bottom: 50px;
     }
 }
 
@@ -634,12 +634,12 @@ span.select2.select2-container.select2-container--default {
 .select2-container--default .select2-selection--single .select2-selection__arrow {
     top: 50%;
     transform: translateY(-50%);
+    right: 5px;
 }
 
 .select2-container--default .select2-selection--single .select2-selection__arrow b {
     border-color: #a19e9e transparent transparent transparent;
     border-width: 5px 6px 0 6px;
-    margin-left: -10px;
     top: 50%;
     transform: translateY(-50%);
 }
@@ -650,7 +650,7 @@ span.select2.select2-container.select2-container--default {
 }
 
 .rtl .select2-container--default .select2-selection--single .select2-selection__arrow {
-    left: 1px;
+    left: 5px;
 }
 
 .rtl .select2-container .select2-selection--single .select2-selection__rendered {
@@ -864,6 +864,26 @@ Reuseble style section start
 
 }
 
+
+// Rtl search box section start 
+.rtl {
+    .search-box {
+        .search-btn {
+            left: 2px;
+            right: auto;
+        }
+
+        .form-control {
+            padding-right: 10px;
+            padding-left: 50px;
+        }
+    }
+}
+
+// Rtl search box section end
+
+// Search box section end
+
 // Multiple search box start
 .multiple-search-box {
     padding: 10px;
@@ -973,24 +993,36 @@ Reuseble style section start
     }
 }
 
-// Rtl search box section start 
+// Responsive multiple search box start
 .rtl {
-    .search-box {
-        .search-btn {
-            left: 2px;
-            right: auto;
+    .multiple-search-box form {
+        .input-box {
+            .form-control {
+                padding-left: 10px;
+                padding-right: 40px;
+            }
         }
 
-        .form-control {
-            padding-right: 10px;
-            padding-left: 50px;
+        .input-group-text {
+            right: -10px;
+            left: auto;
+        }
+
+        .select2 {
+            padding-left: 0;
+            padding-right: 30px;
+        }
+
+        .cmn-btn {
+            i {
+                transform: rotate(90deg);
+            }
         }
     }
 }
 
-// Rtl search box section end
-
-// Search box section end
+// Responsive multiple search box end
+// Multiple search box end
 // Bootstrap datepicker start
 .date-picker {
     cursor: pointer;
@@ -1151,7 +1183,7 @@ Reuseble style section start
     background: var(--primary-color);
     padding: 10px 15px;
     border-radius: 5px;
-    transition: all .3s ease-in-out;
+    transition: var(--transition);
     font-size: 16px;
     color: var(--white);
     display: inline-flex;
@@ -1161,7 +1193,8 @@ Reuseble style section start
     font-weight: 500;
     text-transform: capitalize;
     -webkit-mask-image: url(../img/svg/btn-path-right.svg);
-    -webkit-mask-position: bottom right;
+    // -webkit-mask-position: bottom right;
+    -webkit-mask-position: center;
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-size: cover;
 
@@ -1187,6 +1220,7 @@ Reuseble style section start
         z-index: -1;
     }
 }
+
 
 .cmn-btn2 {
     position: relative;
@@ -2405,9 +2439,21 @@ user nav Profile end
         }
 
         .nav-right {
-            margin-right: 70px;
+            margin-right: 65px;
             position: absolute;
             right: 0;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .navbar {
+
+        .custom-nav {
+            .cmn-btn {
+                height: 40px;
+                width: 40px;
+            }
         }
     }
 }
@@ -2415,6 +2461,13 @@ user nav Profile end
 @media (max-width: 575px) {
     .navbar {
         padding: 10px 0;
+
+        .custom-nav {
+            .cmn-btn {
+                height: 40px;
+                width: 40px;
+            }
+        }
     }
 }
 
@@ -2431,7 +2484,7 @@ user nav Profile end
         .nav-right {
             left: 0;
             right: auto;
-            margin-left: 70px;
+            margin-left: 65px;
             margin-right: 0;
 
         }
@@ -2608,14 +2661,13 @@ Bottom Mobile, Tab Nav section end
 
 // Hero rtl start
 .rtl {
-    .hero-section {
-        &::after {
-            transform: rotate(180deg);
-        }
+    @media (min-width: 1200px) {
 
-        .hero-btn-area .btn {
-            margin-right: 0;
-            margin-left: 10px;
+        .hero-section {
+            .offset-xl-1 {
+                margin-left: 0;
+                margin-right: 8.33333333%;
+            }
         }
     }
 }
@@ -2887,6 +2939,15 @@ Destination details section end
 
 
 // About responsive end
+// Rtl about section start
+.rtl {
+    .about-section .about-image-area .img2 {
+        margin-left: 0;
+        margin-right: auto;
+    }
+}
+
+// Rtl about section end
 
 /*----------------------------------------------
 About section end
@@ -3133,6 +3194,20 @@ Package section end
     top: 100px;
 }
 
+// Rtl Package details section start
+.rtl {
+    .package-details-section .overview-area .over-view-list .item {
+        padding-left: 0;
+        padding-right: 20px;
+
+        &::after {
+            left: auto;
+            right: 0;
+        }
+    }
+}
+
+// Rtl Package details section end
 /*----------------------------------------------
 Package details section end
 ----------------------------------------------*/
@@ -3175,6 +3250,7 @@ Package details section end
         display: flex;
         overflow: hidden;
         margin-bottom: 30px;
+        gap: 15px;
 
         .img-box {
             width: 50px;
@@ -3200,7 +3276,6 @@ Package details section end
         .text-box {
             width: calc(100% - 50px);
             margin-left: auto;
-            padding-left: 15px;
 
             .reply-btn {
                 font-family: "Teko", sans-serif;
@@ -3333,7 +3408,9 @@ Review section end
 12. Newsletter section start
 ----------------------------------------------*/
 .newsletter-section {
-    background-image: linear-gradient(rgba(45, 55, 60, 0.8), rgba(45, 55, 60, 0.8), ), url(../img/newsletter/1.jpg);
+    background-image: linear-gradient(rgba(45, 55, 60, 0.8), rgba(45, 55, 60, 0.8)), url(../img/newsletter/1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 
     .newsletter-inner {
         max-width: 500px;
@@ -3401,18 +3478,15 @@ Review section end
 
 // Newslatter rtl start
 .rtl {
-    .subscribe-form {
+    .newsletter-form {
         input {
-            padding: 5px 5px 5px 40px;
+            padding: 10px 20px 10px 165px;
         }
 
         .subscribe-btn {
-            left: 0;
+            left: 5px;
             right: auto;
 
-            i {
-                transform: rotate(-135deg);
-            }
         }
     }
 
@@ -3553,6 +3627,7 @@ Why choose us section end
         max-width: 600px;
         background-color: var(--white);
         box-shadow: var(--shadow1);
+        text-align: justify;
 
         p {
             font-size: 18px;
@@ -3620,7 +3695,27 @@ Why choose us section end
     }
 }
 
-// Rtl testimonial end
+// Responsive testimonial section start
+@media (max-width: 575px) {
+    .testimonial-section {
+        .testimonial-box {
+            padding: 20px;
+
+            .quote-area {
+                font-size: 50px;
+                right: 15px;
+                bottom: 15px;
+            }
+
+            .client-info .thumbs-area img {
+                width: 50px;
+                height: 50px;
+            }
+        }
+    }
+}
+
+// Responsive testimonial section end
 // Dark theme testimonial section start
 .dark-theme {
     .testimonial-section .owl-item.active.center .testimonial-box {
@@ -3775,7 +3870,7 @@ Testimonial section end
     }
 
     .content-area {
-        .sidebar-widget-title {
+        .blog-title {
             margin-bottom: 15px;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -3821,7 +3916,7 @@ Testimonial section end
     .content-area {
         max-width: 600px;
 
-        .sidebar-widget-title {
+        .blog-title {
             margin-bottom: 15px;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -3860,10 +3955,16 @@ Testimonial section end
 
 }
 
-// Dark theme blog section start
+// Rtl blog section start
+.rtl {
+    .blog-btn i {
+        margin-left: 0;
+        margin-right: 5px;
 
+    }
+}
 
-// Dark theme blog section end
+// Rtl blog section end
 /*----------------------------------------------
 Blog section end
 ----------------------------------------------*/
@@ -4092,7 +4193,7 @@ Footer end
 // Responsive banner start
 @media (max-width: 991px) {
     .banner-area {
-        padding-top: 100px;
+        padding-top: 250px;
         padding-bottom: 70px;
 
         h3 {
@@ -4130,8 +4231,8 @@ Banner section end
 
     .contact-inner {
         background-color: var(--white);
-        padding: 80px 80px;
-        border-radius: 5px;
+        padding: 80px;
+        border-radius: 15px;
         margin-top: -230px;
         box-shadow: var(--shadow2);
     }
@@ -4189,15 +4290,12 @@ Banner section end
 }
 
 // Responsive contact section start
-@media (max-width: 575px) {
-    .contact-section .contact-message-area {
-        padding: 20px;
-
-        .btn-area {
-            margin-top: 10px;
-        }
+@media (max-width: 991px) {
+    .contact-section .contact-inner {
+        padding: 30px;
     }
 }
+
 
 // Responsive contact section end
 
@@ -4238,9 +4336,9 @@ Contact end
         display: flex;
         align-items: center;
         justify-content: center;
+        padding: 30px;
 
         .content-area {
-            height: 100%;
             max-height: 680px;
             max-width: 500px;
             background-color: rgba(0, 0, 0, 0.7);
@@ -4249,6 +4347,7 @@ Contact end
             flex-direction: column;
             justify-content: space-between;
             border-radius: 30px;
+            height: 100%;
 
             .logo {
                 max-width: 150px;
@@ -4267,6 +4366,7 @@ Contact end
             }
         }
     }
+
 
     .login-signup-form {
         background-color: var(--white);
@@ -4308,7 +4408,11 @@ Contact end
 }
 
 // Responsive login signup start
-
+@media (max-width: 767px){
+    .login-signup-page .login-signup-form{
+        margin: auto;
+    }
+}
 @media (max-width: 575px) {
     .login-signup-page .login-signup-form {
         padding: 20px;
