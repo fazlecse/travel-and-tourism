@@ -2161,16 +2161,9 @@ Bottom Mobile, Tab Nav section end
   background-color: var(--bg-color1);
   position: relative;
   padding: 200px 0 100px;
-  overflow: hidden;
-  z-index: 0;
 }
 .hero-section .section-subtitle {
   font-size: 40px;
-}
-.hero-section .hero-para-text {
-  font-size: 22px;
-  font-weight: 500;
-  text-transform: capitalize;
 }
 .hero-section .hero-btn-area {
   display: flex;
@@ -2181,6 +2174,12 @@ Bottom Mobile, Tab Nav section end
   background-color: var(--white);
   padding: 10px;
   box-shadow: var(--shadow4);
+}
+
+.hero-para-text {
+  font-size: 22px;
+  font-weight: 500;
+  text-transform: capitalize;
 }
 
 @media (min-width: 992px) {
@@ -2253,6 +2252,10 @@ Hero section end
 /*----------------------------------------------
 04. Destination section start
 ----------------------------------------------*/
+.destination-section {
+  background-color: var(--bg-color1);
+}
+
 .detination-box {
   position: relative;
   transition: var(--transition);
@@ -2451,6 +2454,20 @@ About section end
 /*----------------------------------------------
 07. Package section start
 ----------------------------------------------*/
+/*----------------------------------------------
+07. Popular tour section start
+----------------------------------------------*/
+.popular-tour-section {
+  background-color: var(--bg-color1);
+}
+
+/*----------------------------------------------
+Popular tour start
+----------------------------------------------*/
+.package-section {
+  background-color: var(--bg-color1);
+}
+
 .package-card {
   border-radius: 15px;
   border: 1px solid var(--border-color1);
@@ -2538,6 +2555,9 @@ Package section end
 /*----------------------------------------------
 00. Package details section end
 ----------------------------------------------*/
+.package-details-section {
+  background-color: var(--bg-color1);
+}
 .package-details-section .title {
   margin-bottom: 20px;
 }
@@ -2881,6 +2901,16 @@ Review section end
 
 /*----------------------------------------------
 Newsletter section end
+----------------------------------------------*/
+/*----------------------------------------------
+00. Holiday Offer section start
+----------------------------------------------*/
+.holiday-section {
+  background-color: var(--bg-color1);
+}
+
+/*----------------------------------------------
+Holiday Offer section end
 ----------------------------------------------*/
 /*----------------------------------------------
 00. Why choose us section start
@@ -3771,11 +3801,12 @@ Map section end
 }
 
 .blog-date {
+  display: flex;
+  gap: 5px;
   color: var(--heading-color);
   font-size: 14px;
 }
 .blog-date i {
-  margin-right: 5px;
   color: var(--primary-color);
 }
 
@@ -3787,6 +3818,16 @@ Map section end
   right: 0;
   left: auto;
 }
+.rtl .blog-quote-box {
+  padding: 25px 40px 20px 20px;
+}
+.rtl .blog-quote-box .icon-area {
+  left: auto;
+  right: -20px;
+}
+.rtl .blog-quote-box .icon-area i {
+  transform: rotateY(180deg);
+}
 
 /*----------------------------------------------
 Blog details end
@@ -3795,7 +3836,6 @@ Blog details end
 00. Checkout page start
 ----------------------------------------------*/
 .checkout-form {
-  padding: 20px;
   border-radius: 5px;
   background-color: var(--white);
 }
@@ -3810,7 +3850,6 @@ Checkout page end
 Payment section start
 -----------------------------------------------*/
 .payment-section {
-  padding: 20px;
   border-radius: 5px;
   background-color: var(--white);
 }
@@ -3892,6 +3931,11 @@ Booking submission section end
 }
 .booking-submission-section .sidebar-widget-area .section-header .content-area .title {
   margin-bottom: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
 }
 .booking-submission-section .sidebar-widget-area .section-header .content-area .location {
   display: flex;
@@ -4028,4 +4072,52 @@ Pagination end
 }
 /*----------------------------------------------
 Error section start
+----------------------------------------------*/
+/*----------------------------------------------
+Hero2 section start
+----------------------------------------------*/
+.hero-section2 {
+  position: relative;
+}
+.hero-section2 h1 {
+  color: var(--white);
+}
+.hero-section2 .section-subtitle {
+  color: var(--white);
+}
+.hero-section2 .hero-para-text {
+  color: var(--white);
+}
+.hero-section2 .item {
+  position: relative;
+  min-height: 750px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.hero-section2 .item::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  content: "";
+  background-color: #000000;
+  height: 100%;
+  width: 100%;
+  opacity: 0.25;
+}
+.hero-section2 .hero-content {
+  margin-top: 50px;
+  position: absolute;
+  top: 50%;
+  z-index: 9;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+}
+.hero-section2 .multiple-search-box {
+  box-shadow: none;
+}
+
+/*----------------------------------------------
+Hero2 section end
 ----------------------------------------------*/

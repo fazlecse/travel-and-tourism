@@ -72,6 +72,25 @@ $(document).ready(function () {
                 }
             }
         });
+        $('.hero-carousel').owlCarousel({
+            loop: true,
+            autoplay: false,
+            margin: 10,
+            nav: false,
+            dots: false,
+            // rtl: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 1
+                },
+                1000: {
+                    items: 1
+                }
+            }
+        });
     });
     // Testimonial section end
 
