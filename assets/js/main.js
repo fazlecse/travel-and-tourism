@@ -74,7 +74,7 @@ $(document).ready(function () {
         });
         $('.hero-carousel').owlCarousel({
             loop: true,
-            autoplay: false,
+            autoplay: true,
             margin: 10,
             nav: false,
             dots: false,

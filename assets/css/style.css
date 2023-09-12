@@ -1604,6 +1604,17 @@ hr.divider:after {
   color: var(--heading-color);
 }
 
+.feature-box {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 10px;
+}
+.feature-box .icon-area {
+  font-size: 50px;
+  color: var(--primary-color);
+}
+
 .mt-10 {
   margin-top: 10px;
 }
@@ -2271,7 +2282,7 @@ Hero section end
   height: 100%;
   width: 100%;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0.3) 60%);
-  border-radius: 5px;
+  border-radius: 15px;
 }
 .detination-box:hover .thumbs-area img {
   transform: scale(1.1);
@@ -2284,11 +2295,11 @@ Hero section end
   visibility: visible;
 }
 .detination-box .thumbs-area {
-  border-radius: 5px;
+  border-radius: 15px;
   overflow: hidden;
 }
 .detination-box .thumbs-area img {
-  border-radius: 5px;
+  border-radius: 15px;
   transition: var(--transition);
   max-height: 250px;
   width: 100%;
@@ -4074,7 +4085,7 @@ Pagination end
 Error section start
 ----------------------------------------------*/
 /*----------------------------------------------
-Hero2 section start
+Hero section2 start
 ----------------------------------------------*/
 .hero-section2 {
   position: relative;
@@ -4090,7 +4101,7 @@ Hero2 section start
 }
 .hero-section2 .item {
   position: relative;
-  min-height: 750px;
+  min-height: 800px;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -4106,7 +4117,7 @@ Hero2 section start
   opacity: 0.25;
 }
 .hero-section2 .hero-content {
-  margin-top: 50px;
+  margin-top: 70px;
   position: absolute;
   top: 50%;
   z-index: 9;
@@ -4119,5 +4130,40 @@ Hero2 section start
 }
 
 /*----------------------------------------------
-Hero2 section end
+Hero section2 end
+----------------------------------------------*/
+/*----------------------------------------------
+00. Feature section start
+----------------------------------------------*/
+.feature-section {
+  background-color: var(--bg-color1);
+}
+
+/*----------------------------------------------
+Feature section end
+----------------------------------------------*/
+/*----------------------------------------------
+00. Newsletter section2 start
+----------------------------------------------*/
+.newsletter-section2 .newsletter-offer {
+  background: linear-gradient(rgba(45, 55, 60, 0.8) 100%, rgba(45, 55, 60, 0.8) 100%), url(../img/newsletter/2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  padding: 100px 30px;
+  min-height: 550px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.newsletter-section2 .newsletter-offer .newsletter-offer-inner {
+  max-width: 520px;
+}
+.newsletter-section2 .newsletter-offer h2, .newsletter-section2 .newsletter-offer p {
+  color: var(--white);
+}
+
+/*----------------------------------------------
+Feature section2 end
 ----------------------------------------------*/
