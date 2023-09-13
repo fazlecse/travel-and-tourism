@@ -72,10 +72,28 @@ $(document).ready(function () {
                 }
             }
         });
-        $('.hero-carousel').owlCarousel({
+        $('.testimonial-carousel2').owlCarousel({
             loop: true,
             autoplay: true,
             margin: 10,
+            nav: false,
+            dots: true,
+            // rtl: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                1000: {
+                    items: 3
+                }
+            }
+        });
+        $('.hero-carousel').owlCarousel({
+            loop: true,
+            autoplay: true,
             nav: false,
             dots: false,
             // rtl: true,

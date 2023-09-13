@@ -54,7 +54,7 @@ Typography
   --border-color2: #F2EFDF70;
   --border-color3: #e1f1ee;
   --primary-color-opacity-low: rgba(255, 153, 51, 0.2);
-  --primary-color-opacity-low2: #D0CEFD;
+  --primary-color-opacity-low2: rgba(255, 153, 51, 0.3);
   --shadow1: 0px 0px 5px 2px rgb(249 238 238);
   --shadow2: 0px 3px 5px 0px rgba(0, 0, 0, 0.10);
   --shadow3: 0px 0px 5px 0px rgba(0, 0, 0, 0.10);
@@ -2406,17 +2406,18 @@ Destination details section end
   z-index: 0;
   background-color: var(--bg-color1);
 }
-.about-section .about-image-area {
+
+.about-image-area {
   text-align: center;
 }
-.about-section .about-image-area .img1 {
+.about-image-area .img1 {
   width: 100%;
   max-width: 90%;
   padding: 10px;
   background-color: var(--white);
   box-shadow: var(--shadow4);
 }
-.about-section .about-image-area .img2 {
+.about-image-area .img2 {
   max-width: 400px;
   margin-top: -130px;
   margin-right: 0;
@@ -2427,12 +2428,13 @@ Destination details section end
   box-shadow: var(--shadow4);
   position: relative;
 }
-.about-section .about-content .item-list-container {
+
+.about-content .item-list-container {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-.about-section .about-content .item-list-container .item {
+.about-content .item-list-container .item {
   display: flex;
   align-items: center;
   gap: 20px;
@@ -2846,7 +2848,7 @@ Review section end
   background-repeat: no-repeat;
   background-size: cover;
 }
-.newsletter-section .newsletter-inner {
+.newsletter-section .newsletter-form-area {
   max-width: 500px;
 }
 .newsletter-section .section-subtitle {
@@ -2894,7 +2896,7 @@ Review section end
 }
 
 @media (max-width: 575px) {
-  .newsletter-section .newsletter-inner {
+  .newsletter-section .newsletter-form-area {
     text-align: center;
   }
 }
@@ -3499,7 +3501,7 @@ Banner section end
   padding: 80px;
   border-radius: 15px;
   margin-top: -230px;
-  box-shadow: var(--shadow2);
+  box-shadow: var(--shadow4);
 }
 .contact-section .contact-area .contact-item-list {
   margin-top: 30px;
@@ -4146,7 +4148,8 @@ Feature section end
 00. Newsletter section2 start
 ----------------------------------------------*/
 .newsletter-section2 .newsletter-offer {
-  background: linear-gradient(rgba(45, 55, 60, 0.8) 100%, rgba(45, 55, 60, 0.8) 100%), url(../img/newsletter/2.jpg);
+  background: linear-gradient(rgba(45, 55, 60, 0.8) 100%, rgba(45, 55, 60, 0.8) 100%), url(../img/newsletter/joshua-earle--87JyMb9ZfU-unsplash.jpg);
+  background: linear-gradient(rgba(56, 53, 53, 0.8) 100%, rgba(56, 53, 53, 0.8) 100%), url(../img/newsletter/joshua-earle--87JyMb9ZfU-unsplash.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -4160,10 +4163,105 @@ Feature section end
 .newsletter-section2 .newsletter-offer .newsletter-offer-inner {
   max-width: 520px;
 }
-.newsletter-section2 .newsletter-offer h2, .newsletter-section2 .newsletter-offer p {
+.newsletter-section2 .newsletter-offer h2,
+.newsletter-section2 .newsletter-offer p {
   color: var(--white);
+}
+.newsletter-section2 .newsletter-form-area {
+  background: url(../img/newsletter/2.png), var(--bg-color3);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 20px;
+  min-height: 550px;
+}
+.newsletter-section2 .newsletter-form-area .newsletter-form-area-inner {
+  width: 100%;
+  max-width: 550px;
+}
+.newsletter-section2 .newsletter-form-area .newsletter-form-area-inner .section-subtitle,
+.newsletter-section2 .newsletter-form-area .newsletter-form-area-inner .newslatter-title {
+  color: var(--white);
+}
+.newsletter-section2 .newsletter-form-area .newsletter-form-area-inner p {
+  color: #9e9fa0;
 }
 
 /*----------------------------------------------
 Feature section2 end
+----------------------------------------------*/
+/*----------------------------------------------
+09. Testimonial section2 start
+----------------------------------------------*/
+.testimonial-section2 {
+  background-color: var(--bg-color1);
+}
+.testimonial-section2 .testimonial-box {
+  padding: 20px;
+  background: var(--white);
+  border-radius: 15px;
+  transition: var(--transition);
+  border: 1px solid var(--border-color1);
+}
+.testimonial-section2 .testimonial-box .testimonial-header {
+  display: flex;
+  justify-content: space-between;
+}
+.testimonial-section2 .testimonial-box .testimonial-header .testimonial-title-area {
+  display: flex;
+}
+.testimonial-section2 .testimonial-box .testimonial-header .testimonial-thumbs {
+  margin-right: 10px;
+}
+.testimonial-section2 .testimonial-box .testimonial-header .testimonial-thumbs img {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+}
+.testimonial-section2 .testimonial-box .testimonial-header .qoute-icon {
+  font-size: 35px;
+  color: var(--primary-color);
+}
+.testimonial-section2 .testimonial-box .quote-area {
+  margin-top: 20px;
+}
+.testimonial-section2 .owl-theme .owl-nav.disabled + .owl-dots {
+  margin-top: 30px;
+}
+
+.rtl .testimonial-section2 .testimonial-box .testimonial-header .testimonial-thumbs {
+  margin-right: 0;
+  margin-left: 10px;
+}
+
+/*----------------------------------------------
+00. Testimonial section2 start
+----------------------------------------------*/
+/*----------------------------------------------
+00. About section2 start
+----------------------------------------------*/
+.about-section2 {
+  background-color: var(--bg-color1);
+}
+.about-section2 .about-image-area {
+  position: relative;
+}
+.about-section2 .about-image-area .about-counter {
+  position: absolute;
+  right: 0;
+  bottom: -50px;
+  background-color: var(--white);
+  padding: 30px;
+  text-align: end;
+  box-shadow: var(--shadow4);
+  border-bottom: 2px solid var(--primary-color);
+  border-radius: 3px 3px 4px 4px;
+}
+
+/*----------------------------------------------
+About section2 end
 ----------------------------------------------*/
