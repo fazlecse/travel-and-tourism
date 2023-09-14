@@ -1344,12 +1344,12 @@ section {
   background-color: var(--primary-color);
 }
 
-.star-list li a {
+.star-list li i {
   color: var(--orange);
   opacity: 0.5;
 }
 
-.star-list li a.active {
+.star-list li .active {
   color: var(--orange);
   opacity: 1;
 }
@@ -2267,13 +2267,13 @@ Hero section end
   background-color: var(--bg-color1);
 }
 
-.detination-box {
+.destination-box {
   position: relative;
   transition: var(--transition);
   overflow: hidden;
   display: block;
 }
-.detination-box::after {
+.destination-box::after {
   z-index: 0;
   content: "";
   position: absolute;
@@ -2284,27 +2284,27 @@ Hero section end
   background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0.3) 60%);
   border-radius: 15px;
 }
-.detination-box:hover .thumbs-area img {
+.destination-box:hover .thumbs-area img {
   transform: scale(1.1);
 }
-.detination-box:hover .content-area {
+.destination-box:hover .content-area {
   bottom: 15px;
 }
-.detination-box:hover .content-area .destination-info {
+.destination-box:hover .content-area .destination-info {
   opacity: 1;
   visibility: visible;
 }
-.detination-box .thumbs-area {
+.destination-box .thumbs-area {
   border-radius: 15px;
   overflow: hidden;
 }
-.detination-box .thumbs-area img {
+.destination-box .thumbs-area img {
   border-radius: 15px;
   transition: var(--transition);
   max-height: 250px;
   width: 100%;
 }
-.detination-box .content-area {
+.destination-box .content-area {
   z-index: 1;
   color: var(--white);
   position: absolute;
@@ -2317,13 +2317,13 @@ Hero section end
   align-items: center;
   transition: var(--transition);
 }
-.detination-box .content-area .title {
+.destination-box .content-area .title {
   color: var(--white);
   font-family: var(--body-font);
   margin-bottom: 0;
   font-weight: 500;
 }
-.detination-box .content-area .destination-info {
+.destination-box .content-area .destination-info {
   display: flex;
   gap: 15px;
   font-size: 16px;
@@ -2335,7 +2335,7 @@ Hero section end
   transition: var(--transition);
   position: relative;
 }
-.detination-box .content-area .destination-info .item:not(:last-child)::after {
+.destination-box .content-area .destination-info .item:not(:last-child)::after {
   content: "";
   position: absolute;
   background-color: var(--primary-color);
@@ -2345,7 +2345,7 @@ Hero section end
   transform: translateX(-50%);
   top: 6px;
 }
-.detination-box .content-area .destination-info span {
+.destination-box .content-area .destination-info span {
   font-size: 18px;
   font-weight: 500;
 }
@@ -2465,17 +2465,17 @@ Destination details section end
 About section end
 ----------------------------------------------*/
 /*----------------------------------------------
-07. Package section start
-----------------------------------------------*/
-/*----------------------------------------------
-07. Popular tour section start
+07. Popular tour section start 
 ----------------------------------------------*/
 .popular-tour-section {
   background-color: var(--bg-color1);
 }
 
 /*----------------------------------------------
-Popular tour start
+Popular tour section end
+----------------------------------------------*/
+/*----------------------------------------------
+07. Package section start
 ----------------------------------------------*/
 .package-section {
   background-color: var(--bg-color1);
@@ -2564,6 +2564,90 @@ Popular tour start
 
 /*----------------------------------------------
 Package section end
+----------------------------------------------*/
+/*----------------------------------------------
+Package card section2 start
+----------------------------------------------*/
+.package-card2 {
+  position: relative;
+  transition: var(--transition);
+  overflow: hidden;
+  display: block;
+}
+.package-card2::after {
+  z-index: 0;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0.3) 60%);
+  border-radius: 15px;
+}
+.package-card2:hover .thumbs-area img {
+  transform: scale(1.1);
+}
+.package-card2 .thumbs-area {
+  border-radius: 15px;
+  overflow: hidden;
+  height: 320px;
+}
+.package-card2 .thumbs-area img {
+  border-radius: 15px;
+  transition: var(--transition);
+  height: 320px;
+  width: 100%;
+}
+.package-card2 .content-area {
+  z-index: 1;
+  color: var(--white);
+  position: absolute;
+  bottom: 5px;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+  padding: 20px 10px 10px;
+  gap: 5px;
+}
+.package-card2 .content-area .title {
+  color: var(--white);
+  font-family: var(--body-font);
+  margin-bottom: 0;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+}
+.package-card2 .content-area .review-area p {
+  color: var(--white);
+}
+
+.package-tabs .nav-pills {
+  margin-bottom: 30px;
+  gap: 2rem;
+}
+.package-tabs .nav-link {
+  padding: 0;
+  color: var(--body-color);
+  font-weight: 500;
+}
+.package-tabs .nav-link.active {
+  border-bottom: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  background-color: transparent;
+  border-radius: 0;
+}
+.package-tabs .nav-link .icon {
+  font-size: 32px;
+}
+
+/*----------------------------------------------
+Package card section2 end
 ----------------------------------------------*/
 /*----------------------------------------------
 00. Package details section end

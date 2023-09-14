@@ -1574,13 +1574,13 @@ section {
 
 
 // Star section start
-.star-list li a {
+.star-list li i {
     color: var(--orange);
     opacity: .5;
 
 }
 
-.star-list li a.active {
+.star-list li .active {
     color: var(--orange);
     opacity: 1;
 }
@@ -2710,7 +2710,7 @@ Hero section end
     background-color: var(--bg-color1);
 }
 
-.detination-box {
+.destination-box {
     position: relative;
     transition: var(--transition);
     overflow: hidden;
@@ -2879,8 +2879,9 @@ Destination details section end
     position: relative;
     z-index: 0;
     background-color: var(--bg-color1);
- 
+
 }
+
 .about-image-area {
     text-align: center;
 
@@ -2967,19 +2968,21 @@ Destination details section end
 About section end
 ----------------------------------------------*/
 
-/*----------------------------------------------
-07. Package section start
-----------------------------------------------*/
+
 
 /*----------------------------------------------
-07. Popular tour section start
+07. Popular tour section start 
 ----------------------------------------------*/
 .popular-tour-section {
     background-color: var(--bg-color1);
 }
 
 /*----------------------------------------------
-Popular tour start
+Popular tour section end
+----------------------------------------------*/
+
+/*----------------------------------------------
+07. Package section start
 ----------------------------------------------*/
 .package-section {
     background-color: var(--bg-color1);
@@ -3084,6 +3087,102 @@ Popular tour start
 
 /*----------------------------------------------
 Package section end
+----------------------------------------------*/
+
+/*----------------------------------------------
+Package card section2 start
+----------------------------------------------*/
+.package-card2 {
+    position: relative;
+    transition: var(--transition);
+    overflow: hidden;
+    display: block;
+    &::after {
+        z-index: 0;
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0.3) 60%);
+        border-radius: 15px;
+    }
+    &:hover {
+        .thumbs-area {
+            img {
+                transform: scale(1.1);
+            }
+        }
+
+    }
+
+    .thumbs-area {
+        border-radius: 15px;
+        overflow: hidden;
+        height: 320px;
+
+        img {
+            border-radius: 15px;
+            transition: var(--transition);
+            height: 320px;
+            width: 100%;
+        }
+    }
+    .content-area {
+        z-index: 1;
+        color: var(--white);
+        position: absolute;
+        bottom: 5px;
+        width: 100%;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        transition: var(--transition);
+        padding: 20px 10px 10px;
+        gap: 5px;
+        .title {
+            color: var(--white);
+            font-family: var(--body-font);
+            margin-bottom: 0;
+            font-weight: 500;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-box-orient: vertical;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+        }
+        .review-area {
+            p{
+                color: var(--white);
+            }
+        }
+    }
+    
+}
+.package-tabs{
+    .nav-pills{
+        margin-bottom: 30px;
+        gap: 2rem;
+    }
+    .nav-link{
+        padding: 0;
+        color: var(--body-color);
+        font-weight: 500;
+        &.active{
+            border-bottom: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            background-color: transparent;
+            border-radius: 0;
+        }
+        .icon{
+            font-size: 32px;
+        }
+    }
+}
+
+/*----------------------------------------------
+Package card section2 end
 ----------------------------------------------*/
 
 /*----------------------------------------------
