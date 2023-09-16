@@ -824,6 +824,27 @@ body::-webkit-scrollbar-thumb {
 }
 
 // Owl carousel section end
+// Modal section start
+.modal {
+    z-index: 99999;
+}
+
+// Modal section end
+// Cmn modal offcanvas button start
+.cmn-btn-close {
+    font-size: 18px;
+    background: var(--primary-color);
+    width: 40px;
+    height: 40px;
+    border-radius: 62% 38% 46% 54%/60% 63% 37% 40%;
+    color: var(--white);
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    box-shadow: none;
+}
+
+// Cmn modal offcanvas button end
 
 /*----------------------------------------------
 Reset section end
@@ -1193,7 +1214,6 @@ Reuseble style section start
     font-weight: 500;
     text-transform: capitalize;
     -webkit-mask-image: url(../img/svg/btn-path-right.svg);
-    // -webkit-mask-position: bottom right;
     -webkit-mask-position: center;
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-size: cover;
@@ -1793,6 +1813,10 @@ hr.divider:after {
 // checkbox categories area end
 
 // Fancybox carousel section start
+.fancybox__container {
+    z-index: 99999;
+}
+
 .fancybox-carousel {
     width: 100%;
     margin: 0 auto 1rem auto;
@@ -3097,6 +3121,7 @@ Package card section2 start
     transition: var(--transition);
     overflow: hidden;
     display: block;
+
     &::after {
         z-index: 0;
         content: "";
@@ -3108,6 +3133,7 @@ Package card section2 start
         background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0.3) 60%);
         border-radius: 15px;
     }
+
     &:hover {
         .thumbs-area {
             img {
@@ -3129,6 +3155,7 @@ Package card section2 start
             width: 100%;
         }
     }
+
     .content-area {
         z-index: 1;
         color: var(--white);
@@ -3141,6 +3168,7 @@ Package card section2 start
         transition: var(--transition);
         padding: 20px 10px 10px;
         gap: 5px;
+
         .title {
             color: var(--white);
             font-family: var(--body-font);
@@ -3152,30 +3180,35 @@ Package card section2 start
             display: -webkit-box;
             -webkit-line-clamp: 1;
         }
+
         .review-area {
-            p{
+            p {
                 color: var(--white);
             }
         }
     }
-    
+
 }
-.package-tabs{
-    .nav-pills{
+
+.package-tabs {
+    .nav-pills {
         margin-bottom: 30px;
         gap: 2rem;
     }
-    .nav-link{
+
+    .nav-link {
         padding: 0;
         color: var(--body-color);
         font-weight: 500;
-        &.active{
+
+        &.active {
             border-bottom: 1px solid var(--primary-color);
             color: var(--primary-color);
             background-color: transparent;
             border-radius: 0;
         }
-        .icon{
+
+        .icon {
             font-size: 32px;
         }
     }
@@ -3183,6 +3216,59 @@ Package card section2 start
 
 /*----------------------------------------------
 Package card section2 end
+----------------------------------------------*/
+/*----------------------------------------------
+00. Package card2 modal section start
+----------------------------------------------*/
+.package-card2-modal {
+    .modal-content {
+        background-color: var(--bg-color1);
+        position: relative;
+
+        .cmn-btn-close {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            z-index: 1;
+        }
+
+        .modal-body {
+            padding: 20px 10px;
+
+            .package-sidebar {
+                top: 0;
+            }
+        }
+    }
+    .modal-xl{
+        @media(min-width: 1400px){
+           --bs-modal-width: 1320px;
+        }
+    }
+
+.package-nav{
+    margin-bottom: 20px;
+    z-index: 1;
+    position: sticky;
+    top: 0;
+    background-color: var(--bg-color1);
+    display: flex;
+    .nav-link{
+        border-bottom: 1px solid var(--border-color1);
+        padding: 5px;
+        padding-right: 20px;
+        &.active{
+            border-bottom: 1px solid var(--primary-color);
+            color: var(--heading-color);
+        }
+    }
+}
+
+
+}
+
+/*----------------------------------------------
+Package card2 modal section start
 ----------------------------------------------*/
 
 /*----------------------------------------------
@@ -4078,7 +4164,7 @@ Testimonial section end
 
 
 
-.date {
+.blog-date {
     position: absolute;
     background: var(--primary-color);
     top: 15px;
@@ -4786,6 +4872,18 @@ Map section end
                 margin-bottom: 10px;
                 font-family: var(--heading-font);
             }
+
+            .widget-date {
+                display: flex;
+                gap: 5px;
+                color: var(--heading-color);
+
+                i {
+                    color: var(--primary-color);
+                }
+
+                font-size: 14px;
+            }
         }
     }
 
@@ -4797,17 +4895,6 @@ Map section end
     }
 }
 
-.blog-date {
-    display: flex;
-    gap: 5px;
-    color: var(--heading-color);
-
-    i {
-        color: var(--primary-color);
-    }
-
-    font-size: 14px;
-}
 
 // Blog details rtl start
 .rtl {

@@ -738,6 +738,23 @@ body::-webkit-scrollbar-thumb:hover {
   margin-top: 20px;
 }
 
+.modal {
+  z-index: 99999;
+}
+
+.cmn-btn-close {
+  font-size: 18px;
+  background: var(--primary-color);
+  width: 40px;
+  height: 40px;
+  border-radius: 62% 38% 46% 54%/60% 63% 37% 40%;
+  color: var(--white);
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  box-shadow: none;
+}
+
 /*----------------------------------------------
 Reset section end
 ----------------------------------------------*/
@@ -1516,6 +1533,10 @@ hr.divider:after {
   display: flex;
   justify-content: space-between;
   cursor: pointer;
+}
+
+.fancybox__container {
+  z-index: 99999;
 }
 
 .fancybox-carousel {
@@ -2650,6 +2671,51 @@ Package card section2 start
 Package card section2 end
 ----------------------------------------------*/
 /*----------------------------------------------
+00. Package card2 modal section start
+----------------------------------------------*/
+.package-card2-modal .modal-content {
+  background-color: var(--bg-color1);
+  position: relative;
+}
+.package-card2-modal .modal-content .cmn-btn-close {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  z-index: 1;
+}
+.package-card2-modal .modal-content .modal-body {
+  padding: 20px 10px;
+}
+.package-card2-modal .modal-content .modal-body .package-sidebar {
+  top: 0;
+}
+@media (min-width: 1400px) {
+  .package-card2-modal .modal-xl {
+    --bs-modal-width: 1320px;
+  }
+}
+.package-card2-modal .package-nav {
+  margin-bottom: 20px;
+  z-index: 1;
+  position: sticky;
+  top: 0;
+  background-color: var(--bg-color1);
+  display: flex;
+}
+.package-card2-modal .package-nav .nav-link {
+  border-bottom: 1px solid var(--border-color1);
+  padding: 5px;
+  padding-right: 20px;
+}
+.package-card2-modal .package-nav .nav-link.active {
+  border-bottom: 1px solid var(--primary-color);
+  color: var(--heading-color);
+}
+
+/*----------------------------------------------
+Package card2 modal section start
+----------------------------------------------*/
+/*----------------------------------------------
 00. Package details section end
 ----------------------------------------------*/
 .package-details-section {
@@ -3350,7 +3416,7 @@ Testimonial section end
   -webkit-line-clamp: 2;
 }
 
-.date {
+.blog-date {
   position: absolute;
   background: var(--primary-color);
   top: 15px;
@@ -3359,8 +3425,8 @@ Testimonial section end
   padding: 5px 10px;
   border-radius: 2px;
 }
-.date p,
-.date h5 {
+.blog-date p,
+.blog-date h5 {
   color: var(--white);
   text-transform: uppercase;
   margin-bottom: 0;
@@ -3893,18 +3959,17 @@ Map section end
   margin-bottom: 10px;
   font-family: var(--heading-font);
 }
-.sidebar-widget-area .sidebar-widget-item:not(:last-child) {
-  margin-bottom: 20px;
-}
-
-.blog-date {
+.sidebar-widget-area .sidebar-widget-item .content-area .widget-date {
   display: flex;
   gap: 5px;
   color: var(--heading-color);
   font-size: 14px;
 }
-.blog-date i {
+.sidebar-widget-area .sidebar-widget-item .content-area .widget-date i {
   color: var(--primary-color);
+}
+.sidebar-widget-area .sidebar-widget-item:not(:last-child) {
+  margin-bottom: 20px;
 }
 
 .rtl .sidebar-widget-item .content-area {
