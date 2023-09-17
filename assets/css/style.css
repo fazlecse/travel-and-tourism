@@ -345,6 +345,11 @@ h3 {
   text-transform: capitalize;
 }
 
+@media (max-width: 991px) {
+  h3 {
+    font-size: 24px;
+  }
+}
 h4 {
   font-size: 22px;
   text-transform: capitalize;
@@ -685,7 +690,7 @@ figure {
 
 ::-webkit-scrollbar {
   width: 3px;
-  height: 6px;
+  height: 3px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -934,21 +939,11 @@ Reuseble style section start
   }
 }
 .offcanvas {
-  background: var(--bg-color5);
+  background: var(--white);
 }
 
 .offcanvas.offcanvas-end {
   border-left: 1px solid var(--border-color1);
-}
-
-.offcanvas-backdrop {
-  background-color: rgba(228, 235, 248, 0.4784313725);
-  -webkit-backdrop-filter: blur(8.8px);
-          backdrop-filter: blur(8.8px);
-}
-
-.offcanvas-backdrop.show {
-  opacity: 1;
 }
 
 @keyframes smooth-header {
@@ -1636,6 +1631,11 @@ hr.divider:after {
   color: var(--primary-color);
 }
 
+@media (max-width: 991px) {
+  .feature-box .icon-area {
+    font-size: 35px;
+  }
+}
 .mt-10 {
   margin-top: 10px;
 }
@@ -2249,7 +2249,7 @@ Bottom Mobile, Tab Nav section end
 }
 @media (max-width: 767px) {
   h1 {
-    font-size: 40px;
+    font-size: 46px;
   }
   .hero-section {
     padding: 200px 0 50px;
@@ -2651,11 +2651,17 @@ Package card section2 start
 .package-tabs .nav-pills {
   margin-bottom: 30px;
   gap: 2rem;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding-bottom: 5px;
+}
+.package-tabs .nav-pills:hover::-webkit-scrollbar-thumb {
+  visibility: hidden;
+  opacity: 0;
 }
 .package-tabs .nav-link {
   padding: 0;
   color: var(--body-color);
-  font-weight: 500;
 }
 .package-tabs .nav-link.active {
   border-bottom: 1px solid var(--primary-color);
@@ -2664,7 +2670,10 @@ Package card section2 start
   border-radius: 0;
 }
 .package-tabs .nav-link .icon {
-  font-size: 32px;
+  font-size: 28px;
+}
+.package-tabs .nav-link .content {
+  white-space: nowrap;
 }
 
 /*----------------------------------------------
@@ -2687,7 +2696,7 @@ Package card section2 end
   padding: 20px 10px;
 }
 .package-card2-modal .modal-content .modal-body .package-sidebar {
-  top: 0;
+  top: 10px;
 }
 @media (min-width: 1400px) {
   .package-card2-modal .modal-xl {
@@ -2701,11 +2710,17 @@ Package card section2 end
   top: 0;
   background-color: var(--bg-color1);
   display: flex;
+  overflow-x: auto;
+}
+.package-card2-modal .package-nav:hover::-webkit-scrollbar-thumb {
+  opacity: 0;
+  visibility: hidden;
 }
 .package-card2-modal .package-nav .nav-link {
   border-bottom: 1px solid var(--border-color1);
   padding: 5px;
   padding-right: 20px;
+  white-space: nowrap;
 }
 .package-card2-modal .package-nav .nav-link.active {
   border-bottom: 1px solid var(--primary-color);
@@ -2815,11 +2830,12 @@ Package card2 modal section start
   padding-bottom: 10px;
 }
 
-.package-sidebar {
-  position: sticky;
-  top: 100px;
+@media (min-width: 991px) {
+  .package-sidebar {
+    position: sticky;
+    top: 100px;
+  }
 }
-
 .rtl .package-details-section .overview-area .over-view-list .item {
   padding-left: 0;
   padding-right: 20px;
@@ -4280,6 +4296,16 @@ Hero section2 start
   box-shadow: none;
 }
 
+@media (max-width: 991px) {
+  .hero-section2 .hero-content {
+    width: 70%;
+  }
+}
+@media (max-width: 575px) {
+  .hero-section2 .hero-content {
+    width: 100%;
+  }
+}
 /*----------------------------------------------
 Hero section2 end
 ----------------------------------------------*/
@@ -4297,13 +4323,12 @@ Feature section end
 00. Newsletter section2 start
 ----------------------------------------------*/
 .newsletter-section2 .newsletter-offer {
-  background: linear-gradient(rgba(45, 55, 60, 0.8) 100%, rgba(45, 55, 60, 0.8) 100%), url(../img/newsletter/joshua-earle--87JyMb9ZfU-unsplash.jpg);
   background: linear-gradient(rgba(56, 53, 53, 0.8) 100%, rgba(56, 53, 53, 0.8) 100%), url(../img/newsletter/joshua-earle--87JyMb9ZfU-unsplash.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
-  padding: 100px 30px;
+  padding: 100px 20px;
   min-height: 550px;
   display: flex;
   justify-content: center;
@@ -4340,8 +4365,18 @@ Feature section end
   color: #9e9fa0;
 }
 
+@media (max-width: 991px) {
+  .newsletter-section2 .newsletter-offer {
+    padding: 50px 20px;
+    min-height: 400px;
+  }
+  .newsletter-section2 .newsletter-form-area {
+    padding: 50px 20px;
+    min-height: 400px;
+  }
+}
 /*----------------------------------------------
-Feature section2 end
+Newsletter section2 end
 ----------------------------------------------*/
 /*----------------------------------------------
 09. Testimonial section2 start
@@ -4411,6 +4446,12 @@ Feature section2 end
   border-radius: 3px 3px 4px 4px;
 }
 
+@media (max-width: 576px) {
+  .about-section2 .about-image-area .about-counter {
+    padding: 10px;
+    text-align: center;
+  }
+}
 /*----------------------------------------------
 About section2 end
 ----------------------------------------------*/

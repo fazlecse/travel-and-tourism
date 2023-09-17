@@ -381,6 +381,12 @@ h3 {
     text-transform: capitalize;
 }
 
+@media(max-width: 991px) {
+    h3 {
+        font-size: 24px;
+    }
+}
+
 
 h4 {
     font-size: 22px;
@@ -767,7 +773,7 @@ figure {
 
 ::-webkit-scrollbar {
     width: 3px;
-    height: 6px;
+    height: 3px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -1098,24 +1104,16 @@ Reuseble style section start
 
 // Responsive bootstra datepicker end
 // Bootstrap datepicker end
-
-
+// Offcanvas sectio start
 .offcanvas {
-    background: var(--bg-color5);
+    background: var(--white);
 }
 
 .offcanvas.offcanvas-end {
     border-left: 1px solid var(--border-color1);
 }
 
-.offcanvas-backdrop {
-    background-color: #e4ebf87a;
-    backdrop-filter: blur(8.8px);
-}
-
-.offcanvas-backdrop.show {
-    opacity: 1;
-}
+// Offcanvas sectio end
 
 // Animation section start
 @keyframes smooth-header {
@@ -1920,7 +1918,7 @@ hr.divider:after {
 }
 
 // Increment decrement section end
-
+// Feature box section start
 .feature-box {
     display: flex;
     flex-direction: column;
@@ -1933,6 +1931,15 @@ hr.divider:after {
     }
 }
 
+// Responsive feature box start
+@media (max-width: 991px) {
+    .feature-box .icon-area {
+        font-size: 35px;
+    }
+}
+
+// Responsive feature box end
+// Feature box section end
 //  Margin top 
 .mt-10 {
     margin-top: 10px;
@@ -2672,7 +2679,7 @@ Bottom Mobile, Tab Nav section end
 
 @media (max-width: 767px) {
     h1 {
-        font-size: 40px;
+        font-size: 46px;
     }
 
     .hero-section {
@@ -3194,12 +3201,21 @@ Package card section2 start
     .nav-pills {
         margin-bottom: 30px;
         gap: 2rem;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 5px;
+
+        &:hover::-webkit-scrollbar-thumb {
+            visibility: hidden;
+            opacity: 0;
+        }
     }
+
+
 
     .nav-link {
         padding: 0;
         color: var(--body-color);
-        font-weight: 500;
 
         &.active {
             border-bottom: 1px solid var(--primary-color);
@@ -3209,7 +3225,11 @@ Package card section2 start
         }
 
         .icon {
-            font-size: 32px;
+            font-size: 28px;
+        }
+
+        .content {
+            white-space: nowrap;
         }
     }
 }
@@ -3236,33 +3256,44 @@ Package card section2 end
             padding: 20px 10px;
 
             .package-sidebar {
-                top: 0;
+                top: 10px;
             }
         }
     }
-    .modal-xl{
-        @media(min-width: 1400px){
-           --bs-modal-width: 1320px;
+
+    .modal-xl {
+        @media(min-width: 1400px) {
+            --bs-modal-width: 1320px;
         }
     }
 
-.package-nav{
-    margin-bottom: 20px;
-    z-index: 1;
-    position: sticky;
-    top: 0;
-    background-color: var(--bg-color1);
-    display: flex;
-    .nav-link{
-        border-bottom: 1px solid var(--border-color1);
-        padding: 5px;
-        padding-right: 20px;
-        &.active{
-            border-bottom: 1px solid var(--primary-color);
-            color: var(--heading-color);
+    .package-nav {
+        margin-bottom: 20px;
+        z-index: 1;
+        position: sticky;
+        top: 0;
+        background-color: var(--bg-color1);
+        display: flex;
+        overflow-x: auto;
+
+        &:hover::-webkit-scrollbar-thumb {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .nav-link {
+            border-bottom: 1px solid var(--border-color1);
+            padding: 5px;
+            padding-right: 20px;
+            white-space: nowrap;
+
+            &.active {
+                border-bottom: 1px solid var(--primary-color);
+                color: var(--heading-color);
+            }
+
         }
     }
-}
 
 
 }
@@ -3405,10 +3436,15 @@ Package card2 modal section start
     }
 }
 
-.package-sidebar {
-    position: sticky;
-    top: 100px;
+// Responsive package details section start
+@media (min-width: 991px) {
+    .package-sidebar {
+        position: sticky;
+        top: 100px;
+    }
 }
+
+// Responsive package details section end
 
 // Rtl Package details section start
 .rtl {
@@ -5291,16 +5327,22 @@ Hero section2 start
     .multiple-search-box {
         box-shadow: none;
     }
-
-    // .hero-carousel {
-    //     .owl-nav.disabled+.owl-dots {
-    //         margin-top: -50px;
-    //         z-index: 99;
-    //         position: relative;
-    //     }
-    // }
 }
 
+// Responsive hero section start
+@media (max-width: 991px) {
+    .hero-section2 .hero-content {
+        width: 70%;
+    }
+}
+
+@media (max-width: 575px) {
+    .hero-section2 .hero-content {
+        width: 100%;
+    }
+}
+
+// Responsive hero section end
 /*----------------------------------------------
 Hero section2 end
 ----------------------------------------------*/
@@ -5320,13 +5362,12 @@ Feature section end
 ----------------------------------------------*/
 .newsletter-section2 {
     .newsletter-offer {
-        background: linear-gradient(rgba(45, 55, 60, 0.8) 100%, rgba(45, 55, 60, 0.8) 100%), url(../img/newsletter/joshua-earle--87JyMb9ZfU-unsplash.jpg);
         background: linear-gradient(rgba(56 53 53 / 80%) 100%, rgba(56 53 53 / 80%) 100%), url(../img/newsletter/joshua-earle--87JyMb9ZfU-unsplash.jpg);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         height: 100%;
-        padding: 100px 30px;
+        padding: 100px 20px;
         min-height: 550px;
         display: flex;
         justify-content: center;
@@ -5371,8 +5412,24 @@ Feature section end
     }
 }
 
+// Responsive newsletter section2 start
+@media (max-width: 991px) {
+    .newsletter-section2 {
+        .newsletter-offer {
+            padding: 50px 20px;
+            min-height: 400px;
+        }
+
+        .newsletter-form-area {
+            padding: 50px 20px;
+            min-height: 400px;
+        }
+    }
+}
+
+// Responsive newsletter section2 end
 /*----------------------------------------------
-Feature section2 end
+Newsletter section2 end
 ----------------------------------------------*/
 
 /*----------------------------------------------
@@ -5468,6 +5525,15 @@ Feature section2 end
     }
 }
 
+// Responsive about section2 start
+@media (max-width: 576px) {
+    .about-section2 .about-image-area .about-counter {
+        padding: 10px;
+        text-align: center;
+    }
+}
+
+// Responsive about section2 end
 /*----------------------------------------------
 About section2 end
 ----------------------------------------------*/
