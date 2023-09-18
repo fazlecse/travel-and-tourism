@@ -2133,11 +2133,13 @@ user nav Profile end
   margin-left: 5px;
   transform: rotate(180deg);
 }
-.rtl .navbar .nav-right {
-  left: 0;
-  right: auto;
-  margin-left: 65px;
-  margin-right: 0;
+@media (max-width: 991px) {
+  .rtl .navbar .nav-right {
+    left: 0;
+    right: auto;
+    margin-left: 65px;
+    margin-right: 0;
+  }
 }
 
 .dark-theme .profile-box .user-dropdown {
@@ -4452,6 +4454,11 @@ Newsletter section2 end
     text-align: center;
   }
 }
+.rtl .about-section2 .about-image-area .about-counter {
+  right: auto;
+  left: 0;
+}
+
 /*----------------------------------------------
 About section2 end
 ----------------------------------------------*/

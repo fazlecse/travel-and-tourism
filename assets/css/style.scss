@@ -2523,13 +2523,17 @@ user nav Profile end
             margin-left: 5px;
             transform: rotate(180deg);
         }
+    }
 
-        .nav-right {
-            left: 0;
-            right: auto;
-            margin-left: 65px;
-            margin-right: 0;
+    @media (max-width:991px) {
+        .navbar {
+            .nav-right {
+                left: 0;
+                right: auto;
+                margin-left: 65px;
+                margin-right: 0;
 
+            }
         }
     }
 }
@@ -5534,6 +5538,15 @@ Newsletter section2 end
 }
 
 // Responsive about section2 end
+// Rtl about section2 start
+.rtl {
+    .about-section2 .about-image-area .about-counter {
+        right: auto;
+        left: 0;
+    }
+}
+
+// Rtl about section2 end
 /*----------------------------------------------
 About section2 end
 ----------------------------------------------*/
