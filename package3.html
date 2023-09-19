@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel & Tourism</title>
+    <!-- Favicon-link -->
+    <link rel="shortcut icon" href="assets/img/logo/favicon.png" type="image/x-icon">
+    <!-- Fontawesome6_Js_link -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <!-- Bootstrap5_Css_link -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Owl_carousel_Css_link -->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+    <!-- Swiper_Css_link -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <!-- select2_Css_link -->
+    <link rel="stylesheet" href="assets/css/select2.min.css">
+    <!-- fancybox Css link -->
+    <link rel="stylesheet" href="assets/css/fancybox.css">
+    <!-- Bootstrap Datepicker Css_link -->
+    <link rel="stylesheet" href="assets/css/bootstrap-datepicker.min.css">
+    <!-- intlTelInput Css link -->
+    <link rel="stylesheet" href="assets/css/intlTelInput.min.css">
+    <!-- rangeSlider Css link -->
+    <link rel="stylesheet" href="assets/css/ion.rangeSlider.min.css">
+
+
+
+    <!-- Style_Css_link -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body onload="preloder_function()" class="">
+    <!-- Preloader area start -->
+    <div id="preloader">
+        <div class="loader">Loading
+            <span></span>
+        </div>
+    </div>
+    <!-- Preloader area end -->
+
+    <!-- Header section start -->
+    <header class="header fadeInDown animated fixed-top">
+        <!-- Header top section start -->
+        <div class="header-top-section">
+            <div class="container">
+                <div class="top-bar">
+                    <ul class="contact-info">
+                        <li><a href="#"><i class="fa-regular fa-headphones"></i><span>+881234587</span></a></li>
+                        <li><a href="#"><i class="fa-regular fa-envelope-open"></i><span>demo@example.com</span></a>
+                        </li>
+                    </ul>
+                    <div class="social-area ">
+                        <ul class="d-flex d-none d-sm-flex">
+                            <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                            <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+                            <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                        <a href="" class="cmn-btn"><span class="d-md-none"><i
+                                    class="fa-regular fa-calendar-check"></i></span><span class="d-none d-md-block">book
+                                now</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header top section end -->
+        <!-- Nav section start -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container position-relative">
+                <a class="navbar-brand logo" href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <i class="fa-light fa-list"></i>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbar">
+                    <div class="offcanvas-header">
+                        <a class="navbar-brand" href="index.html"><img class="logo" src="assets/img/logo/logo.png"
+                                alt=""></a>
+                        <button type="button" class="cmn-btn-close btn-close" data-bs-dismiss="offcanvas"
+                            aria-label="Close"><i class="fa-light fa-arrow-right"></i></button>
+                    </div>
+                    <div class="offcanvas-body align-items-center justify-content-between">
+                        <ul class="navbar-nav m-auto text-center">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="index.html">home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="destination.html">destination</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="package.html">package</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="faq.html">FAQ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact</a>
+                            </li>
+
+                        </ul>
+
+
+                    </div>
+                </div>
+                <div class="nav-right">
+                    <ul class="custom-nav">
+                        <li class="nav-item">
+                            <a class="nav-link cmn-btn" href="login.html"><i
+                                    class="login-icon fa-regular fa-right-to-bracket"></i><span
+                                    class="d-none d-md-block">Login</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <div class="profile-box">
+                                <div class="profile">
+                                    <img src="./assets/img/Person/1.jpg" class="img-fluid" alt="" />
+                                </div>
+                                <ul class="user-dropdown">
+                                    <li>
+                                        <a href="user-panel.html"> <i class="fal fa-user"></i> View Profile </a>
+                                    </li>
+                                    <li>
+                                        <a href="support-ticket.html"> <i class="fal fa-user-headset"></i> Support </a>
+                                    </li>
+                                    <li>
+                                        <a href="edit-profile.html"> <i class="fal fa-user-cog"></i> Account Settings
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href=""> <i class="fal fa-sign-out-alt"></i> Sign Out </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <!-- <li>
+                <a id="toggle-btn" class="nav-link d-flex toggle-btn">
+                    <i class="fa-regular fa-moon" id="moon"></i>
+                    <i class="fa-regular fa-sun-bright" id="sun"></i>
+                </a>
+            </li> -->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Nav section end -->
+    </header>
+    <!-- Header section end -->
+
+
+    <!-- Bottom Mobile Tab nav section start -->
+    <ul class="nav bottom-nav fixed-bottom d-lg-none">
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="offcanvas" role="button" aria-controls="offcanvasExample"
+                href="#offcanvasNavbar" aria-current="page" href="#"><i class="fa-regular fa-bars-staggered"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa-regular fa-shuttle-space"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="#"><i class="fa-regular fa-house"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa-regular fa-address-book"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa-regular fa-user"></i></a>
+        </li>
+    </ul>
+    <!-- Bottom Mobile Tab nav section end -->
+
+
+    <!-- Banner section start -->
+    <div class="banner-area">
+        <div class="container">
+            <div class="row ">
+                <div class="col">
+                    <div class="breadcrumb-area">
+                        <h3>package</h3>
+                        <ul class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="home-1.html">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">package</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Banner section end -->
+
+    <!-- Destination section start -->
+    <section class="package-section">
+        <div class="container">
+            <div class="row gy-5 g-sm-5">
+                <div class="col-lg-4">
+                    <div class="package-sidebar">
+                        <div class="sidebar-widget-area">
+                            <div class="search-box">
+                                <input type="text" class="form-control" placeholder="Search here...">
+                                <button type="submit" class="search-btn"><i class="far fa-search"></i></button>
+                            </div>
+                        </div>
+                        <div class="sidebar-widget-area">
+                            <div class="widget-title">
+                                <h4>Filter by Price</h4>
+                            </div>
+                            <div class="range-area">
+                                <input type="text" class="js-range-slider" name="my_range" value="" data-type="double"
+                                    data-min="0" data-max="1000" data-from="80" data-to="500" data-grid="false"
+                                    data-min="false" />
+                            </div>
+                            <h5 class="mt-20">Price : <span class="highlight">$80 - $500</span></h5>
+                        </div>
+                        <div class="sidebar-widget-area">
+                            <div class="checkbox-categories-area">
+                                <div class="widget-title">
+                                    <h4 class="">Tour type</h4>
+                                </div>
+                                <div class="section-inner">
+                                    <div class="categories-list">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckChecked9" checked>
+                                            <label class="form-check-label" for="flexCheckChecked9">
+                                                <span>Nature tours</span> <span class="highlight">(20)</span>
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckChecked10">
+                                            <label class="form-check-label" for="flexCheckChecked10">
+                                                <span>Advanture tours</span> <span class="highlight">(20)</span>
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckChecked11">
+                                            <label class="form-check-label" for="flexCheckChecked11">
+                                                <span>Cultural tours</span> <span class="highlight">(20)</span>
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckChecked12">
+                                            <label class="form-check-label" for="flexCheckChecked12">
+                                                <span>Food tours</span> <span class="highlight">(20)</span>
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckChecked13">
+                                            <label class="form-check-label" for="flexCheckChecked13">
+                                                <span>City tours</span> <span class="highlight">(20)</span>
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckChecked14">
+                                            <label class="form-check-label" for="flexCheckChecked14">
+                                                <span>Cruises tours</span> <span class="highlight">(20)</span>
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckChecked15">
+                                            <label class="form-check-label" for="flexCheckChecked15">
+                                                <span>Couple tours</span> <span class="highlight">(20)</span>
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckChecked16">
+                                            <label class="form-check-label" for="flexCheckChecked16">
+                                                <span>Group tours</span> <span class="highlight">(20)</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sidebar-widget-area">
+                            <div class="checkbox-categories-area">
+                                <div class="widget-title">
+                                    <h4 class="">Duration</h4>
+                                </div>
+                                <div class="section-inner">
+                                    <div class="categories-list">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckChecked" checked>
+                                            <label class="form-check-label" for="flexCheckChecked">
+                                                <span>0-3 hours</span></span>
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckChecked2">
+                                            <label class="form-check-label" for="flexCheckChecked2">
+                                                <span>3-5 hours</span>
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckChecked3">
+                                            <label class="form-check-label" for="flexCheckChecked3">
+                                                <span>5-7 hours</span>
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckChecked4">
+                                            <label class="form-check-label" for="flexCheckChecked4">
+                                                <span>7-9 hours</span>
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckChecked5">
+                                            <label class="form-check-label" for="flexCheckChecked5">
+                                                <span>Full day(9+ hours)</span>
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckChecked6">
+                                            <label class="form-check-label" for="flexCheckChecked6">
+                                                <span>Multi day</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sidebar-widget-area">
+                            <div class="checkbox-categories-area">
+                                <div class="widget-title">
+                                    <h4 class="">Rating</h4>
+                                </div>
+                                <div class="section-inner">
+                                    <div class="categories-list">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckChecked17" checked>
+                                            <label class="form-check-label" for="flexCheckChecked17">
+                                                <ul class="star-list">
+                                                    <li>
+                                                        <i class="active fa-solid fa-star"></i>
+                                                        <i class="active fa-solid fa-star"></i>
+                                                        <i class="active fa-solid fa-star"></i>
+                                                        <i class="active fa-solid fa-star"></i>
+                                                        <i class="active fa-solid fa-star"></i>
+                                                    </li>
+                                                </ul>
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckChecked18">
+                                            <label class="form-check-label" for="flexCheckChecked18">
+                                                <ul class="star-list">
+                                                    <li>
+                                                        <i class="active fa-solid fa-star"></i>
+                                                        <i class="active fa-solid fa-star"></i>
+                                                        <i class="active fa-solid fa-star"></i>
+                                                        <i class="active fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </li>
+                                                </ul>
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckChecked19">
+                                            <label class="form-check-label" for="flexCheckChecked19">
+                                                <ul class="star-list">
+                                                    <li>
+                                                        <i class="active fa-solid fa-star"></i>
+                                                        <i class="active fa-solid fa-star"></i>
+                                                        <i class="active fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </li>
+                                                </ul>
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckChecked20">
+                                            <label class="form-check-label" for="flexCheckChecked20">
+                                                <ul class="star-list">
+                                                    <li>
+                                                        <i class="active fa-solid fa-star"></i>
+                                                        <i class="active fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </li>
+                                                </ul>
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckChecked21">
+                                            <label class="form-check-label" for="flexCheckChecked21">
+                                                <ul class="star-list">
+                                                    <li>
+                                                        <i class="active fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </li>
+                                                </ul>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="package-card3">
+                                <a href="package-details.html">
+                                    <div class="thumbs-area">
+                                        <img src="assets/img/destination3/5.jpg" alt="img">
+                                    </div>
+                                </a>
+                                <div class="content-area">
+                                    <h4 class="title"><a href="">the grand resort</a></h4>
+                                    <div class="locat-revi-price">
+                                        <div class="location"><i class="fa-regular fa-location-dot"></i>
+                                            <span>Morocco</span>
+                                        </div>
+                                        <div class="review-area">
+                                            <ul class="star-list">
+                                                <li>
+                                                    <i class="active fa-solid fa-star"></i>
+                                                </li>
+                                            </ul>
+                                            <p class="mb-0"><span>4.8 </span></p>
+                                        </div>
+                                        <div class="price">$850</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="package-card3">
+                                <a href="package-details.html">
+                                    <div class="thumbs-area">
+                                        <img src="assets/img/destination3/6.jpg" alt="img">
+                                    </div>
+                                </a>
+                                <div class="content-area">
+                                    <h4 class="title"><a href="">barlin</a></h4>
+                                    <div class="locat-revi-price">
+                                        <div class="location"><i class="fa-regular fa-location-dot"></i>
+                                            <span>Germany</span>
+                                        </div>
+                                        <div class="review-area">
+                                            <ul class="star-list">
+                                                <li>
+                                                    <i class="active fa-solid fa-star"></i>
+                                                </li>
+                                            </ul>
+                                            <p class="mb-0"><span>4.8 </span></p>
+                                        </div>
+                                        <div class="price">$850</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="package-card3">
+                                <a href="package-details.html">
+                                    <div class="thumbs-area">
+                                        <img src="assets/img/destination3/7.jpg" alt="img">
+                                    </div>
+                                </a>
+                                <div class="content-area">
+                                    <h4 class="title"><a href="">Bern</a></h4>
+                                    <div class="locat-revi-price">
+                                        <div class="location"><i class="fa-regular fa-location-dot"></i>
+                                            <span>Switzerland </span>
+                                        </div>
+                                        <div class="review-area">
+                                            <ul class="star-list">
+                                                <li>
+                                                    <i class="active fa-solid fa-star"></i>
+                                                </li>
+                                            </ul>
+                                            <p class="mb-0"><span>4.8 </span></p>
+                                        </div>
+                                        <div class="price">$850</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="package-card3">
+                                <a href="package-details.html">
+                                    <div class="thumbs-area">
+                                        <img src="assets/img/destination3/9.jpg" alt="img">
+                                    </div>
+                                </a>
+                                <div class="content-area">
+                                    <h4 class="title"><a href="">Gili Islands</a></h4>
+                                    <div class="locat-revi-price">
+                                        <div class="location"><i class="fa-regular fa-location-dot"></i>
+                                            <span>Indonesia</span>
+                                        </div>
+                                        <div class="review-area">
+                                            <ul class="star-list">
+                                                <li>
+                                                    <i class="active fa-solid fa-star"></i>
+                                                </li>
+                                            </ul>
+                                            <p class="mb-0"><span>4.8 </span></p>
+                                        </div>
+                                        <div class="price">$850</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="package-card3">
+                                <a href="package-details.html">
+                                    <div class="thumbs-area">
+                                        <img src="assets/img/destination3/11.jpg" alt="img">
+                                    </div>
+                                </a>
+                                <div class="content-area">
+                                    <h4 class="title"><a href="">Hagia Sophia</a></h4>
+                                    <div class="locat-revi-price">
+                                        <div class="location"><i class="fa-regular fa-location-dot"></i>
+                                            <span>Türkiye</span>
+                                        </div>
+                                        <div class="review-area">
+                                            <ul class="star-list">
+                                                <li>
+                                                    <i class="active fa-solid fa-star"></i>
+                                                </li>
+                                            </ul>
+                                            <p class="mb-0"><span>4.8 </span></p>
+                                        </div>
+                                        <div class="price">$850</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="package-card3">
+                                <a href="package-details.html">
+                                    <div class="thumbs-area">
+                                        <img src="assets/img/destination3/8.jpg" alt="img">
+                                    </div>
+                                </a>
+                                <div class="content-area">
+                                    <h4 class="title"><a href="">AYANA Resort Bali</a></h4>
+                                    <div class="locat-revi-price">
+                                        <div class="location"><i class="fa-regular fa-location-dot"></i>
+                                            <span>Indonesia</span>
+                                        </div>
+                                        <div class="review-area">
+                                            <ul class="star-list">
+                                                <li>
+                                                    <i class="active fa-solid fa-star"></i>
+                                                </li>
+                                            </ul>
+                                            <p class="mb-0"><span>4.8 </span></p>
+                                        </div>
+                                        <div class="price">$850</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <!-- pagination section start -->
+                        <div class="pagination-section">
+                            <nav aria-label="...">
+                                <ul class="pagination">
+                                    <li class="page-item">
+                                        <a class="page-link" href="#"><i class="fal fa-long-arrow-left"></i></a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item active" aria-current="page">
+                                        <a class="page-link" href="#">2</a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#"><i class="fal fa-long-arrow-right"></i></a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <!-- pagination section end -->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <!-- Destination section end -->
+
+
+    <!-- Footer Section start -->
+    <section class="footer-section pb-50">
+        <div class="container">
+            <div class="row gy-4 gy-sm-5">
+                <div class="col-lg-4 col-sm-6">
+                    <div class="footer-widget">
+                        <div class="widget-logo mb-30">
+                            <a href="#nav_area"><img class="logo" src="assets/img/logo/logo-white.png" alt=""></a>
+                        </div>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur fuga odit excepturi,
+                            natus voluptate commodi qui sunt quisquam cupiditate molestiae?
+                        </p>
+
+                        <div class="social-area mt-50">
+                            <ul class="d-flex">
+                                <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                                <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+                                <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-sm-6">
+                    <div class="footer-widget">
+                        <h5 class="widget-title">Quick Links</h5>
+                        <ul>
+                            <li><a class="widget-link" href="about.html">About</a></li>
+                            <li><a class="widget-link" href="faq.html">FAQ</a></li>
+                            <li><a class="widget-link" href="index.html">Home</a></li>
+                            <li><a class="widget-link" href="blog.html">Blog</a></li>
+                            <li><a class="widget-link" href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 pt-sm-0 pt-3 ps-lg-5">
+                    <div class="footer-widget">
+                        <h5 class="widget-title">Company Policy</h5>
+                        <ul>
+                            <li><a class="widget-link" href="">Privacy Policy</a></li>
+                            <li><a class="widget-link" href="">Refund Policy</a></li>
+                            <li><a class="widget-link" href="">Terms of use</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 pt-sm-0 pt-3">
+                    <div class="footer-widget">
+                        <h5 class="widget-title">Contact Us</h5>
+                        <p class="contact-item"><i class="fa-regular fa-location-dot"></i> 10714 163rd Pl, Orland Park,
+                            IL 60467, United States</p>
+                        <p class="contact-item"><i class="fa-regular fa-envelope"></i> email@website.com</p>
+                        <p class="contact-item"><i class="fa-regular fa-phone"></i> 354-4156745674</p>
+                    </div>
+                </div>
+            </div>
+            <hr class="cmn-hr">
+            <!-- Copyright-area-start -->
+            <div class="copyright-area">
+                <div class="row gy-4">
+                    <div class="col-sm-6">
+                        <p>Copyright ©2023 <a class="highlight" href="index.html">Email Template</a> All Rights Reserved
+                        </p>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="language">
+                            <a href="" class="language">English</a>
+                            <a href="" class="language">Spanish</a>
+                            <a href="" class="language">Germany</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Copyright-area-end -->
+        </div>
+    </section>
+    <!-- Footer Section end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Jquery_Js_link -->
+    <script src="assets/js/jquery-3.6.1.min.js"></script>
+
+    <!-- Bootstrap_Js_link -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Owl_carausel_Js_link -->
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <!-- Swiper_Js_link -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <!-- Qr_Js_link -->
+    <script src="assets/js/qrjs2.min.js"></script>
+    <!-- select2_Js_link -->
+    <script src="assets/js/select2.min.js"></script>
+    <!-- fancybox Js link -->
+    <script src="assets/js/fancybox.umd.js"></script>
+    <!-- Bootstrap Datepicker Js_link -->
+    <script src="assets/js/bootstrap-datepicker.min.js"></script>
+    <!-- intlTelInput Css link -->
+    <script src="assets/js/intlTelInput.min.js"></script>
+    <!-- rangeSlider Js link -->
+    <script src="assets/js/ion.rangeSlider.min.js"></script>
+
+
+    <!-- Main_Js_link -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

@@ -21,11 +21,38 @@ window.addEventListener("scroll", function () {
 
 
 $(document).ready(function () {
-    // owl carousel dashboard card
+    // owl carousel1
     $('.carousel-area1').owlCarousel({
         loop: true,
         autoplay: false,
         margin: 20,
+        nav: false,
+        dots: true,
+        // rtl:true,
+        responsive: {
+            0: {
+                items: 1,
+                dotsEach: 3,
+            },
+            550: {
+                items: 2
+            },
+            991: {
+                items: 3
+            },
+            1200: {
+                items: 4
+            },
+            1400: {
+                items: 5
+            }
+        }
+    });
+    // owl carousel2
+    $('.carousel-area2').owlCarousel({
+        loop: true,
+        autoplay: false,
+        margin: 10,
         nav: false,
         dots: true,
         // rtl:true,

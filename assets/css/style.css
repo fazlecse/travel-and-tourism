@@ -55,7 +55,7 @@ Typography
   --border-color3: #e1f1ee;
   --primary-color-opacity-low: rgba(255, 153, 51, 0.2);
   --primary-color-opacity-low2: rgba(255, 153, 51, 0.3);
-  --shadow1: 0px 0px 5px 2px rgb(249 238 238);
+  --shadow1: 0px 0px 15px 2px rgb(249 238 238);
   --shadow2: 0px 3px 5px 0px rgba(0, 0, 0, 0.10);
   --shadow3: 0px 0px 5px 0px rgba(0, 0, 0, 0.10);
   --shadow4: 0 5px 25px rgba(0, 0, 0, 0.15);
@@ -373,10 +373,10 @@ h6 {
 
 body {
   font-family: var(--body-font);
-  line-height: 1.5;
+  line-height: 1.3;
   color: var(--body-color);
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 @media (max-width: 991px) {
@@ -801,7 +801,7 @@ Reuseble style section start
 }
 
 .multiple-search-box {
-  padding: 10px;
+  padding: 10px 0;
   background: var(--white);
   border-radius: 5px;
   margin-top: 70px;
@@ -862,6 +862,7 @@ Reuseble style section start
   height: 60px;
   background: var(--white);
   border: 1px solid var(--white);
+  border-radius: 10px;
 }
 .multiple-search-box form .select2-container--default .select2-selection--single .select2-selection__rendered {
   line-height: 60px;
@@ -870,8 +871,6 @@ Reuseble style section start
   color: var(--heading-color);
 }
 .multiple-search-box form .input-group {
-  background: var(--white);
-  border-radius: 5px;
   align-items: center;
 }
 .multiple-search-box form .input-group-text {
@@ -1058,7 +1057,7 @@ Reuseble style section start
   z-index: 1;
   background: var(--primary-color);
   padding: 8px 15px;
-  border-radius: 8px;
+  border-radius: 5px;
   transition: all 0.3s ease-in-out;
   font-size: 18px;
   color: var(--white);
@@ -1315,7 +1314,6 @@ section {
 
 .cmn-para-text {
   max-width: 600px;
-  font-size: 18px;
 }
 
 .section-title {
@@ -2304,7 +2302,7 @@ Hero section end
   top: 0;
   height: 100%;
   width: 100%;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0.3) 60%);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0.1) 60%);
   border-radius: 15px;
 }
 .destination-box:hover .thumbs-area img {
@@ -2324,7 +2322,7 @@ Hero section end
 .destination-box .thumbs-area img {
   border-radius: 15px;
   transition: var(--transition);
-  max-height: 250px;
+  height: 250px;
   width: 100%;
 }
 .destination-box .content-area {
@@ -2605,7 +2603,7 @@ Package card section2 start
   top: 0;
   height: 100%;
   width: 100%;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0.3) 60%);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0.1) 60%);
   border-radius: 15px;
 }
 .package-card2:hover .thumbs-area img {
@@ -2680,6 +2678,52 @@ Package card section2 start
 
 /*----------------------------------------------
 Package card section2 end
+----------------------------------------------*/
+/*----------------------------------------------
+00. Package card section3 start
+----------------------------------------------*/
+.package-card3 {
+  background-color: var(--white);
+  border-radius: 20px;
+  box-shadow: var(--shadow1);
+}
+.package-card3 .thumbs-area img {
+  height: 320px;
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+}
+.package-card3 .content-area {
+  padding: 20px;
+}
+.package-card3 .content-area .title {
+  margin-bottom: 15px;
+}
+.package-card3 .content-area .locat-revi-price {
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+}
+.package-card3 .content-area .locat-revi-price .location {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.package-card3 .content-area .locat-revi-price .location i {
+  font-size: 18px;
+  color: var(--primary-color);
+}
+.package-card3 .content-area .locat-revi-price .price {
+  padding: 5px 10px;
+  color: var(--primary-color);
+  background-color: var(--primary-color-opacity-low);
+  border-radius: 5px;
+}
+.package-card3 .content-area .review-area {
+  gap: 5px;
+}
+
+/*----------------------------------------------
+Package card section3 end
 ----------------------------------------------*/
 /*----------------------------------------------
 00. Package card2 modal section start
@@ -3457,6 +3501,154 @@ Testimonial section end
 
 /*----------------------------------------------
 Blog section end
+----------------------------------------------*/
+/*----------------------------------------------
+14. Footer section start
+----------------------------------------------*/
+/*----------------------------------------------
+11. Blog section start
+----------------------------------------------*/
+.blog-section3 {
+  position: relative;
+  z-index: 0;
+  background-color: var(--bg-color1);
+}
+
+.blog-box3 {
+  background: var(--bg-color1);
+}
+.blog-box3:hover {
+  box-shadow: none;
+}
+.blog-box3:hover .img-box {
+  overflow: hidden;
+}
+.blog-box3:hover .img-box img {
+  transform: scale(1.1);
+}
+.blog-box3 .img-box {
+  overflow: hidden;
+  position: relative;
+  border-radius: 5px;
+}
+.blog-box3 .img-box img {
+  transition: var(--transition);
+  width: 100%;
+  height: 270px;
+  border-radius: 5px;
+}
+.blog-box3 .content-box {
+  position: relative;
+  padding: 20px;
+  box-shadow: var(--shadow2);
+  padding: 50px 15px 20px;
+  position: relative;
+  margin: -40px 20px 0;
+  z-index: 1;
+  background: var(--white);
+  border-radius: 5px;
+}
+.blog-box3 .content-box .blog-btn {
+  border-top: 1px solid var(--border-color1);
+  color: var(--primary-color);
+  font-weight: 500;
+  font-family: var(--heading-font);
+  margin-top: 20px;
+  display: flex;
+  text-transform: capitalize;
+  gap: 5px;
+  padding-top: 15px;
+}
+.blog-box3 .content-box .blog-btn i {
+  transform: rotate(-45deg);
+}
+.blog-box3 .content-box .para-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+}
+.blog-box3 .blog-author {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.blog-box3 .blog-author .author-img {
+  margin-right: 10px;
+}
+.blog-box3 .blog-author .author-img img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+.blog-box3 .blog-author .author-info h5 {
+  margin: 0;
+}
+.blog-box3 .blog-author .author-info span {
+  font-size: 14px;
+}
+.blog-box3 .blog-title {
+  margin-bottom: 25px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+}
+
+.blog-date3 {
+  position: absolute;
+  width: 70px;
+  height: 65px;
+  background: var(--primary-color);
+  top: -35px;
+  left: 50%;
+  text-align: center;
+  padding: 5px;
+  transform: translateX(-50%);
+  border-radius: 5px;
+}
+.blog-date3 p,
+.blog-date3 h4 {
+  color: var(--white);
+  text-transform: uppercase;
+}
+
+@media (max-width: 1400px) {
+  h5 {
+    font-size: 18px;
+  }
+  .blog-box .img-box img {
+    height: 20vw;
+  }
+  .blog-box .blog-author .author-info span {
+    font-size: 14px;
+  }
+}
+@media (max-width: 767px) {
+  .blog-box .img-box img {
+    height: 40vw;
+  }
+}
+@media (max-width: 575px) {
+  .blog-box .img-box img {
+    height: 55vw;
+  }
+}
+.rtl .blog-box .blog-author .author-img {
+  margin-right: 0;
+  margin-left: 10px;
+}
+.rtl .blog-box .content-box .blog-btn i {
+  transform: rotate(-135deg);
+}
+
+/*----------------------------------------------
+Blog section3 end
+----------------------------------------------*/
+/*----------------------------------------------
+14. Footer section start
 ----------------------------------------------*/
 /*----------------------------------------------
 14. Footer section start
@@ -4461,4 +4653,119 @@ Newsletter section2 end
 
 /*----------------------------------------------
 About section2 end
+----------------------------------------------*/
+/*----------------------------------------------
+00. Hero section3 start
+----------------------------------------------*/
+.hero-section3 {
+  padding: 200px 0 100px;
+  background-color: var(--bg-color1);
+}
+.hero-section3 h1 {
+  text-transform: initial;
+}
+.hero-section3 .hero-image-area {
+  max-width: 570px;
+  margin: auto;
+}
+.hero-section3 .multiple-search-box {
+  margin-top: 40px;
+  border-radius: 15px;
+  padding: 15px 5px;
+}
+.hero-section3 .multiple-search-box .input-box {
+  border-radius: 10px;
+}
+.hero-section3 .multiple-search-box form .input-group {
+  border-radius: 10px;
+}
+
+/*----------------------------------------------
+Hero section3 end
+----------------------------------------------*/
+/*----------------------------------------------
+00. Feature section3 start
+----------------------------------------------*/
+.feature-section3 {
+  background-color: var(--bg-color1);
+}
+
+.feature-box3 {
+  padding: 20px;
+  background-color: var(--white);
+  box-shadow: var(--shadow1);
+  border-radius: 15px;
+  height: 100%;
+}
+.feature-box3 .icon-area {
+  color: var(--primary-color);
+  border-radius: 8px;
+  width: 55px;
+  height: 65px;
+  font-size: 28px;
+  box-shadow: var(--shadow1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.feature-box3 .content-area {
+  margin-top: 20px;
+}
+.feature-box3 .content-area .title {
+  margin-bottom: 10px;
+}
+
+/*----------------------------------------------
+Feature section3 end
+----------------------------------------------*/
+/*----------------------------------------------
+00. Destination section3 start
+----------------------------------------------*/
+.destination-box3 .image-area {
+  position: relative;
+}
+.destination-box3 .image-area img {
+  border-radius: 15px;
+  height: 400px;
+  width: 100%;
+}
+.destination-box3 .image-area .location-country {
+  text-transform: capitalize;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: var(--white);
+  padding: 5px 20px;
+  color: var(--primary-color);
+  font-weight: 500;
+  border-radius: 8px;
+}
+.destination-box3 .content-area {
+  text-align: center;
+}
+.destination-box3 .content-area .title {
+  margin-top: 10px;
+}
+.destination-box3 .content-area .review-area {
+  gap: 5px;
+  text-transform: capitalize;
+  justify-content: center;
+}
+
+/*----------------------------------------------
+Destination section3 end
+----------------------------------------------*/
+/*----------------------------------------------
+00. Popular tour section start
+----------------------------------------------*/
+.popular-tour-section3 {
+  background-color: var(--bg-color1);
+}
+
+.carousel-area2 .owl-item {
+  padding: 5px;
+}
+
+/*----------------------------------------------
+Popular tour section end
 ----------------------------------------------*/
