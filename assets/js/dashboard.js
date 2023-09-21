@@ -279,7 +279,7 @@ $(".js-example-basic-single").select2({
 
 $(document).ready(function () {
     // owl carousel dashboard card
-    $('.carousel-area1').owlCarousel({
+    $('.carousel-1').owlCarousel({
         loop: true,
         autoplay: false,
         margin: -20,

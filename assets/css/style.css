@@ -52,7 +52,6 @@ Typography
   --body-color: #707070;
   --border-color1: #e5e7eb;
   --border-color2: #F2EFDF70;
-  --border-color3: #e1f1ee;
   --primary-color-opacity-low: rgba(255, 153, 51, 0.2);
   --primary-color-opacity-low2: rgba(255, 153, 51, 0.3);
   --shadow1: 0px 0px 15px 2px rgb(249 238 238);
@@ -178,77 +177,35 @@ Reset section start
   width: 100%;
   height: 100vh;
   z-index: 99999;
-  background-color: var(--black);
+  background-color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-@keyframes animateC {
+#preloader .preloader-image {
+  width: 100px;
+  animation: flipInY both 2s infinite;
+}
+@keyframes flipInY {
   0% {
-    transform: rotate(0deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  40% {
+    transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    animation-timing-function: ease-in;
+  }
+  60% {
+    transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    opacity: 1;
+  }
+  80% {
+    transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
   }
   100% {
-    transform: rotate(360deg);
+    transform: perspective(400px);
   }
-}
-@keyframes animate {
-  0% {
-    transform: rotate(45deg);
-  }
-  100% {
-    transform: rotate(405deg);
-  }
-}
-#preloader .loader {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 150px;
-  height: 150px;
-  background: transparent;
-  border: 3px solid var(--primary-color-opacity-low);
-  border-radius: 50%;
-  text-align: center;
-  line-height: 150px;
-  font-size: 20px;
-  color: var(--primary-color);
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  text-shadow: 0 0 10px var(--primary-color);
-  box-shadow: var(--shadow3);
-}
-#preloader .loader::before {
-  content: "";
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  border: 3px solid transparent;
-  border-top: 3px solid var(--primary-color);
-  border-right: 3px solid var(--primary-color);
-  border-radius: 50%;
-  animation: animateC 2s linear infinite;
-}
-#preloader .loader span {
-  display: block;
-  position: absolute;
-  top: calc(50% - 2px);
-  left: 50%;
-  width: 50%;
-  height: 4px;
-  background: transparent;
-  transform-origin: left;
-  animation: animate 2s linear infinite;
-}
-#preloader .loader span::before {
-  content: "";
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background: var(--primary-color);
-  top: -6px;
-  right: -6px;
-  box-shadow: 0 0 20px 5px var(--primary-color);
 }
 
 /* preloader-end */
@@ -327,6 +284,18 @@ h1 {
   text-transform: capitalize;
 }
 
+@media (max-width: 991px) {
+  h1 {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+@media (max-width: 767px) {
+  h1 {
+    font-size: 46px;
+    line-height: 50px;
+  }
+}
 h2 {
   font-size: 42px;
   text-transform: capitalize;
@@ -801,7 +770,7 @@ Reuseble style section start
 }
 
 .multiple-search-box {
-  padding: 10px 0;
+  padding: 10px;
   background: var(--white);
   border-radius: 5px;
   margin-top: 70px;
@@ -888,6 +857,11 @@ Reuseble style section start
   height: 50px;
 }
 
+@media (min-width: 992px) {
+  .multiple-search-box {
+    padding: 10px 0;
+  }
+}
 .rtl .multiple-search-box form .input-box .form-control {
   padding-left: 10px;
   padding-right: 40px;
@@ -1934,9 +1908,6 @@ Reuseble style section end
   background-color: var(--bg-color3);
   animation: smooth-header 0.4s linear;
 }
-.header.active .navbar .navbar-nav .nav-link {
-  color: var(--white);
-}
 .header.active .navbar .navbar-nav .nav-link:hover {
   color: var(--primary-color);
 }
@@ -2094,6 +2065,9 @@ user nav Profile start
 user nav Profile end
 ----------------------------------------------*/
 @media (min-width: 992px) {
+  .header.active .navbar .navbar-nav .nav-link {
+    color: var(--white);
+  }
   .navbar {
     padding: 15px 0;
   }
@@ -2220,10 +2194,6 @@ Bottom Mobile, Tab Nav section end
   }
 }
 @media (max-width: 991px) {
-  h1 {
-    font-size: 60px;
-    line-height: 50px;
-  }
   .cmn-btn {
     font-size: 16px;
   }
@@ -2260,7 +2230,7 @@ Bottom Mobile, Tab Nav section end
   }
 }
 @media (max-width: 575px) {
-  .hero-section .hero-para-text {
+  .hero-para-text {
     font-size: 18px;
   }
 }
@@ -2302,7 +2272,7 @@ Hero section end
   top: 0;
   height: 100%;
   width: 100%;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0.1) 60%);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0.1) 40%);
   border-radius: 15px;
 }
 .destination-box:hover .thumbs-area img {
@@ -2603,7 +2573,7 @@ Package card section2 start
   top: 0;
   height: 100%;
   width: 100%;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0.1) 60%);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0.1) 40%);
   border-radius: 15px;
 }
 .package-card2:hover .thumbs-area img {
@@ -2749,26 +2719,24 @@ Package card section3 end
     --bs-modal-width: 1320px;
   }
 }
-.package-card2-modal .package-nav {
+
+.package-details-nav {
   margin-bottom: 20px;
-  z-index: 1;
-  position: sticky;
-  top: 0;
   background-color: var(--bg-color1);
   display: flex;
   overflow-x: auto;
 }
-.package-card2-modal .package-nav:hover::-webkit-scrollbar-thumb {
+.package-details-nav:hover::-webkit-scrollbar-thumb {
   opacity: 0;
   visibility: hidden;
 }
-.package-card2-modal .package-nav .nav-link {
+.package-details-nav .nav-link {
   border-bottom: 1px solid var(--border-color1);
   padding: 5px;
   padding-right: 20px;
   white-space: nowrap;
 }
-.package-card2-modal .package-nav .nav-link.active {
+.package-details-nav .nav-link.active {
   border-bottom: 1px solid var(--primary-color);
   color: var(--heading-color);
 }
@@ -4663,6 +4631,7 @@ About section2 end
 }
 .hero-section3 h1 {
   text-transform: initial;
+  font-weight: 500;
 }
 .hero-section3 .hero-image-area {
   max-width: 570px;
@@ -4680,6 +4649,22 @@ About section2 end
   border-radius: 10px;
 }
 
+@media (max-width: 991px) {
+  .hero-section3 {
+    padding: 150px 0 50px;
+  }
+  .hero-section3 .content-area {
+    text-align: center;
+  }
+  .hero-section3 h1 br {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .hero-section3 {
+    padding: 180px 0 50px;
+  }
+}
 /*----------------------------------------------
 Hero section3 end
 ----------------------------------------------*/
@@ -4768,4 +4753,46 @@ Destination section3 end
 
 /*----------------------------------------------
 Popular tour section end
+----------------------------------------------*/
+/*----------------------------------------------
+00. Why choose us section3 start
+----------------------------------------------*/
+.why-choose-us-section3 {
+  background-image: linear-gradient(rgba(38, 38, 38, 0.45), rgba(38, 38, 38, 0.45)), url(../img/why-choose-us/3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 560px;
+  display: flex;
+  align-items: center;
+}
+.why-choose-us-section3 .content-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.why-choose-us-section3 .content-area .section-title,
+.why-choose-us-section3 .content-area .section-subtitle {
+  color: var(--white);
+}
+
+/*----------------------------------------------
+Why choose us section3 end
+----------------------------------------------*/
+/*----------------------------------------------
+00. Why choose us section3 feature start
+----------------------------------------------*/
+.why-choose-us-section3-feature {
+  background-color: var(--bg-color1);
+}
+.why-choose-us-section3-feature .section-inner {
+  margin-top: -220px;
+}
+.why-choose-us-section3-feature .feature-box3 {
+  box-shadow: var(--shadow4);
+}
+
+/*----------------------------------------------
+Why choose us section3 feature end
 ----------------------------------------------*/
