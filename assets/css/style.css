@@ -11,24 +11,48 @@ Version       : 1.0
 01. Nav section start
 02. Bottom Mobile, Tab Nav section start
 03. Hero section start
-04. 
-05. About section start
+04. Destination section start
+05.Destination details section start
+06. About section start
 06. Qr section start
-07. How it works section start
-08. Pricing section start
-09. Testimonial section start
-10. Faq section start
-11. Blog section start
-11. App section start
+07. Popular tour section start 
+08. Package section start
+09. Package card section2 start
+10. Package card section3 start
+11. Package card2 modal section start
+12. Package details section end
 12. Newsletter section start
-13. Footer section start
-14. Copyright section start
-15. Banner section start
-16. Contact section start
-17. Login Signup section start
-18. Blog details section start
-19. Pagination section start
-20. Error section start
+13. Review section start
+14. Newsletter section start
+15. Holiday Offer section start
+16. Why choose us section start
+17. Testimonial section start
+18. Faq section start
+19. Blog section start
+20. Blog section3 start
+21. Footer section start
+22. Copyright section start
+23. Banner section start
+24. Contact section start
+25. Login Signup section start
+26. Map section start
+27. Blog details section start
+28. Checkout page start
+29. Payment section start
+30. Booking submission section start
+31. Pagination section start
+32. Error section start
+33. Hero section2 start
+34. Feature section start
+35. Newsletter section2 start
+36. Testimonial section2 start
+37. About section2 start
+38. Hero section3 start
+39. Feature section3 start
+40. Destination section3 start
+41. Popular tour section start
+42. Why choose us section3 start
+43. Why choose us section3 feature start
 ----------------------------------------------*/
 /*----------------------------------------------
 Typography 
@@ -2241,13 +2265,6 @@ Bottom Mobile, Tab Nav section end
   }
 }
 
-.dark-theme .hero-section::before {
-  background: none;
-}
-.dark-theme .hero-section::after {
-  background: none;
-}
-
 /*----------------------------------------------
 Hero section end
 ----------------------------------------------*/
@@ -2345,7 +2362,7 @@ Hero section end
 Destination section end
 ----------------------------------------------*/
 /*----------------------------------------------
-Destination details section start
+05.Destination details section start
 ----------------------------------------------*/
 .destination-details-section .blog-box-large .content-area {
   max-width: 100%;
@@ -2390,7 +2407,7 @@ Destination details section start
 Destination details section end
 ----------------------------------------------*/
 /*----------------------------------------------
-05. About section start
+06. About section start
 ----------------------------------------------*/
 .about-section {
   position: relative;
@@ -2466,7 +2483,7 @@ About section end
 Popular tour section end
 ----------------------------------------------*/
 /*----------------------------------------------
-07. Package section start
+08. Package section start
 ----------------------------------------------*/
 .package-section {
   background-color: var(--bg-color1);
@@ -2557,7 +2574,7 @@ Popular tour section end
 Package section end
 ----------------------------------------------*/
 /*----------------------------------------------
-Package card section2 start
+09. Package card section2 start
 ----------------------------------------------*/
 .package-card2 {
   position: relative;
@@ -2640,6 +2657,8 @@ Package card section2 start
   border-radius: 0;
 }
 .package-tabs .nav-link .icon {
+  display: flex;
+  justify-content: center;
   font-size: 28px;
 }
 .package-tabs .nav-link .content {
@@ -2650,7 +2669,7 @@ Package card section2 start
 Package card section2 end
 ----------------------------------------------*/
 /*----------------------------------------------
-00. Package card section3 start
+10. Package card section3 start
 ----------------------------------------------*/
 .package-card3 {
   background-color: var(--white);
@@ -2696,7 +2715,7 @@ Package card section2 end
 Package card section3 end
 ----------------------------------------------*/
 /*----------------------------------------------
-00. Package card2 modal section start
+11. Package card2 modal section start
 ----------------------------------------------*/
 .package-card2-modal .modal-content {
   background-color: var(--bg-color1);
@@ -2745,7 +2764,7 @@ Package card section3 end
 Package card2 modal section start
 ----------------------------------------------*/
 /*----------------------------------------------
-00. Package details section end
+12. Package details section end
 ----------------------------------------------*/
 .package-details-section {
   background-color: var(--bg-color1);
@@ -2863,7 +2882,7 @@ Package card2 modal section start
 Package details section end
 ----------------------------------------------*/
 /*----------------------------------------------
-00. Review section start
+13. Review section start
 ----------------------------------------------*/
 .average-review .card-box {
   text-align: center;
@@ -3021,7 +3040,7 @@ Package details section end
 Review section end
 ----------------------------------------------*/
 /*----------------------------------------------
-12. Newsletter section start
+14. Newsletter section start
 ----------------------------------------------*/
 .newsletter-section {
   background-image: linear-gradient(rgba(45, 55, 60, 0.8), rgba(45, 55, 60, 0.8)), url(../img/newsletter/1.jpg);
@@ -3088,15 +3107,11 @@ Review section end
   right: auto;
 }
 
-.dark-theme .subscribe-form .form-control {
-  border-bottom: 1px solid #e5e7eb;
-}
-
 /*----------------------------------------------
 Newsletter section end
 ----------------------------------------------*/
 /*----------------------------------------------
-00. Holiday Offer section start
+15. Holiday Offer section start
 ----------------------------------------------*/
 .holiday-section {
   background-color: var(--bg-color1);
@@ -3106,7 +3121,7 @@ Newsletter section end
 Holiday Offer section end
 ----------------------------------------------*/
 /*----------------------------------------------
-00. Why choose us section start
+16. Why choose us section start
 ----------------------------------------------*/
 .why-choose-us {
   background-color: var(--bg-color3);
@@ -3173,7 +3188,7 @@ Holiday Offer section end
 Why choose us section end
 ----------------------------------------------*/
 /*----------------------------------------------
-09. Testimonial section start
+17. Testimonial section start
 ----------------------------------------------*/
 .testimonial-section {
   background-color: var(--bg-color1);
@@ -3271,15 +3286,11 @@ Why choose us section end
     height: 50px;
   }
 }
-.dark-theme .testimonial-section .owl-item.active.center .testimonial-box {
-  border-color: var(--bg-color2);
-}
-
 /*----------------------------------------------
 Testimonial section end
 ----------------------------------------------*/
 /*----------------------------------------------
-10. Faq section start
+18. Faq section start
 ----------------------------------------------*/
 .faq-area {
   position: relative;
@@ -3360,15 +3371,11 @@ Testimonial section end
   margin-left: 0;
 }
 
-.dark-theme .faq-area .accordion-button:not(.collapsed) {
-  background-color: var(--bg-color2);
-}
-
 /*----------------------------------------------
-10. Faq section start
+Faq section end
 ----------------------------------------------*/
 /*----------------------------------------------
-11. Blog section start
+19. Blog section start
 ----------------------------------------------*/
 .blog-section {
   position: relative;
@@ -3471,10 +3478,7 @@ Testimonial section end
 Blog section end
 ----------------------------------------------*/
 /*----------------------------------------------
-14. Footer section start
-----------------------------------------------*/
-/*----------------------------------------------
-11. Blog section start
+20. Blog section3 start
 ----------------------------------------------*/
 .blog-section3 {
   position: relative;
@@ -3616,10 +3620,7 @@ Blog section end
 Blog section3 end
 ----------------------------------------------*/
 /*----------------------------------------------
-14. Footer section start
-----------------------------------------------*/
-/*----------------------------------------------
-14. Footer section start
+21. Footer section start
 ----------------------------------------------*/
 .footer-section {
   background-color: var(--bg-color3);
@@ -3718,7 +3719,7 @@ Blog section3 end
 Footer end
 ----------------------------------------------*/
 /*----------------------------------------------
-15. Copyright section start
+22. Copyright section start
 ----------------------------------------------*/
 .copyright-area p {
   margin-bottom: 0;
@@ -3761,7 +3762,7 @@ Footer end
   Copyright end
   ----------------------------------------------*/
 /*----------------------------------------------
-15. Banner section start
+23. Banner section start
 ----------------------------------------------*/
 .banner-nav {
   background: transparent;
@@ -3817,7 +3818,7 @@ Footer end
 Banner section end
 ----------------------------------------------*/
 /*----------------------------------------------
-16. Contact section start
+24. Contact section start
 ----------------------------------------------*/
 .contact-section {
   background-color: var(--bg-color1);
@@ -3882,7 +3883,7 @@ Banner section end
 Contact end
 ----------------------------------------------*/
 /*----------------------------------------------
-17. Login Signup section start
+25. Login Signup section start
 ----------------------------------------------*/
 .login-signup-page {
   background-color: var(--white);
@@ -3978,7 +3979,7 @@ Contact end
 Login Signup end
 ----------------------------------------------*/
 /*----------------------------------------------
-18. Map section start
+26. Map section start
 ----------------------------------------------*/
 .map-section .title {
   margin-bottom: 20px;
@@ -3995,7 +3996,7 @@ Login Signup end
 Map section end
 ----------------------------------------------*/
 /*----------------------------------------------
-18. Blog details section start
+27. Blog details section start
 ----------------------------------------------*/
 .blog-details-section {
   background-color: var(--bg-color1);
@@ -4173,7 +4174,7 @@ Map section end
 Blog details end
 ----------------------------------------------*/
 /*----------------------------------------------
-00. Checkout page start
+28. Checkout page start
 ----------------------------------------------*/
 .checkout-form {
   border-radius: 5px;
@@ -4187,7 +4188,7 @@ Blog details end
 Checkout page end
 ----------------------------------------------*/
 /*----------------------------------------------
-Payment section start
+29. Payment section start
 -----------------------------------------------*/
 .payment-section {
   border-radius: 5px;
@@ -4251,10 +4252,7 @@ Payment section start
 Payment section end
 -----------------------------------------------*/
 /*----------------------------------------------
-Booking submission section start
------------------------------------------------*/
-/*----------------------------------------------
-Booking submission section end
+30. Booking submission section start
 -----------------------------------------------*/
 .booking-submission-section {
   position: sticky;
@@ -4307,7 +4305,10 @@ Booking submission section end
 }
 
 /*----------------------------------------------
-19. Pagination section start
+Booking submission section end
+-----------------------------------------------*/
+/*----------------------------------------------
+31. Pagination section start
 ----------------------------------------------*/
 .pagination-section {
   margin-top: 50px;
@@ -4354,7 +4355,7 @@ Booking submission section end
 Pagination end
 ----------------------------------------------*/
 /*----------------------------------------------
-20. Error section start
+32. Error section start
 ----------------------------------------------*/
 .error-section {
   height: 100vh;
@@ -4405,16 +4406,15 @@ Pagination end
 }
 @media (max-width: 575px) {
   .error-section {
-    height: 100%;
-    width: 100%;
-    text-align: center;
+    min-height: 100%;
+    min-width: 100%;
   }
 }
 /*----------------------------------------------
-Error section start
+Error end
 ----------------------------------------------*/
 /*----------------------------------------------
-Hero section2 start
+33. Hero section2 start
 ----------------------------------------------*/
 .hero-section2 {
   position: relative;
@@ -4472,7 +4472,7 @@ Hero section2 start
 Hero section2 end
 ----------------------------------------------*/
 /*----------------------------------------------
-00. Feature section start
+34. Feature section start
 ----------------------------------------------*/
 .feature-section {
   background-color: var(--bg-color1);
@@ -4482,7 +4482,7 @@ Hero section2 end
 Feature section end
 ----------------------------------------------*/
 /*----------------------------------------------
-00. Newsletter section2 start
+35. Newsletter section2 start
 ----------------------------------------------*/
 .newsletter-section2 .newsletter-offer {
   background: linear-gradient(rgba(56, 53, 53, 0.8) 100%, rgba(56, 53, 53, 0.8) 100%), url(../img/newsletter/joshua-earle--87JyMb9ZfU-unsplash.jpg);
@@ -4541,7 +4541,7 @@ Feature section end
 Newsletter section2 end
 ----------------------------------------------*/
 /*----------------------------------------------
-09. Testimonial section2 start
+36. Testimonial section2 start
 ----------------------------------------------*/
 .testimonial-section2 {
   background-color: var(--bg-color1);
@@ -4588,7 +4588,7 @@ Newsletter section2 end
 00. Testimonial section2 start
 ----------------------------------------------*/
 /*----------------------------------------------
-00. About section2 start
+37. About section2 start
 ----------------------------------------------*/
 .about-section2 {
   background-color: var(--bg-color1);
@@ -4623,7 +4623,7 @@ Newsletter section2 end
 About section2 end
 ----------------------------------------------*/
 /*----------------------------------------------
-00. Hero section3 start
+38. Hero section3 start
 ----------------------------------------------*/
 .hero-section3 {
   padding: 200px 0 100px;
@@ -4669,7 +4669,7 @@ About section2 end
 Hero section3 end
 ----------------------------------------------*/
 /*----------------------------------------------
-00. Feature section3 start
+39. Feature section3 start
 ----------------------------------------------*/
 .feature-section3 {
   background-color: var(--bg-color1);
@@ -4704,7 +4704,7 @@ Hero section3 end
 Feature section3 end
 ----------------------------------------------*/
 /*----------------------------------------------
-00. Destination section3 start
+40. Destination section3 start
 ----------------------------------------------*/
 .destination-box3 .image-area {
   position: relative;
@@ -4741,7 +4741,7 @@ Feature section3 end
 Destination section3 end
 ----------------------------------------------*/
 /*----------------------------------------------
-00. Popular tour section start
+41. Popular tour section start
 ----------------------------------------------*/
 .popular-tour-section3 {
   background-color: var(--bg-color1);
@@ -4755,7 +4755,7 @@ Destination section3 end
 Popular tour section end
 ----------------------------------------------*/
 /*----------------------------------------------
-00. Why choose us section3 start
+42. Why choose us section3 start
 ----------------------------------------------*/
 .why-choose-us-section3 {
   background-image: linear-gradient(rgba(38, 38, 38, 0.45), rgba(38, 38, 38, 0.45)), url(../img/why-choose-us/3.jpg);
@@ -4781,7 +4781,7 @@ Popular tour section end
 Why choose us section3 end
 ----------------------------------------------*/
 /*----------------------------------------------
-00. Why choose us section3 feature start
+43. Why choose us section3 feature start
 ----------------------------------------------*/
 .why-choose-us-section3-feature {
   background-color: var(--bg-color1);
