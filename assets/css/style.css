@@ -1026,9 +1026,13 @@ Reuseble style section start
   font-weight: 500;
   text-transform: capitalize;
   -webkit-mask-image: url(../img/svg/btn-path-right.svg);
+  mask-image: url(../img/svg/btn-path-right.svg);
   -webkit-mask-position: center;
+  mask-position: center;
   -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
   -webkit-mask-size: cover;
+  mask-size: cover;
 }
 .cmn-btn:hover {
   color: var(--white);
