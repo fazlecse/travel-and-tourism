@@ -1,4 +1,5 @@
 
+
 // Preloader area
 const preloader = document.getElementById("preloader");
 function preloder_function() {
@@ -152,14 +153,6 @@ $(document).ready(function () {
     });
 
 
-
-
-
-
-
-
-
-
     // cmn select2 start
     $('.cmn-select2').select2({
 
@@ -208,43 +201,44 @@ $(document).ready(function () {
     });
     // cmn select2 modal start
 
+    if ($(".fancybox-carousel-section").length) {
+        // Fancybox carousel section start
+        // Initialise Carousel
+        const mainCarousel = new Carousel(document.querySelector("#mainCarousel"), {
+            Dots: false,
+        });
 
-    // Fancybox carousel section start
-    // Initialise Carousel
-    const mainCarousel = new Carousel(document.querySelector("#mainCarousel"), {
-        Dots: false,
-    });
+        // Thumbnails
+        const thumbCarousel = new Carousel(document.querySelector("#thumbCarousel"), {
+            Sync: {
+                target: mainCarousel,
+                friction: 0,
+            },
+            Dots: false,
+            Navigation: false,
+            center: true,
+            slidesPerPage: 1,
+            infinite: true,
+        });
 
-    // Thumbnails
-    const thumbCarousel = new Carousel(document.querySelector("#thumbCarousel"), {
-        Sync: {
-            target: mainCarousel,
-            friction: 0,
-        },
-        Dots: false,
-        Navigation: false,
-        center: true,
-        slidesPerPage: 1,
-        infinite: true,
-    });
-
-    // Customize Fancybox
-    Fancybox.bind('[data-fancybox="gallery"]', {
-        Carousel: {
-            on: {
-                change: (that) => {
-                    mainCarousel.slideTo(mainCarousel.findPageForSlide(that.page), {
-                        friction: 0,
-                    });
+        // Customize Fancybox
+        Fancybox.bind('[data-fancybox="gallery"]', {
+            Carousel: {
+                on: {
+                    change: (that) => {
+                        mainCarousel.slideTo(mainCarousel.findPageForSlide(that.page), {
+                            friction: 0,
+                        });
+                    },
                 },
             },
-        },
-    });
+        });
+        // Fancybox carousel section end
+    }
 
-
-    // Fancybox carousel section end
-
-
+    // flatpickr start
+    flatpickr("#myID", {});
+    // flatpickr end
 });
 
 // Bootstrap datepicker start
@@ -266,41 +260,60 @@ const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstra
 
 
 // Int Tel Input With Flags and Dial Codes start
-const input = document.querySelector("#telephone");
-window.intlTelInput(input, {
-    initialCountry: "bd",
-    separateDialCode: true,
-});
+if ($(".login-signup-page").length) {
+    const input = document.querySelector("#telephone");
+    window.intlTelInput(input, {
+        initialCountry: "bd",
+        separateDialCode: true,
+    });
+}
 // Int Tel Input With Flags and Dial Codes end
 
 // input field show hide password start
-const password = document.querySelector('.password');
-const passwordIcon = document.querySelector('.password-icon');
+if ($(".login-signup-page").length) {
+    const password = document.querySelector('.password');
+    const passwordIcon = document.querySelector('.password-icon');
 
-passwordIcon.addEventListener("click", function () {
-    console.log("password icon clicked");
-    if (password.type == 'password') {
-        password.type = 'text';
-        passwordIcon.classList.add('fa-eye-slash');
-    } else {
-        password.type = 'password';
-        passwordIcon.classList.remove('fa-eye-slash');
-    }
-})
+    passwordIcon.addEventListener("click", function () {
+        console.log("password icon clicked");
+        if (password.type == 'password') {
+            password.type = 'text';
+            passwordIcon.classList.add('fa-eye-slash');
+        } else {
+            password.type = 'password';
+            passwordIcon.classList.remove('fa-eye-slash');
+        }
+    })
+}
 // input field show hide password end
 
-// Qr section start
-var qr = QRCode.generatePNG(document.getElementById("qrUrl").value, {
-    ecclevel: "M",
-    format: "html",
-    margin: 4,
-    modulesize: 8,
+// // Qr section start
+// var qr = QRCode.generatePNG(document.getElementById("qrUrl").value, {
+//     ecclevel: "M",
+//     format: "html",
+//     margin: 4,
+//     modulesize: 8,
+// });
+
+// var img = document.createElement("img");
+// img.src = qr;
+// document.getElementById("qrcode").appendChild(img);
+// var download = (document.getElementById("download-qr").href = qr);
+// // Qr section end
+
+// input box click to focus input start
+document.addEventListener("DOMContentLoaded", function () {
+    function handleInput(inputBox) {
+        const inputField = inputBox.querySelector(".form-control");
+        inputBox.addEventListener("click", function () {
+            inputField.focus();
+        });
+    }
+
+    const inputBox = document.querySelector(".input-box");
+    handleInput(inputBox);
+    const inputBox2 = document.querySelector(".input-box2");
+    handleInput(inputBox2);
 });
 
-var img = document.createElement("img");
-img.src = qr;
-document.getElementById("qrcode").appendChild(img);
-var download = (document.getElementById("download-qr").href = qr);
-// Qr section end
-
-
+// input box click to focus input end

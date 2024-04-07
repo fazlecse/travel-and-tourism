@@ -794,96 +794,164 @@ Reuseble style section start
 }
 
 .multiple-search-box {
-  padding: 10px;
   background: var(--white);
-  border-radius: 5px;
+  border-radius: 80px;
   margin-top: 70px;
   box-shadow: var(--shadow1);
+  position: relative;
 }
-.multiple-search-box form .input-box:hover {
-  box-shadow: var(--shadow3);
+.multiple-search-box .input-box {
+  padding: 10px 25px;
+  position: relative;
+  border-radius: 80px;
+  cursor: pointer;
 }
-.multiple-search-box form .input-box label {
-  font-weight: 500;
-  font-size: 16px;
-  margin-bottom: 10px;
-  text-transform: capitalize;
+.multiple-search-box .input-box:hover {
+  box-shadow: var(--shadow1);
 }
-.multiple-search-box form .input-box .form-select,
-.multiple-search-box form .input-box .form-control {
-  height: 60px;
-  border-radius: 5px !important;
+.multiple-search-box .input-box:first-child::after {
+  content: "";
+  background-color: var(--border-color1);
+  height: 55%;
+  width: 1px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.multiple-search-box .input-box .form-control {
+  padding: 0;
   background-color: transparent;
-  border: 1px solid var(--white);
-  padding: 10px;
-  padding-left: 40px;
+  border: none;
   font-size: 15px;
   font-weight: normal;
-  caret-color: var(--primary);
+  caret-color: var(--primary-color);
   color: var(--heading-color);
+  height: 30px;
 }
-.multiple-search-box form .input-box .form-select:focus,
-.multiple-search-box form .input-box .form-control:focus {
+.multiple-search-box .input-box .form-control:focus {
   color: var(--heading-color);
   box-shadow: 0 0 0 0rem var(--shadow1);
 }
-.multiple-search-box form .input-box .form-select::-moz-placeholder, .multiple-search-box form .input-box .form-control::-moz-placeholder {
+.multiple-search-box .input-box .form-control::-moz-placeholder {
   color: var(--heading-color);
 }
-.multiple-search-box form .input-box .form-select::placeholder,
-.multiple-search-box form .input-box .form-control::placeholder {
+.multiple-search-box .input-box .form-control::placeholder {
   color: var(--heading-color);
 }
-.multiple-search-box form .input-box .form-select {
+.multiple-search-box .input-box .form-select {
   background-image: url(../img/icon/downward-arrow.png);
 }
-.multiple-search-box form .input-box .form-select option {
+.multiple-search-box .input-box .form-select option {
   background: var(--white);
   color: var(--heading-color);
 }
-.multiple-search-box form .input-box textarea.form-control {
+.multiple-search-box .input-box textarea.form-control {
   height: 160px;
   border-radius: 5px;
 }
-.multiple-search-box form .select2 {
-  width: calc(100% - 0px) !important;
-  width: 100%;
-  margin-left: auto;
-  padding-left: 30px;
-}
-.multiple-search-box form .select2-container--default .select2-selection--single {
-  height: 60px;
-  background: var(--white);
-  border: 1px solid var(--white);
-  border-radius: 10px;
-}
-.multiple-search-box form .select2-container--default .select2-selection--single .select2-selection__rendered {
-  line-height: 60px;
-  padding-left: 10px;
-  padding-right: 10px;
-  color: var(--heading-color);
-}
-.multiple-search-box form .input-group {
-  align-items: center;
-}
-.multiple-search-box form .input-group-text {
-  background: none;
-  color: var(--primary-color);
-  border: none;
-  height: 60px;
-  position: absolute;
-  top: 2px;
-  left: -10px;
-}
-.multiple-search-box form .btn-custom {
+.multiple-search-box .btn-custom {
   padding: 15px;
   border-radius: 50px;
   height: 50px;
 }
 
-@media (min-width: 992px) {
+.multiple-search-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  text-transform: capitalize;
+  width: 45px;
+  height: 45px;
+  min-width: 45px;
+  background-color: var(--primary-color);
+  color: var(--white);
+  border-radius: 80px;
+  transition: var(--transition);
+  margin-right: 15px;
+}
+
+.multiple-search-btn:hover {
+  background-color: var(--primary-color);
+}
+
+.search-result {
+  position: absolute;
+  left: 0;
+  top: calc(100% + 5px);
+  width: 100%;
+  background-color: var(--white);
+  box-shadow: var(--shadow1);
+  border-radius: 5px;
+  z-index: 1;
+}
+.search-result .search-item {
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.search-result .search-item:hover {
+  background-color: var(--primary-color-opacity-low);
+}
+.search-result .search-item .icon-area {
+  font-size: 28px;
+  color: var(--primary-color);
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search-result .search-item .img-area img {
+  width: 35px;
+  height: 35px;
+  border-radius: 3px;
+}
+.search-result .search-item .title {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: var(--heading-color);
+}
+.search-result .search-item .sub-title {
+  font-size: 12px;
+  text-transform: capitalize;
+  color: var(--heading-color);
+}
+.search-result .search-item:not(:last-child):not(:first-child) {
+  border-bottom: 1px solid var(--border-color1);
+}
+.search-result .recent-clear {
+  border-bottom: 1px solid var(--border-color1);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-transform: capitalize;
+  padding: 10px 20px;
+}
+
+@media (min-width: 768px) {
+  .input-box {
+    width: calc(50% - 30px);
+  }
   .multiple-search-box {
-    padding: 10px 0;
+    display: flex;
+    align-items: center;
+  }
+}
+@media (max-width: 767px) {
+  .multiple-search-box {
+    border-radius: 40px;
+  }
+  .multiple-search-btn {
+    width: 95%;
+    height: 50px;
+    margin: auto;
+  }
+  .search-result {
+    top: calc(100% + 15px);
   }
 }
 .rtl .multiple-search-box form .input-box .form-control {
@@ -1009,6 +1077,28 @@ Reuseble style section start
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.autocomplete-suggestions {
+  border: 1px solid #999;
+  background: #FFF;
+  cursor: default;
+  overflow: auto;
+}
+
+.autocomplete-suggestion {
+  padding: 2px 5px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.autocomplete-selected {
+  background: #F0F0F0;
+}
+
+.autocomplete-suggestions strong {
+  font-weight: normal;
+  color: #3399FF;
 }
 
 .cmn-btn {
@@ -2230,7 +2320,6 @@ Bottom Mobile, Tab Nav section end
   }
   .hero-section {
     padding: 180px 0 50px;
-    text-align: center;
   }
   .hero-section .section-subtitle {
     font-size: 32px;
@@ -2240,6 +2329,9 @@ Bottom Mobile, Tab Nav section end
   }
   .hero-section .select2 {
     text-align: initial;
+  }
+  .hero-section .hero-text {
+    text-align: center;
   }
   .hero-btn-area {
     justify-content: center;
@@ -2251,7 +2343,6 @@ Bottom Mobile, Tab Nav section end
   }
   .hero-section {
     padding: 200px 0 50px;
-    text-align: center;
   }
   .hero-section .section-subtitle {
     font-size: 26px;

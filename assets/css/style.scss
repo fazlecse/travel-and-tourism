@@ -914,113 +914,192 @@ Reuseble style section start
 
 // Multiple search box start
 .multiple-search-box {
-    padding: 10px;
     background: var(--white);
-    border-radius: 5px;
+    border-radius: 80px;
     margin-top: 70px;
     box-shadow: var(--shadow1);
+    position: relative;
 
-    form {
-        .input-box {
+    .input-box {
+        padding: 10px 25px;
+        position: relative;
+        border-radius: 80px;
+        cursor: pointer;
 
-            &:hover {
-                box-shadow: var(--shadow3);
+        &:hover {
+            box-shadow: var(--shadow1);
+        }
+
+        &:first-child {
+
+            &::after {
+                content: "";
+                background-color: var(--border-color1);
+                height: 55%;
+                width: 1px;
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
             }
+        }
 
-            label {
-                font-weight: 500;
-                font-size: 16px;
-                margin-bottom: 10px;
-                text-transform: capitalize;
-            }
+        .form-control {
+            padding: 0;
+            background-color: transparent;
+            border: none;
+            font-size: 15px;
+            font-weight: normal;
+            caret-color: var(--primary-color);
+            color: var(--heading-color);
+            height: 30px;
 
-            .form-select,
-            .form-control {
-                height: 60px;
-                border-radius: 5px !important;
-                background-color: transparent;
-                border: 1px solid var(--white);
-                padding: 10px;
-                padding-left: 40px;
-                font-size: 15px;
-                font-weight: normal;
-                caret-color: var(--primary);
+
+            &:focus {
                 color: var(--heading-color);
-
-                &:focus {
-                    color: var(--heading-color);
-                    box-shadow: 0 0 0 0rem var(--shadow1);
-                    // border: 1px solid var(--border-color1);
-                }
-
-                &::placeholder {
-                    color: var(--heading-color);
-                }
+                box-shadow: 0 0 0 0rem var(--shadow1);
             }
 
-            .form-select {
-                background-image: url(../img/icon/downward-arrow.png);
-
-                option {
-                    background: var(--white);
-                    color: var(--heading-color);
-                }
+            &::placeholder {
+                color: var(--heading-color);
             }
+        }
 
-            textarea.form-control {
-                height: 160px;
-                border-radius: 5px;
+        .form-select {
+            background-image: url(../img/icon/downward-arrow.png);
+
+            option {
+                background: var(--white);
+                color: var(--heading-color);
             }
+        }
+
+        textarea.form-control {
+            height: 160px;
+            border-radius: 5px;
+        }
+
+    }
+
+    .btn-custom {
+        padding: 15px;
+        border-radius: 50px;
+        height: 50px;
+    }
+}
+
+.multiple-search-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    text-transform: capitalize;
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-radius: 80px;
+    transition: var(--transition);
+    margin-right: 15px;
+}
+
+.multiple-search-btn:hover {
+    background-color: var(--primary-color);
+}
+
+.search-result {
+    position: absolute;
+    left: 0;
+    top: calc(100% + 5px);
+    width: 100%;
+    background-color: var(--white);
+    box-shadow: var(--shadow1);
+    border-radius: 5px;
+    z-index: 1;
+
+    .search-item {
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        &:hover {
+            background-color: var(--primary-color-opacity-low);
+        }
+
+        .icon-area {
+            font-size: 28px;
+            color: var(--primary-color);
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
         }
 
-        .select2 {
-            width: calc(100% - 0px) !important;
-            width: 100%;
-            margin-left: auto;
-            padding-left: 30px;
+        .img-area {
+            img {
+                width: 35px;
+                height: 35px;
+                border-radius: 3px;
+            }
         }
 
-        .select2-container--default .select2-selection--single {
-            height: 60px;
-            background: var(--white);
-            border: 1px solid var(--white);
-            border-radius: 10px;
-        }
-
-        .select2-container--default .select2-selection--single .select2-selection__rendered {
-            line-height: 60px;
-            padding-left: 10px;
-            padding-right: 10px;
+        .title {
+            font-size: 16px;
+            text-transform: capitalize;
             color: var(--heading-color);
         }
 
-        .input-group {
-            align-items: center;
+        .sub-title {
+            font-size: 12px;
+            text-transform: capitalize;
+            color: var(--heading-color);
         }
+    }
 
-        .input-group-text {
-            background: none;
-            color: var(--primary-color);
-            border: none;
-            height: 60px;
-            position: absolute;
-            top: 2px;
-            left: -10px;
-        }
+    .search-item:not(:last-child):not(:first-child) {
+        border-bottom: 1px solid var(--border-color1);
+    }
 
-        .btn-custom {
-            padding: 15px;
-            border-radius: 50px;
-            height: 50px;
-        }
+    .recent-clear {
+        border-bottom: 1px solid var(--border-color1);
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-transform: capitalize;
+        padding: 10px 20px;
     }
 }
 
 // Responsive multiple search box start
-@media (min-width: 992px) {
+@media(min-width: 768px) {
+    .input-box {
+        width: calc(50% - 30px);
+    }
+
     .multiple-search-box {
-        padding: 10px 0;
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media(max-width: 767px) {
+    .multiple-search-box {
+        border-radius: 40px;
+    }
+
+    .multiple-search-btn {
+        width: 95%;
+        height: 50px;
+        margin: auto;
+    }
+
+    .search-result {
+        top: calc(100% + 15px);
     }
 }
 
@@ -1202,6 +1281,27 @@ Reuseble style section start
     -webkit-text-fill-color: transparent;
 }
 
+.autocomplete-suggestions {
+    border: 1px solid #999;
+    background: #FFF;
+    cursor: default;
+    overflow: auto;
+}
+
+.autocomplete-suggestion {
+    padding: 2px 5px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.autocomplete-selected {
+    background: #F0F0F0;
+}
+
+.autocomplete-suggestions strong {
+    font-weight: normal;
+    color: #3399FF;
+}
 
 .cmn-btn {
     position: relative;
@@ -2661,7 +2761,6 @@ Bottom Mobile, Tab Nav section end
 
     .hero-section {
         padding: 180px 0 50px;
-        text-align: center;
 
         .section-subtitle {
             font-size: 32px;
@@ -2673,6 +2772,10 @@ Bottom Mobile, Tab Nav section end
 
         .select2 {
             text-align: initial;
+        }
+
+        .hero-text {
+            text-align: center;
         }
     }
 
@@ -2690,7 +2793,6 @@ Bottom Mobile, Tab Nav section end
 
     .hero-section {
         padding: 200px 0 50px;
-        text-align: center;
 
         .section-subtitle {
             font-size: 26px;
@@ -5358,6 +5460,7 @@ Payment section end
         border-bottom: 1px solid var(--border-color1);
     }
 }
+
 /*----------------------------------------------
 Booking submission section end
 -----------------------------------------------*/
