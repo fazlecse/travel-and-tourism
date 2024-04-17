@@ -28,6 +28,8 @@
     <link rel="stylesheet" href="assets/css/intlTelInput.min.css">
     <!-- rangeSlider Css link -->
     <link rel="stylesheet" href="assets/css/ion.rangeSlider.min.css">
+    <!-- flatpickr Css link -->
+    <link rel="stylesheet" href="assets/css/flatpickr.min.css">
 
 
 
@@ -193,54 +195,72 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-xl-10">
-                    <div class="multiple-search-box">
-                        <form>
-                            <div class="row g-xl-0 g-3 align-items-center justify-content-around">
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="input-box">
-                                        <div class="input-group">
-                                            <span class="input-group-text">
-                                                <i class="fa-regular fa-location-dot"></i>
-                                            </span>
-                                            <select class="cmn-select2 form-control" name="productType">
-                                                <option value="type1">Country</option>
-                                                <option value="gb">England</option>
-                                                <option value="bd">bdt</option>
-                                                <option value="type3">Pakistan</option>
-                                                <option value="type4">Palestine</option>
-                                                <option value="type4">Palestine</option>
-                                                <option value="type4">Palestine</option>
-                                                <option value="type4">Palestine</option>
-                                                <option value="type4">Palestine</option>
-                                                <option value="type4">Palestine</option>
-                                            </select>
-                                        </div>
-                                    </div>
-
+                <div class="col-xl-8 col-lg-10">
+                    <form class="multiple-search-box">
+                        <div class="input-box">
+                            <h6>Where to?</h6>
+                            <input class="form-control" type="text" name="country" />
+                        </div>
+                        <div class="input-box input-box2">
+                            <h6>When</h6>
+                            <input class="form-control" id="myID" type="text" />
+                        </div>
+                        <button type="button" class="multiple-search-btn">
+                            <span><i class="fa-regular fa-magnifying-glass"></i></span>
+                            <span class="d-md-none">Filter</span>
+                        </button>
+                        <div class="search-result">
+                            <a href="" class="search-item">
+                                <div class="icon-area">
+                                    <i class="fa-light fa-location-arrow"></i>
                                 </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="input-box">
-                                        <div class="input-group">
-                                            <span class="input-group-text">
-                                                <i class="fa-regular fa-calendar-days"></i>
-                                            </span>
-                                            <input type="text" class="form-control date-picker" placeholder="Date"
-                                                id="Date">
-                                        </div>
-                                    </div>
-
+                                <div class="text-area">
+                                    <div class="title">nearby</div>
                                 </div>
 
-                                <div class="col-lg-3">
-                                    <div class="input-box">
-                                        <button class="cmn-btn w-100"><i class="fal fa-search"></i>Explore Now</button>
-                                    </div>
-
-                                </div>
+                            </a>
+                            <div class="recent-clear">
+                                <h6>Recent searches</h6>
+                                <a href="">clear</a>
                             </div>
-                        </form>
-                    </div>
+                            <a href="" class="search-item">
+                                <div class="icon-area">
+                                    <i class="fa-light fa-location-arrow"></i>
+                                </div>
+                                <div class="text-area">
+                                    <div class="title">nearby</div>
+                                </div>
+                            </a>
+                            <a href="" class="search-item">
+                                <div class="icon-area">
+                                    <i class="fa-light fa-location-dot"></i>
+                                </div>
+                                <div class="text-area">
+                                    <h5 class="title mb-0">dhaka</h5>
+                                    <span class="sub-title">bangladesh</span>
+
+                                </div>
+                            </a>
+                            <a href="" class="search-item">
+                                <div class="icon-area">
+                                    <i class="fa-light fa-location-arrow"></i>
+                                </div>
+                                <div class="text-area">
+                                    <h5 class="title mb-0">nearby</h5>
+                                    <span class="sub-title">bangladesh</span>
+                                </div>
+                            </a>
+                            <a href="" class="search-item">
+                                <div class="img-area">
+                                    <img src="./assets/img/search/bc.jpg" alt="">
+                                </div>
+                                <div class="text-area">
+                                    <h5 class="title mb-0">bangla boxing stadium ticket</h5>
+                                    <span class="sub-title">Thiland</span>
+                                </div>
+                            </a>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -1306,6 +1326,8 @@
     <script src="assets/js/intlTelInput.min.js"></script>
     <!-- rangeSlider Js link -->
     <script src="assets/js/ion.rangeSlider.min.js"></script>
+    <!-- flatpickr Js link -->
+    <script src="assets/js/flatpickr.js"></script>
 
 
     <!-- Main_Js_link -->

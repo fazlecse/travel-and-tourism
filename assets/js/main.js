@@ -239,6 +239,7 @@ $(document).ready(function () {
     // flatpickr start
     flatpickr("#myID", {});
     // flatpickr end
+
 });
 
 // Bootstrap datepicker start
